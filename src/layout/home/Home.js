@@ -1,18 +1,17 @@
 import React from 'react'
 import Header from '../../components/header/Header';
+import Intro from '../../components/intro/Intro';
 
 // style
 import "./Home.css";
 
 const Home = () => {
     return (
-        <section className="home">
+        <div className="home">
             <Header />
-            <p>
-                This is my Home page
-            </p>
-        </section>
+            <Intro />
+        </div>
     )
 }
 
-export default Home
+export default Home;
