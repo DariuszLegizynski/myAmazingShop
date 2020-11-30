@@ -1,0 +1,56 @@
+@import "../../styles/variables";
+
+.header {
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1.2rem 3.2rem;
+    margin: 0 auto;
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__link {
+            transition: all .2s ease-in;
+
+            &:focus, &:hover{
+                transform: scale(1.2);
+                transition: all .2s ease-in-out;
+            }
+
+        }
+
+        &__nav {
+
+            &__link {
+
+                &:hover, &:focus {
+                    color: $color-first-light;
+                }
+            }
+
+            & > ul {
+                display: flex;
+                align-items: center;
+                
+                & > li {
+                    margin: 1rem;
+                }
+            }
+        }
+
+        & > ul {
+            display: flex;
+            align-items: center;
+            
+            & > li {
+                margin: 1rem;
+            }
+        }
+    }
+}

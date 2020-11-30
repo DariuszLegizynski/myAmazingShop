@@ -1,0 +1,58 @@
+@import "./variables";
+
+.btn {
+    border: none;
+    background-color: transparent;
+    padding: 1rem;
+    font-size: 1.2rem;
+    border-radius: 15px;
+
+    &:hover, &:focus, &:active {
+        outline: none;
+        background-color: transparent;
+    }
+
+    &--sign {
+        border: 2px solid $color-third;
+        transition: all .2s ease-in-out;
+
+        &:hover, &:focus {
+            background-color: $color-third;
+            transition: all .2s ease-in-out;
+        }
+    }
+
+    &--account {
+        border: 2px solid $color-second;
+        transition: all .2s ease-in-out;
+
+        &:hover, &:focus {
+            background-color: $color-second;
+            transition: all .2s ease-in-out;
+        }
+    }
+}
+
+.icon {
+    fill: $color-black;
+    height: 3rem;
+    width: 3rem;
+
+    &:hover, &:focus {
+        outline: none;
+    }
+}
+
+.link {
+    color: $color-black;
+
+    &:link, &:visited, &:active, &:focus, &:hover {
+        outline: none;
+        text-decoration: none;
+    }
+}
+
+.list {
+    list-style: none;
+}
+
