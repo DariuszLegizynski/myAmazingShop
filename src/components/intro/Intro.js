@@ -12,6 +12,7 @@ import "slick-carousel/slick/slick-theme.css";
 import sliderImage1 from "../../resources/images/MainTheme/ady-teenagerinro-sQ0xXxQdfeY-unsplash.jpg";
 import sliderImage2 from "../../resources/images/MainTheme/norbert-levajsics-dUx0gwLbhzs-unsplash.jpg";
 import sliderImage3 from "../../resources/images/MainTheme/joseph-gonzalez-bvteWf284Sw-unsplash.jpg";
+import { Link } from "react-router-dom";
 
 const Intro = () => {
 	const settings = {
@@ -41,8 +42,32 @@ const Intro = () => {
 					</div>
 				</Slider>
 			</div>
-			<div className="intro__text">
-				Intro Text
+			<div className="intro__title">
+				<div className="intro__title__white-bg">
+					<div className="intro__title__white-bg__subtitle">
+						<p className="intro__title__white-bg__subtitle__p p">
+							― Arthur C. Clarke
+						</p>
+					</div>
+					<div className="intro__title__white-bg__main-title">
+						<h1 className="intro__title__white-bg__main-title__h1 h1">
+							Any sufficiently advanced technology is indistinguishable from magic.
+						</h1>
+					</div>
+					<div className="intro__title__white-bg__description">
+						<p className="intro__title__white-bg__description__p p">
+							Inspired by technology, we bring the newest models to your home.
+						</p>
+					</div>
+					<div className="intro__title__white-bg__shop">
+						<Link className="intro__title__white-bg__shop__link" to={"/"}>
+							<button className="intro__title__white-bg__shop__link__btn btn--shop btn">
+								Shop
+							</button>
+						</Link>
+					</div>
+				</div>
+				
 			</div>
 		</section>
 	);

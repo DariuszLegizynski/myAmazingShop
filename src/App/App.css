@@ -11,18 +11,6 @@
   background-color: transparent;
 }
 
-.btn--sign {
-  border: 2px solid #f16373;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
-}
-
-.btn--sign:hover, .btn--sign:focus {
-  background-color: #f16373;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
-}
-
 .btn--account {
   border: 2px solid #efaa54;
   -webkit-transition: all .2s ease-in-out;
@@ -31,6 +19,36 @@
 
 .btn--account:hover, .btn--account:focus {
   background-color: #efaa54;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.btn--shop {
+  height: 4rem;
+  min-width: 12rem;
+  font-size: 1rem;
+  background-color: #00a4e8;
+  border-radius: 3rem;
+  -webkit-box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.btn--shop:hover, .btn--shop:focus {
+  background-color: #c2d1ff;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.btn--sign {
+  border: 2px solid #f16373;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.btn--sign:hover, .btn--sign:focus {
+  background-color: #f16373;
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
 }

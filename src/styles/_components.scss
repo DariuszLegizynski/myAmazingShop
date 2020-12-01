@@ -12,22 +12,38 @@
         background-color: transparent;
     }
 
-    &--sign {
-        border: 2px solid $color-third;
-        transition: all .2s ease-in-out;
-
-        &:hover, &:focus {
-            background-color: $color-third;
-            transition: all .2s ease-in-out;
-        }
-    }
-
     &--account {
         border: 2px solid $color-second;
         transition: all .2s ease-in-out;
 
         &:hover, &:focus {
             background-color: $color-second;
+            transition: all .2s ease-in-out;
+        }
+    }
+
+    &--shop {
+        height: 4rem;
+        min-width: 12rem;
+        font-size: 1rem;
+        background-color: $color-first;
+        border-radius: 3rem;
+        box-shadow: 0 3px 12px rgba(0,0,0,.08);
+
+        transition: all .2s ease-in-out;
+
+        &:hover, &:focus {
+            background-color: $color-first-light;
+            transition: all .2s ease-in-out;
+        }
+    }
+
+    &--sign {
+        border: 2px solid $color-third;
+        transition: all .2s ease-in-out;
+
+        &:hover, &:focus {
+            background-color: $color-third;
             transition: all .2s ease-in-out;
         }
     }

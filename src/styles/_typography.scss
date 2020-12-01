@@ -1,0 +1,11 @@
+$default-font-family: "Old Standard TT", Times New Roman, serif;
+$default-font-size: 1.6rem;
+$default-font-weight: 400;
+$default-line-height: 2.4rem;
+
+$default-font-size-large: 3.6rem;
+
+.h1 {
+    font-size: $default-font-size-large;
+    line-height: 5rem;
+}
