@@ -16,6 +16,7 @@ import { Link } from "react-router-dom";
 
 const Intro = () => {
 	const settings = {
+		arrows: false,
 		infinite: true,
 		pauseOnHover:false,
 		slidesToShow: 1,
