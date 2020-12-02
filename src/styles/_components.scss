@@ -4,56 +4,43 @@
     border: none;
     background-color: transparent;
     padding: 1rem;
-    font-size: 1.2rem;
+    font-size: $default-font-size-small;
     border-radius: 15px;
 
     &:hover, &:focus, &:active {
         outline: none;
-        background-color: transparent;
     }
 
     &--account {
         border: 2px solid $color-second;
         transition: all .2s ease-in-out;
-
-        &:hover, &:focus {
-            background-color: $color-second;
-            transition: all .2s ease-in-out;
-        }
     }
 
     &--cart {
-        width: 4rem;
-        height: 4rem;
+        width: 3.6rem;
+        height: 3.6rem;
         border-radius: 50%;
-        background-color: $color-first-light;
+        background-color: $color-first;
         box-shadow: 0 3px 12px rgba(0,0,0,.08);
+        
+        transition: all .2s ease-in-out;
     }
 
     &--shop {
         height: 4rem;
         min-width: 12rem;
-        font-size: 1rem;
+        font-size: $default-font-size-normal;
         background-color: $color-first;
         border-radius: 3rem;
         box-shadow: 0 3px 12px rgba(0,0,0,.08);
 
         transition: all .2s ease-in-out;
-
-        &:hover, &:focus {
-            background-color: $color-first-light;
-            transition: all .2s ease-in-out;
-        }
     }
 
     &--sign {
         border: 2px solid $color-third;
-        transition: all .2s ease-in-out;
 
-        &:hover, &:focus {
-            background-color: $color-third;
-            transition: all .2s ease-in-out;
-        }
+        transition: all .2s ease-in-out;
     }
 }
 
@@ -79,9 +66,64 @@
         outline: none;
         text-decoration: none;
     }
+
+    &--logo {
+        transition: all .2s ease-in;
+
+        &:focus, &:hover{
+            transform: scale(1.2);
+            transition: all .2s ease-in-out;
+        }
+    }
+
+    &--text {
+        transition: all .2s ease-in;
+
+        &:focus, &:hover {
+            color: $color-first-light;
+            transform: scale(1.2);
+            transition: all .2s ease-in-out;
+        }
+    }
+
+    &:focus, &:hover {
+        & > button.btn--sign {
+            background-color: $color-third;
+            transition: all .2s ease-in-out;
+        }
+
+        & > button.btn--account {
+            background-color: $color-second;
+            transition: all .2s ease-in-out;
+        }
+
+        & > button.btn--cart, button.btn--shop {
+            background-color: $color-first-light;
+            transition: all .2s ease-in-out;
+
+            & > span {
+                color: $color-black;
+                transition: all .2s ease-in-out;
+            }
+        }
+    } 
 }
 
 .list {
     list-style: none;
 }
 
+.h1 {
+    font-size: $default-font-size-large;
+    line-height: 5rem;
+}
+
+.span {
+    font-size: $default-font-size-normal;
+    color: $color-white;
+    transition: all .2s ease-in-out;
+}
+
+.p {
+    font-size: $default-font-size-small;
+}

@@ -56,14 +56,16 @@ const Intro = () => {
 						</h1>
 					</div>
 					<div className="intro__title__white-bg__description">
-						<p className="intro__title__white-bg__description__p p">
+						<span className="intro__title__white-bg__description__span span">
 							Inspired by technology, we bring the newest models to your home.
-						</p>
+						</span>
 					</div>
 					<div className="intro__title__white-bg__shop">
-						<Link className="intro__title__white-bg__shop__link" to={"/"}>
-							<button className="intro__title__white-bg__shop__link__btn btn--shop btn">
-								Shop
+						<Link className="intro__title__white-bg__shop__link link" to={"/"}>
+							<button className="btn--shop btn" tabIndex="-1">
+								<span className="span">
+									Shop
+								</span>
 							</button>
 						</Link>
 					</div>

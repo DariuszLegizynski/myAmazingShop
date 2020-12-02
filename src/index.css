@@ -1,3 +1,127 @@
+.btn {
+  border: none;
+  background-color: transparent;
+  padding: 1rem;
+  font-size: 1.2rem;
+  border-radius: 15px;
+}
+
+.btn:hover, .btn:focus, .btn:active {
+  outline: none;
+}
+
+.btn--account {
+  border: 2px solid #efaa54;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.btn--cart {
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: 50%;
+  background-color: #00a4e8;
+  -webkit-box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.btn--shop {
+  height: 4rem;
+  min-width: 12rem;
+  font-size: 1.6rem;
+  background-color: #00a4e8;
+  border-radius: 3rem;
+  -webkit-box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.btn--sign {
+  border: 2px solid #f16373;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.icon {
+  fill: #1f1f1f;
+  height: 3rem;
+  width: 3rem;
+}
+
+.icon:hover, .icon:focus {
+  outline: none;
+}
+
+.icon--cart {
+  height: 2rem;
+  width: 2rem;
+}
+
+.link {
+  color: #1f1f1f;
+}
+
+.link:link, .link:visited, .link:active, .link:focus, .link:hover {
+  outline: none;
+  text-decoration: none;
+}
+
+.link--logo {
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+}
+
+.link--logo:focus, .link--logo:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.link--text {
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+}
+
+.link--text:focus, .link--text:hover {
+  color: #c2d1ff;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.link:focus > button.btn--sign, .link:hover > button.btn--sign {
+  background-color: #f16373;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.link:focus > button.btn--account, .link:hover > button.btn--account {
+  background-color: #efaa54;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.link:focus > button.btn--cart, .link:focus button.btn--shop, .link:hover > button.btn--cart, .link:hover button.btn--shop {
+  background-color: #c2d1ff;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.link:focus > button.btn--cart > span, .link:focus button.btn--shop > span, .link:hover > button.btn--cart > span, .link:hover button.btn--shop > span {
+  color: #1f1f1f;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.list {
+  list-style: none;
+}
+
 .h1 {
   font-size: 3.6rem;
   line-height: 5rem;
@@ -5,6 +129,13 @@
 
 .span {
   font-size: 1.6rem;
+  color: #fafafa;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.p {
+  font-size: 1.2rem;
 }
 
 *,

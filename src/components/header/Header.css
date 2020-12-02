@@ -29,26 +29,6 @@
   position: relative;
 }
 
-.header__item__icon {
-  display: none;
-}
-
-.header__item__link {
-  -webkit-transition: all .2s ease-in;
-  transition: all .2s ease-in;
-}
-
-.header__item__link:focus, .header__item__link:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
-}
-
-.header__item__nav__link:hover, .header__item__nav__link:focus {
-  color: #c2d1ff;
-}
-
 .header__item__nav > ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -63,7 +43,6 @@
 }
 
 .header__item__span {
-  color: #1f1f1f;
   position: absolute;
   top: 50%;
   left: 50%;

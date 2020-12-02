@@ -4,24 +4,23 @@ import logo from "../../resources/logo/logo.png";
 
 //styles
 import "./Header.css";
-import icons from "../../resources/icons/icomoon/sprites.svg";
 
 const Header = () => {
     return (
         <header className="header">
             <div className="header__item">
-                <Link className="header__item__link link" to={"/"}>
+                <Link className="link--logo link" to={"/"}>
                     <img className="header__item__link__logo" src={logo} alt="logo" />
                 </Link>
                 <nav className="header__item__nav">
                     <ul>
                         <li className="list">
-                            <Link className="header__item__nav__link link" to={"/"}>
+                            <Link className="link--text link" to={"/"}>
                                 Categories
                             </Link>
                         </li>
                         <li className="list">
-                            <Link className="header__item__nav__link link" to={"/"}>
+                            <Link className="link--text link" to={"/"}>
                                 About
                             </Link>
                         </li>
@@ -31,33 +30,32 @@ const Header = () => {
             <div className="header__item">
                 <ul>
                     <li className="list">
-                        <Link className="header__item__user__link link__sign-in link" to={"/"}>
-                            <button className="btn--sign btn">
+                        <Link className="link--sign-in link" to={"/"}>
+                            <button className="btn--sign btn" tabIndex="-1">
                                 Sign In
                             </button>
                         </Link>
                     </li>
                     <li className="list">
-                        <Link className="header__item__user__link link__sign-in link" to={"/"}>
-                            <button className="btn--account btn">
+                        <Link className="link--sign-in link" to={"/"}>
+                            <button className="btn--account btn" tabIndex="-1">
                                 Account
                             </button>
                         </Link>
                     </li>
                     <li className="list">
-                        <Link className="header__item__user__link link__sign-out link" to={"/"}>
-                            <button className="btn--sign btn">
+                        <Link className="link--sign-out link" to={"/"}>
+                            <button className="btn--sign btn" tabIndex="-1">
                                 Sign Out
                             </button>
                         </Link>
                     </li>
                     <li className="list">
-                        <Link className="header__item__link link" to={"/"}>
-                            <button className="header__item__btn btn--cart btn">
-                                <svg className="header__item__icon icon--cart icon">
-                                    <use href={icons + "#icon-cart"} />
-                                </svg>
-                                <span className="header__item__span span">0</span>
+                        <Link className="link--cart link" to={"/"}>
+                            <button className="header__item__btn btn--cart btn" tabIndex="-1">
+                                <span className="header__item__span span">
+                                    0
+                                </span>
                             </button>
                         </Link>
                     </li>
