@@ -1,8 +1,8 @@
 .btn {
   border: none;
   background-color: transparent;
-  padding: 1rem;
-  font-size: 1.2rem;
+  padding: 0rem .5rem;
+  font-size: 1.3rem;
   border-radius: 15px;
 }
 
@@ -11,7 +11,7 @@
 }
 
 .btn--account {
-  border: 2px solid #efaa54;
+  border-bottom: 1px solid #00a4e8;
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
 }
@@ -40,7 +40,7 @@
 }
 
 .btn--sign {
-  border: 2px solid #f16373;
+  border-bottom: 1px solid #00a4e8;
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
 }
@@ -94,25 +94,13 @@
   transition: all .2s ease-in-out;
 }
 
-.link:focus > button.btn--sign, .link:hover > button.btn--sign {
-  background-color: #f16373;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
-}
-
-.link:focus > button.btn--account, .link:hover > button.btn--account {
-  background-color: #efaa54;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
-}
-
-.link:focus > button.btn--cart, .link:focus button.btn--shop, .link:hover > button.btn--cart, .link:hover button.btn--shop {
+.link:focus > button.btn--cart, .link:focus button.btn--shop, .link:focus button.btn--account, .link:focus button.btn--sign, .link:hover > button.btn--cart, .link:hover button.btn--shop, .link:hover button.btn--account, .link:hover button.btn--sign {
   background-color: #c2d1ff;
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
 }
 
-.link:focus > button.btn--cart > span, .link:focus button.btn--shop > span, .link:hover > button.btn--cart > span, .link:hover button.btn--shop > span {
+.link:focus > button.btn--cart > span, .link:focus button.btn--shop > span, .link:focus button.btn--account > span, .link:focus button.btn--sign > span, .link:hover > button.btn--cart > span, .link:hover button.btn--shop > span, .link:hover button.btn--account > span, .link:hover button.btn--sign > span {
   color: #1f1f1f;
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
@@ -135,7 +123,7 @@
 }
 
 .p {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
 *,
@@ -154,7 +142,7 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
+body, input, textarea, button {
   font-family: "Old Standard TT", Times New Roman, serif;
   font-size: 1.6rem;
   font-weight: 400;

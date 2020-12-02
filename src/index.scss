@@ -16,7 +16,7 @@ html {
 	scroll-behavior: smooth;
 }
 
-body {
+body, input, textarea, button {
 	font-family: $default-font-family;
     font-size: $default-font-size;
     font-weight: $default-font-weight;

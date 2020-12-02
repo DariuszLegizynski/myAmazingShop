@@ -30,21 +30,21 @@ const Header = () => {
             <div className="header__item">
                 <ul>
                     <li className="list">
-                        <Link className="link--sign-in link" to={"/"}>
+                        <Link className="link" to={"/"}>
                             <button className="btn--sign btn" tabIndex="-1">
                                 Sign In
                             </button>
                         </Link>
                     </li>
                     <li className="list">
-                        <Link className="link--sign-in link" to={"/"}>
+                        <Link className="link" to={"/"}>
                             <button className="btn--account btn" tabIndex="-1">
                                 Account
                             </button>
                         </Link>
                     </li>
                     <li className="list">
-                        <Link className="link--sign-out link" to={"/"}>
+                        <Link className="link" to={"/"}>
                             <button className="btn--sign btn" tabIndex="-1">
                                 Sign Out
                             </button>

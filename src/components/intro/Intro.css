@@ -59,6 +59,10 @@
   grid-row: 6;
 }
 
+.intro__title__white-bg__description__span {
+  color: #1f1f1f;
+}
+
 .intro__title__white-bg__shop {
   -ms-grid-column: 6;
   -ms-grid-column-span: 2;
