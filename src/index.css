@@ -3,6 +3,10 @@
   line-height: 5rem;
 }
 
+.span {
+  font-size: 1.6rem;
+}
+
 *,
 *::before,
 *::after {

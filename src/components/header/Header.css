@@ -25,6 +25,14 @@
           align-items: center;
 }
 
+.header__item__btn {
+  position: relative;
+}
+
+.header__item__icon {
+  display: none;
+}
+
 .header__item__link {
   -webkit-transition: all .2s ease-in;
   transition: all .2s ease-in;
@@ -52,6 +60,16 @@
 
 .header__item__nav > ul > li {
   margin: 1rem;
+}
+
+.header__item__span {
+  color: #1f1f1f;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 1;
 }
 
 .header__item > ul {

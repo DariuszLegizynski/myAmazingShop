@@ -53,10 +53,11 @@ const Header = () => {
                     </li>
                     <li className="list">
                         <Link className="header__item__link link" to={"/"}>
-                            <button className="header__item__btn btn">
-                                <svg className="header__item__icon icon">
+                            <button className="header__item__btn btn--cart btn">
+                                <svg className="header__item__icon icon--cart icon">
                                     <use href={icons + "#icon-cart"} />
                                 </svg>
+                                <span className="header__item__span span">0</span>
                             </button>
                         </Link>
                     </li>

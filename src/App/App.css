@@ -23,6 +23,15 @@
   transition: all .2s ease-in-out;
 }
 
+.btn--cart {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: #c2d1ff;
+  -webkit-box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
 .btn--shop {
   height: 4rem;
   min-width: 12rem;
@@ -61,6 +70,11 @@
 
 .icon:hover, .icon:focus {
   outline: none;
+}
+
+.icon--cart {
+  height: 2rem;
+  width: 2rem;
 }
 
 .link {

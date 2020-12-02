@@ -22,6 +22,14 @@
         }
     }
 
+    &--cart {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        background-color: $color-first-light;
+        box-shadow: 0 3px 12px rgba(0,0,0,.08);
+    }
+
     &--shop {
         height: 4rem;
         min-width: 12rem;
@@ -56,6 +64,11 @@
 
     &:hover, &:focus {
         outline: none;
+    }
+
+    &--cart {
+        height: 2rem;
+        width: 2rem;
     }
 }
 
