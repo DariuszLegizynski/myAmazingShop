@@ -104,8 +104,16 @@
 }
 
 .h1 {
-    font-size: $default-font-size-large;
+    font-size: $default-font-size-huge;
     line-height: 5rem;
+}
+
+.h2 {
+    font-size: $default-font-size-larger;
+}
+
+.h3 {
+    font-size: $default-font-size-large;
 }
 
 .span {

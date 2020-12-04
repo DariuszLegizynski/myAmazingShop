@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import { db } from "../../firebase/firebase";
 
 import Product from './Product';
@@ -29,6 +29,9 @@ const Productlist = () => {
 
     return (
         <section className="products">
+            <h2 className="products_h2 h2">
+                Our Poducts
+            </h2>
             {showData()}
         </section>
     )
