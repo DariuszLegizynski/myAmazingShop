@@ -14,14 +14,13 @@ const Productlist = () => {
 			console.log(products);
 			return products.map((el) => {
 				return (
-					<React.Fragment>
-						<Product
-							title={el.title}
-							subtitle={el.subtitle}
-							description={el.description}
-							imageOne={el.thumbnailImageOne}
-						/>
-					</React.Fragment>
+					<Product
+						key={el.id}
+						title={el.title}
+						subtitle={el.subtitle}
+						description={el.description}
+						imageOne={el.thumbnailImageOne}
+					/>
 				);
 			});
 		}

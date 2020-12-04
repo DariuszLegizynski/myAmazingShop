@@ -1,15 +1,7 @@
-import {
-	SHOW_PRODUCTS,
-	SET_LOADING,
-} from "../types";
+import { SHOW_PRODUCTS, SET_LOADING } from "../types";
 
-const productsReducer = (
-	state,
-	action
-) => {
-	switch (
-		action.type
-	) {
+const productsReducer = (state, action) => {
+	switch (action.type) {
 		case SET_LOADING:
 			return {
 				...state,
@@ -18,8 +10,7 @@ const productsReducer = (
 		case SHOW_PRODUCTS:
 			return {
 				...state,
-				products:
-					action.payload,
+				products: action.payload,
 				loading: false,
 			};
 		default:

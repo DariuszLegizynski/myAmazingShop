@@ -27,7 +27,12 @@ const ProductState = (props) => {
 
 	useEffect(() => {
 		db.collection("products").onSnapshot((snapshot) => {
-			showProduct(snapshot.docs.map((doc) => doc.data()));
+			showProduct(
+				snapshot.docs.map((doc) => ({
+					id: doc.id,
+					...doc.data(),
+				}))
+			);
 		});
 	}, []);
 
