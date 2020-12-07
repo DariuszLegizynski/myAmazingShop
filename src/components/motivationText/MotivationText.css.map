@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,MAAM,CAAC;EACN,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,WAAW,EAAE,MAAM;EACnB,eAAe,EAAE,MAAM;CAUvB;;AARC,AAAD,UAAK,CAAC;EACL,KAAK,ECRO,OAAO;CDSnB;;AAEA,AAAD,YAAO,CAAC;EACP,OAAO,EAAE,UAAU;EACnB,KAAK,ECLO,OAAO;CDMnB",
+    "sources": [
+        "MotivationText.scss",
+        "../../styles/_variables.scss"
+    ],
+    "names": [],
+    "file": "MotivationText.css"
+}

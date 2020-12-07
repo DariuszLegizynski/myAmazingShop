@@ -1,0 +1,26 @@
+@import "../../styles/typography";
+
+.about {
+	padding: 3rem;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items: center;
+	justify-items: center;
+
+	&__info {
+		display: grid;
+		grid-template-rows: 1fr 1fr;
+		align-items: center;
+		justify-items: center;
+
+		&__p {
+			padding: 0 6rem;
+			font-size: $default-font-size-huge;
+			line-height: 4.8rem;
+		}
+
+		&__link {
+			padding-top: 8rem;
+		}
+	}
+}

@@ -1,6 +1,8 @@
 import React from "react";
+import About from "../../components/about/About";
 import Header from "../../components/header/Header";
 import Intro from "../../components/intro/Intro";
+import MotivationText from "../../components/motivationText/MotivationText";
 import Productlist from "../../components/products/ProductList/ProductList";
 
 // style
@@ -12,6 +14,8 @@ const Home = () => {
 			<Header />
 			<Intro />
 			<Productlist />
+			<MotivationText />
+			<About />
 		</div>
 	);
 };

@@ -1,7 +1,7 @@
 @import "../../../styles/variables";
 
 .product {
-	padding: 0 4rem;
+	padding: 1.5rem 4rem;
 
 	&__link {
 		&:focus-within &__image-wrapper__hover-image {

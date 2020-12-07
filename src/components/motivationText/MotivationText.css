@@ -1,0 +1,25 @@
+.motto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.motto__h2 {
+  color: #00a4e8;
+}
+
+.motto__span {
+  padding: 2rem 40rem;
+  color: #1f1f1f;
+}
+/*# sourceMappingURL=MotivationText.css.map */

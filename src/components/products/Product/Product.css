@@ -1,5 +1,5 @@
 .product {
-  padding: 0 4rem;
+  padding: 1.5rem 4rem;
 }
 
 .product__link:focus-within .product__link__image-wrapper__hover-image {
