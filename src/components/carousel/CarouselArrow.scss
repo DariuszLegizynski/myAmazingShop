@@ -1,0 +1,26 @@
+@import "../../styles/variables";
+
+.carousel {
+	&:focus > svg {
+		transform: scale(1.2);
+		transition: all 0.2s ease-in-out;
+		fill: $color-first-dark;
+		outline: none;
+	}
+
+	&__icon {
+		fill: $color-first;
+		transition: all 0.2s ease-in-out;
+
+		&:hover {
+			transform: scale(1.2);
+			transition: all 0.2s ease-in-out;
+			fill: $color-first-dark;
+		}
+	}
+}
+
+.slick-next:before,
+.slick-prev:before {
+	display: none;
+}

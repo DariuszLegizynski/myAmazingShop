@@ -51,6 +51,22 @@ Single-colored icons can be modified like so:
   width: 1.0714285714285714em;
 }
 
+.icon-chevron-circle-left {
+  width: 0.8571428571428571em;
+}
+
+.icon-chevron-circle-right {
+  width: 0.8571428571428571em;
+}
+
+.icon-chevron-circle-up {
+  width: 0.8571428571428571em;
+}
+
+.icon-chevron-circle-down {
+  width: 0.8571428571428571em;
+}
+
 .icon-cc-visa {
   width: 1.2857142857142856em;
 }

@@ -1,30 +1,43 @@
 import React, { useContext } from "react";
 import _ from "lodash";
 
+//styles
 import "./ProductList.css";
+import iconSprites from "../../../resources/icons/icomoon/sprites.svg";
 
 //slick-slider
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-// component
+// components
 import Product from "../Product/Product";
+import CarouselArrow from "../../carousel/CarouselArrow";
 
+//context
 import ProductsContext from "../../../context/products/productsContext";
 
 const ProductList = () => {
 	const { products } = useContext(ProductsContext);
 
+	const carouselArrowLeft =
+		iconSprites + "#icon-chevron-circle-left";
+	const carouselArrowRight =
+		iconSprites + "#icon-chevron-circle-right";
+
 	const settings = {
+		arrows: true,
 		dots: true,
 		infinite: false,
+		initialSlide: 0,
 		lazyLoad: true,
-		speed: 500,
 		slidesToShow: 4,
 		slidesToScroll: 1,
-		initialSlide: 0,
+		speed: 500,
 		swipeToSlide: true,
+		variableWidth: true,
+		nextArrow: <CarouselArrow icon={carouselArrowRight} />,
+		prevArrow: <CarouselArrow icon={carouselArrowLeft} />,
 		responsive: [
 			{
 				breakpoint: 1024,

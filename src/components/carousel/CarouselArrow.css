@@ -1,0 +1,28 @@
+.carousel:focus > svg {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  fill: #033587;
+  outline: none;
+}
+
+.carousel__icon {
+  fill: #00a4e8;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.carousel__icon:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  fill: #033587;
+}
+
+.slick-next:before,
+.slick-prev:before {
+  display: none;
+}
+/*# sourceMappingURL=CarouselArrow.css.map */

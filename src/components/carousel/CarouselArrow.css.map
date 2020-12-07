@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AACC,SADQ,AACP,MAAM,GAAG,GAAG,CAAC;EACb,SAAS,EAAE,UAAU;EACrB,UAAU,EAAE,oBAAoB;EAChC,IAAI,ECJa,OAAO;EDKxB,OAAO,EAAE,IAAI;CACb;;AAEA,AAAD,eAAO,CAAC;EACP,IAAI,ECVQ,OAAO;EDWnB,UAAU,EAAE,oBAAoB;CAOhC;;AATA,AAIA,eAJM,AAIL,MAAM,CAAC;EACP,SAAS,EAAE,UAAU;EACrB,UAAU,EAAE,oBAAoB;EAChC,IAAI,ECfY,OAAO;CDgBvB;;AAIH,AAAA,WAAW,AAAA,OAAO;AAClB,WAAW,AAAA,OAAO,CAAC;EAClB,OAAO,EAAE,IAAI;CACb",
+    "sources": [
+        "CarouselArrow.scss",
+        "../../styles/_variables.scss"
+    ],
+    "names": [],
+    "file": "CarouselArrow.css"
+}

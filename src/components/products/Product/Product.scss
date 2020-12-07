@@ -1,2 +1,33 @@
 .product {
+	margin: 0 3rem;
+
+	&__image-wrapper {
+		position: relative;
+		outline: none;
+
+		& &__hover-image {
+			position: absolute;
+			left: 0;
+			top: 0;
+			visibility: hidden;
+			opacity: 0;
+			transition: visibility 0.3s, opacity 0.3s linear;
+		}
+
+		&:hover &__hover-image,
+		&:focus &__hover-image {
+			visibility: visible;
+			opacity: 1;
+			transition: visibility 0s, opacity 0.3s linear;
+		}
+	}
+
+	&__img {
+		max-width: 100%;
+		max-height: 100%;
+	}
+
+	&__h3 {
+		padding-top: 1.4rem;
+	}
 }
