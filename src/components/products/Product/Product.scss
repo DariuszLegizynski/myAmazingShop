@@ -1,24 +1,43 @@
+@import "../../../styles/variables";
+
 .product {
-	margin: 0 3rem;
+	padding: 0 4rem;
 
-	&__image-wrapper {
-		position: relative;
-		outline: none;
-
-		& &__hover-image {
-			position: absolute;
-			left: 0;
-			top: 0;
-			visibility: hidden;
-			opacity: 0;
-			transition: visibility 0.3s, opacity 0.3s linear;
-		}
-
-		&:hover &__hover-image,
-		&:focus &__hover-image {
+	&__link {
+		&:focus-within &__image-wrapper__hover-image {
 			visibility: visible;
 			opacity: 1;
 			transition: visibility 0s, opacity 0.3s linear;
+			-webkit-box-shadow: 0rem 0rem 1rem 0.3rem
+				$color-first;
+			-moz-box-shadow: 0rem 0rem 1rem 0.3rem $color-first;
+			box-shadow: 0rem 0rem 1rem 0.3rem $color-first;
+		}
+
+		&__image-wrapper {
+			position: relative;
+			outline: none;
+
+			& &__hover-image {
+				position: absolute;
+				left: 0;
+				top: 0;
+				visibility: hidden;
+				opacity: 0;
+				transition: visibility 0.3s, opacity 0.3s linear;
+			}
+
+			&:focus &__hover-image,
+			&:hover &__hover-image {
+				visibility: visible;
+				opacity: 1;
+				transition: visibility 0s, opacity 0.3s linear;
+				-webkit-box-shadow: 0rem 0rem 1rem 0.3rem
+					$color-first;
+				-moz-box-shadow: 0rem 0rem 1rem 0.3rem
+					$color-first;
+				box-shadow: 0rem 0rem 1rem 0.3rem $color-first;
+			}
 		}
 	}
 

@@ -1,11 +1,10 @@
 import "./CarouselArrow.css";
 
 const CarouselArrow = ({ icon, style, onClick, className }) => {
-	const myClassName = " carousel";
 	return (
 		<div
 			tabIndex="0"
-			className={className + myClassName}
+			className={`${className} carousel`}
 			style={{
 				...style,
 				display: "block",
@@ -13,6 +12,7 @@ const CarouselArrow = ({ icon, style, onClick, className }) => {
 				height: "3rem",
 			}}
 			onClick={onClick}
+			onKeyPress={onClick}
 		>
 			<svg className="carousel__icon icon">
 				<use href={icon} />
