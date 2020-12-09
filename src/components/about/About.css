@@ -1,5 +1,5 @@
 .about {
-  padding: 3rem;
+  padding: 8rem 3rem;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
@@ -8,6 +8,7 @@
       -ms-flex-align: center;
           align-items: center;
   justify-items: center;
+  background-color: #fafafa;
 }
 
 .about__info {
@@ -28,6 +29,18 @@
 }
 
 .about__info__link {
-  padding-top: 8rem;
+  margin-top: 8rem;
+}
+
+.about__info__link__btn {
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  border-bottom: 1px solid #00a4e8;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.about__info__link__btn__span {
+  color: #1f1f1f;
 }
 /*# sourceMappingURL=About.css.map */

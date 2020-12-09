@@ -1,11 +1,13 @@
+@import "../../styles/variables";
 @import "../../styles/typography";
 
 .about {
-	padding: 3rem;
+	padding: 8rem 3rem;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	align-items: center;
 	justify-items: center;
+	background-color: $color-white;
 
 	&__info {
 		display: grid;
@@ -20,7 +22,18 @@
 		}
 
 		&__link {
-			padding-top: 8rem;
+			margin-top: 8rem;
+
+			&__btn {
+				padding: 1rem 2rem;
+				border-radius: 30px;
+				border-bottom: 1px solid #00a4e8;
+				transition: all 0.2s ease-in-out;
+
+				&__span {
+					color: $color-black;
+				}
+			}
 		}
 	}
 }

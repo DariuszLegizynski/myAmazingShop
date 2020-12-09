@@ -1,127 +1,144 @@
 @import "./variables";
 
 .btn {
-    border: none;
-    background-color: transparent;
-    padding: 0rem .5rem;
-    font-size: $default-font-size-small;
-    border-radius: 15px;
+	border: none;
+	background-color: transparent;
+	padding: 0rem 0.5rem;
+	font-size: $default-font-size-small;
+	border-radius: 15px;
+	cursor: pointer;
 
-    &:hover, &:focus, &:active {
-        outline: none;
-    }
+	&:hover,
+	&:focus,
+	&:active {
+		outline: none;
+	}
 
-    &--account {
-        border-bottom: 1px solid $color-first;
-        transition: all .2s ease-in-out;
-    }
+	&--account {
+		border-bottom: 1px solid $color-first;
+		transition: all 0.2s ease-in-out;
+	}
 
-    &--cart {
-        width: 3.6rem;
-        height: 3.6rem;
-        border-radius: 50%;
-        background-color: $color-first;
-        box-shadow: 0 3px 12px rgba(0,0,0,.08);
-        
-        transition: all .2s ease-in-out;
-    }
+	&--cart {
+		width: 3.6rem;
+		height: 3.6rem;
+		border-radius: 50%;
+		background-color: $color-first;
+		box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
 
-    &--shop {
-        height: 4rem;
-        min-width: 12rem;
-        font-size: $default-font-size-normal;
-        background-color: $color-first;
-        border-radius: 3rem;
-        box-shadow: 0 3px 12px rgba(0,0,0,.08);
+		transition: all 0.2s ease-in-out;
+	}
 
-        transition: all .2s ease-in-out;
-    }
+	&--shop {
+		height: 4rem;
+		min-width: 12rem;
+		font-size: $default-font-size-normal;
+		background-color: $color-first;
+		border-radius: 3rem;
+		box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
 
-    &--sign {
-        border-bottom: 1px solid $color-first;
+		transition: all 0.2s ease-in-out;
+	}
 
-        transition: all .2s ease-in-out;
-    }
+	&--sign {
+		border-bottom: 1px solid $color-first;
+
+		transition: all 0.2s ease-in-out;
+	}
 }
 
 .icon {
-    fill: $color-black;
-    height: 3rem;
-    width: 3rem;
+	fill: $color-black;
+	height: 3rem;
+	width: 3rem;
 
-    &:hover, &:focus {
-        outline: none;
-    }
+	&:hover,
+	&:focus {
+		outline: none;
+	}
 
-    &--cart {
-        height: 2rem;
-        width: 2rem;
-    }
+	&--cart {
+		height: 2rem;
+		width: 2rem;
+	}
 }
 
 .link {
-    color: $color-black;
+	color: $color-black;
+	transition: all 0.2s ease-in;
 
-    &:link, &:visited, &:active, &:focus, &:hover {
-        outline: none;
-        text-decoration: none;
-    }
+	&:link,
+	&:visited,
+	&:active {
+		outline: none;
+		text-decoration: none;
+	}
 
-    &--logo {
-        transition: all .2s ease-in;
+	&--logo {
+		transition: all 0.2s ease-in;
 
-        &:focus, &:hover{
-            transform: scale(1.2);
-            transition: all .2s ease-in-out;
-        }
-    }
+		&:focus,
+		&:hover {
+			transform: scale(1.2);
+			transition: all 0.2s ease-in-out;
+		}
+	}
 
-    &--text {
-        transition: all .2s ease-in;
+	&:focus,
+	&:hover {
+		outline: none;
+		text-decoration: none;
+		color: $color-first-light;
+		transform: scale(1.2);
+		transition: all 0.2s ease-in-out;
 
-        &:focus, &:hover {
-            color: $color-first-light;
-            transform: scale(1.2);
-            transition: all .2s ease-in-out;
-        }
-    }
+		& > button.btn--cart,
+		button.btn--shop,
+		button.btn--account,
+		button.btn--sign,
+		button.btn {
+			background-color: $color-first-light;
+			transition: all 0.2s ease-in-out;
 
-    &:focus, &:hover {
-        & > button.btn--cart, button.btn--shop, button.btn--account, button.btn--sign {
-            background-color: $color-first-light;
-            transition: all .2s ease-in-out;
-
-            & > span {
-                color: $color-black;
-                transition: all .2s ease-in-out;
-            }
-        }
-    } 
+			& > span {
+				color: $color-black;
+				transition: all 0.2s ease-in-out;
+			}
+		}
+	}
 }
 
 .list {
-    list-style: none;
+	list-style: none;
 }
 
 .h1 {
-    font-size: $default-font-size-huge;
-    line-height: 5rem;
+	font-size: $default-font-size-huge;
+	line-height: 5rem;
 }
 
 .h2 {
-    font-size: $default-font-size-larger;
+	font-size: $default-font-size-larger;
 }
 
 .h3 {
-    font-size: $default-font-size-large;
+	font-size: $default-font-size-large;
+}
+
+.hr {
+	color: $color-black;
+	width: 60%;
+	background-color: $color-white;
+	border: none;
+	margin: 0rem auto 0rem auto;
 }
 
 .span {
-    font-size: $default-font-size-normal;
-    color: $color-white;
-    transition: all .2s ease-in-out;
+	font-size: $default-font-size-normal;
+	color: $color-white;
+	transition: all 0.2s ease-in-out;
 }
 
 .p {
-    font-size: $default-font-size-small;
+	font-size: $default-font-size-small;
 }

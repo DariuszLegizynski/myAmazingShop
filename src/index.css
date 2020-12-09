@@ -1,9 +1,10 @@
 .btn {
   border: none;
   background-color: transparent;
-  padding: 0rem .5rem;
+  padding: 0rem 0.5rem;
   font-size: 1.3rem;
   border-radius: 15px;
+  cursor: pointer;
 }
 
 .btn:hover, .btn:focus, .btn:active {
@@ -12,8 +13,8 @@
 
 .btn--account {
   border-bottom: 1px solid #00a4e8;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .btn--cart {
@@ -23,8 +24,8 @@
   background-color: #00a4e8;
   -webkit-box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
           box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .btn--shop {
@@ -35,14 +36,14 @@
   border-radius: 3rem;
   -webkit-box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
           box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .btn--sign {
   border-bottom: 1px solid #00a4e8;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .icon {
@@ -62,48 +63,63 @@
 
 .link {
   color: #1f1f1f;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
 }
 
-.link:link, .link:visited, .link:active, .link:focus, .link:hover {
+.link:link, .link:visited, .link:active {
   outline: none;
   text-decoration: none;
 }
 
 .link--logo {
-  -webkit-transition: all .2s ease-in;
-  transition: all .2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
 }
 
 .link--logo:focus, .link--logo:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
-.link--text {
-  -webkit-transition: all .2s ease-in;
-  transition: all .2s ease-in;
-}
-
-.link--text:focus, .link--text:hover {
+.link:focus, .link:hover {
+  outline: none;
+  text-decoration: none;
   color: #c2d1ff;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
-.link:focus > button.btn--cart, .link:focus button.btn--shop, .link:focus button.btn--account, .link:focus button.btn--sign, .link:hover > button.btn--cart, .link:hover button.btn--shop, .link:hover button.btn--account, .link:hover button.btn--sign {
+.link:focus > button.btn--cart,
+.link:focus button.btn--shop,
+.link:focus button.btn--account,
+.link:focus button.btn--sign,
+.link:focus button.btn, .link:hover > button.btn--cart,
+.link:hover button.btn--shop,
+.link:hover button.btn--account,
+.link:hover button.btn--sign,
+.link:hover button.btn {
   background-color: #c2d1ff;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
-.link:focus > button.btn--cart > span, .link:focus button.btn--shop > span, .link:focus button.btn--account > span, .link:focus button.btn--sign > span, .link:hover > button.btn--cart > span, .link:hover button.btn--shop > span, .link:hover button.btn--account > span, .link:hover button.btn--sign > span {
+.link:focus > button.btn--cart > span,
+.link:focus button.btn--shop > span,
+.link:focus button.btn--account > span,
+.link:focus button.btn--sign > span,
+.link:focus button.btn > span, .link:hover > button.btn--cart > span,
+.link:hover button.btn--shop > span,
+.link:hover button.btn--account > span,
+.link:hover button.btn--sign > span,
+.link:hover button.btn > span {
   color: #1f1f1f;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .list {
@@ -123,11 +139,19 @@
   font-size: 2.2rem;
 }
 
+.hr {
+  color: #1f1f1f;
+  width: 60%;
+  background-color: #fafafa;
+  border: none;
+  margin: 0rem auto 0rem auto;
+}
+
 .span {
   font-size: 1.6rem;
   color: #fafafa;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .p {
@@ -155,7 +179,7 @@ body, input, textarea, button {
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 2.4rem;
-  background-color: #EAEDED;
+  background-color: #eaeded;
 }
 
 *::-moz-selection {

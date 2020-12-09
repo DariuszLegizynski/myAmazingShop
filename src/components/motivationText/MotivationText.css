@@ -12,10 +12,13 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding-top: 4rem;
+  padding-bottom: 8rem;
 }
 
 .motto__h2 {
   color: #00a4e8;
+  padding: 2rem 0;
 }
 
 .motto__span {

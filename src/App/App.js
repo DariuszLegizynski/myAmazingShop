@@ -9,16 +9,40 @@ import Item from "../layout/item/Item";
 
 //styles
 import "./App.css";
+import Personal from "../layout/personal/Personal";
+import Account from "../layout/account/Account";
 
 function App() {
 	return (
 		<div className="App">
 			<ProductState>
 				<Switch>
-					<Route path={"/"} component={Home} />
-					<Route path={"/shop"} component={Shop} />
-					<Route path={"/sign"} component={Sign} />
-					<Route path={"/item"} component={Item} />
+					<Route exact path={"/"} component={Home} />
+					<Route
+						exact
+						path={"/shop"}
+						component={Shop}
+					/>
+					<Route
+						exact
+						path={"/sign"}
+						component={Sign}
+					/>
+					<Route
+						exact
+						path={"/item"}
+						component={Item}
+					/>
+					<Route
+						exact
+						path={"/personal"}
+						component={Personal}
+					/>
+					<Route
+						exact
+						path={"/account"}
+						component={Account}
+					/>
 					<Redirect to={"/"} />
 				</Switch>
 			</ProductState>

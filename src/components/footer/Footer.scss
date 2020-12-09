@@ -1,0 +1,27 @@
+@import "../../styles/variables";
+@import "../../styles/typography";
+
+.footer {
+	background-color: $color-background;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	column-gap: 8rem;
+	padding: 8rem 20rem;
+
+	&__column {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		&__link {
+			&:focus,
+			&:hover {
+			}
+
+			&__span {
+				color: $color-black;
+				font-size: $default-font-size-small;
+			}
+		}
+	}
+}
