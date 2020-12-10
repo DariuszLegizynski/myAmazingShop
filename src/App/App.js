@@ -4,7 +4,7 @@ import ProductState from "../context/products/ProductsState";
 //layout
 import Home from "../layout/home/Home";
 import Shop from "../layout/shop/Shop";
-import Sign from "../layout/sign/Sign";
+import SignIn from "../layout/signIn/SignIn";
 import Item from "../layout/item/Item";
 
 //styles
@@ -25,8 +25,8 @@ function App() {
 					/>
 					<Route
 						exact
-						path={"/sign"}
-						component={Sign}
+						path={"/signIn"}
+						component={SignIn}
 					/>
 					<Route
 						exact

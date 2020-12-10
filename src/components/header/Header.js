@@ -37,7 +37,7 @@ const Header = () => {
 			<div className="header__item">
 				<ul>
 					<li className="list">
-						<Link className="link" to={"/sign"}>
+						<Link className="link" to={"/signIn"}>
 							<button
 								className="btn--sign btn"
 								tabIndex="-1"

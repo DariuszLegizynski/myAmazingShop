@@ -1,0 +1,48 @@
+@import "../../styles/variables";
+@import "../../styles/typography";
+
+.shop {
+	&__bg-image {
+		background-image: url("https://i.imgur.com/FdDO8qR.jpg?3");
+		background-color: $color-background;
+		background-repeat: no-repeat;
+		background-size: cover;
+		padding: 20rem;
+		position: relative;
+
+		&__h1 {
+			position: absolute;
+			left: 45%;
+			top: 30%;
+		}
+	}
+
+	&__wrapper {
+		padding: 5rem 12rem;
+
+		&__items {
+			display: grid;
+			grid-template-columns: repeat(4, auto);
+
+			&__card {
+				display: flex;
+				flex-direction: column;
+
+				&__btn {
+					height: 4rem;
+					min-width: 12rem;
+					font-size: $default-font-size-normal;
+					background-color: $color-second;
+					border-radius: 3rem;
+					box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+
+					transition: all 0.2s ease-in-out;
+				}
+			}
+		}
+
+		&__p {
+			padding: 3rem 6rem;
+		}
+	}
+}
