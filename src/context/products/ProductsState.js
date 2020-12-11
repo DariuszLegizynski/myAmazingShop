@@ -41,7 +41,6 @@ const ProductState = (props) => {
 			value={{
 				products: state.products,
 				loading: state.loading,
-				showProduct,
 			}}
 		>
 			{props.children}

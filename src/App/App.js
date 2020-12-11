@@ -1,5 +1,4 @@
 import { Route, Switch, Redirect } from "react-router-dom";
-import ProductState from "../context/products/ProductsState";
 
 //layout
 import Home from "../layout/home/Home";
@@ -15,37 +14,27 @@ import Account from "../layout/account/Account";
 function App() {
 	return (
 		<div className="App">
-			<ProductState>
-				<Switch>
-					<Route exact path={"/"} component={Home} />
-					<Route
-						exact
-						path={"/shop"}
-						component={Shop}
-					/>
-					<Route
-						exact
-						path={"/signIn"}
-						component={SignIn}
-					/>
-					<Route
-						exact
-						path={"/item"}
-						component={Item}
-					/>
-					<Route
-						exact
-						path={"/personal"}
-						component={Personal}
-					/>
-					<Route
-						exact
-						path={"/account"}
-						component={Account}
-					/>
-					<Redirect to={"/"} />
-				</Switch>
-			</ProductState>
+			<Switch>
+				<Route exact path={"/"} component={Home} />
+				<Route exact path={"/shop"} component={Shop} />
+				<Route
+					exact
+					path={"/signIn"}
+					component={SignIn}
+				/>
+				<Route exact path={"/item"} component={Item} />
+				<Route
+					exact
+					path={"/personal"}
+					component={Personal}
+				/>
+				<Route
+					exact
+					path={"/account"}
+					component={Account}
+				/>
+				<Redirect to={"/"} />
+			</Switch>
 		</div>
 	);
 }
