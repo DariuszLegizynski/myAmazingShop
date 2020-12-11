@@ -32,18 +32,21 @@
 				margin-bottom: 8rem;
 
 				&__btn {
-					height: 3rem;
+					height: 2.3rem;
 					max-width: 8em;
 					font-size: $default-font-size-small;
-					border: 2px solid $color-first-light;
-					border-radius: 0.5rem;
+					border: 1px solid $color-second;
+					border-bottom: 4px solid $color-second;
+
+					// border-radius: 0.5rem;
 					box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
 
 					transition: all 0.2s ease-in-out;
 
 					&:hover,
 					&:focus {
-						background-color: $color-first-light;
+						background-color: $color-second;
+						// border-radius: 0.5rem;
 					}
 				}
 			}
@@ -56,8 +59,6 @@
 	}
 
 	&__center-div {
-		// width: 100%;
-
 		&__link {
 			text-align: center;
 			display: block;
