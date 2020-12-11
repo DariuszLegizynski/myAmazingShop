@@ -54,10 +54,17 @@ const Shop = () => {
 					{showProducts()}
 				</div>
 			</div>
+			<div className="shop__center-div">
+				<Link
+					className="shop__center-div__link link"
+					to={"/"}
+				>
+					<h3 className="shop__center-div__link__h3 h3">
+						&larr; Back
+					</h3>
+				</Link>
+			</div>
 
-			<Link to={"/"}>
-				<h3 className="h3">BACK</h3>
-			</Link>
 			<Shipment />
 			<Footer />
 		</section>

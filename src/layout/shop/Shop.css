@@ -14,7 +14,7 @@
 }
 
 .shop__wrapper {
-  padding: 5rem 12rem;
+  padding: 5rem 8rem;
 }
 
 .shop__wrapper__items {
@@ -58,6 +58,22 @@
 }
 
 .shop__wrapper__p {
-  padding: 3rem 6rem;
+  padding: 1rem 6rem;
+  font-size: 1.6rem;
+}
+
+.shop__center-div__link {
+  text-align: center;
+  display: block;
+  margin: 0 auto 10rem auto;
+}
+
+.shop__center-div__link:hover, .shop__center-div__link:focus {
+  -webkit-transform: none;
+          transform: none;
+}
+
+.shop__center-div__link__h3 {
+  text-transform: uppercase;
 }
 /*# sourceMappingURL=Shop.css.map */

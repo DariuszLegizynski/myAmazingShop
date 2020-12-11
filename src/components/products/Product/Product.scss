@@ -18,10 +18,6 @@
 			position: relative;
 			outline: none;
 
-			&__image {
-				background-color: orangered;
-			}
-
 			& &__hover-image {
 				position: absolute;
 				left: 0;
@@ -47,5 +43,6 @@
 
 	&__h3 {
 		padding-top: 1.4rem;
+		max-width: 16rem;
 	}
 }

@@ -16,10 +16,6 @@
   outline: none;
 }
 
-.product__link__image-wrapper__image {
-  background-color: orangered;
-}
-
 .product__link__image-wrapper .product__link__image-wrapper__hover-image {
   position: absolute;
   left: 0;
@@ -42,5 +38,6 @@
 
 .product__h3 {
   padding-top: 1.4rem;
+  max-width: 16rem;
 }
 /*# sourceMappingURL=Product.css.map */

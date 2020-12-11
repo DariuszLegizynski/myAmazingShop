@@ -18,7 +18,7 @@
 	}
 
 	&__wrapper {
-		padding: 5rem 12rem;
+		padding: 5rem 8rem;
 
 		&__items {
 			display: grid;
@@ -50,7 +50,27 @@
 		}
 
 		&__p {
-			padding: 3rem 6rem;
+			padding: 1rem 6rem;
+			font-size: $default-font-size-normal;
+		}
+	}
+
+	&__center-div {
+		// width: 100%;
+
+		&__link {
+			text-align: center;
+			display: block;
+			margin: 0 auto 10rem auto;
+
+			&:hover,
+			&:focus {
+				transform: none;
+			}
+
+			&__h3 {
+				text-transform: uppercase;
+			}
 		}
 	}
 }
