@@ -1,11 +1,16 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
-
-import logo from "../../resources/logo/logo.png";
 
 //styles
 import "./Header.css";
+import logo from "../../resources/logo/logo.png";
+
+// context
+import BasketContext from "../../context/basket/basketContext";
 
 const Header = () => {
+	const { basket } = useContext(BasketContext);
+
 	return (
 		<header className="header">
 			<div className="header__item">
@@ -69,14 +74,14 @@ const Header = () => {
 					<li className="list">
 						<Link
 							className="link--cart link"
-							to={"/"}
+							to={"/account"}
 						>
 							<button
 								className="header__item__btn btn--cart btn"
 								tabIndex="-1"
 							>
 								<span className="header__item__span span">
-									0
+									{basket.length}
 								</span>
 							</button>
 						</Link>

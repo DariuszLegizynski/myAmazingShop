@@ -1,5 +1,4 @@
 import { useReducer } from "react";
-// import { db } from "../../firebase/firebase";
 import BasketContext from "./basketContext";
 import basketReducer from "./basketReducer";
 import {

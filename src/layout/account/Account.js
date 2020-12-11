@@ -10,7 +10,6 @@ import { Link } from "react-router-dom";
 
 const Account = () => {
 	const { basket } = useContext(BasketContext);
-	console.log(basket);
 
 	const showItems = () => {
 		if (!_.isEmpty(basket)) {
