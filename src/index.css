@@ -174,12 +174,19 @@ html {
   scroll-behavior: smooth;
 }
 
-body, input, textarea, button {
+body,
+input,
+textarea,
+button {
   font-family: "Old Standard TT", Times New Roman, serif;
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 2.4rem;
   background-color: #eaeded;
+}
+
+img {
+  display: block;
 }
 
 *::-moz-selection {

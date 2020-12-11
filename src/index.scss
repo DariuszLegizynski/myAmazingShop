@@ -16,14 +16,21 @@ html {
 	scroll-behavior: smooth;
 }
 
-body, input, textarea, button {
+body,
+input,
+textarea,
+button {
 	font-family: $default-font-family;
-    font-size: $default-font-size;
-    font-weight: $default-font-weight;
+	font-size: $default-font-size;
+	font-weight: $default-font-weight;
 	line-height: $default-line-height;
 	background-color: $color-background;
 }
 
+img {
+	display: block;
+}
+
 *::selection {
 	background: $color-first-dark;
-  }
+}

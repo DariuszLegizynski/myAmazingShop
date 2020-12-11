@@ -24,19 +24,27 @@
 			display: grid;
 			grid-template-columns: repeat(4, auto);
 
-			&__card {
+			&__card-container {
 				display: flex;
 				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				margin-bottom: 8rem;
 
 				&__btn {
-					height: 4rem;
-					min-width: 12rem;
-					font-size: $default-font-size-normal;
-					background-color: $color-second;
-					border-radius: 3rem;
+					height: 3rem;
+					max-width: 8em;
+					font-size: $default-font-size-small;
+					border: 2px solid $color-first-light;
+					border-radius: 0.5rem;
 					box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
 
 					transition: all 0.2s ease-in-out;
+
+					&:hover,
+					&:focus {
+						background-color: $color-first-light;
+					}
 				}
 			}
 		}

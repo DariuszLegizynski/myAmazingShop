@@ -23,7 +23,7 @@ const Shop = () => {
 		if (!_.isEmpty(products)) {
 			return products.map((el) => {
 				return (
-					<div className="shop__wrapper__items__card">
+					<div className="shop__wrapper__items__card-container">
 						<Product
 							key={el.id}
 							title={el.title}
@@ -31,7 +31,7 @@ const Shop = () => {
 							imageOne={el.thumbnailImageOne}
 							imageTwo={el.thumbnailImageTwo}
 						/>
-						<button className="shop__wrapper__items__card__btn btn">
+						<button className="shop__wrapper__items__card-container__btn btn">
 							Add to basket
 						</button>
 					</div>
