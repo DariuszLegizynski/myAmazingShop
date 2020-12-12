@@ -55,6 +55,18 @@ const Shop = () => {
 		}
 	};
 
+	const showProductsLength = () => {
+		if (!_.isEmpty(products)) {
+			return (
+				<p className="shop__wrapper__p p">
+					{_.size(products)} articels found
+				</p>
+			);
+		} else {
+			return <p>loading...</p>;
+		}
+	};
+
 	return (
 		<section className="shop">
 			<Header />
@@ -64,7 +76,7 @@ const Shop = () => {
 				</h1>
 			</div>
 			<div className="shop__wrapper">
-				<p className="shop__wrapper__p p">11 articles</p>
+				{showProductsLength()}
 				<div className="shop__wrapper__items">
 					{showProducts()}
 				</div>
