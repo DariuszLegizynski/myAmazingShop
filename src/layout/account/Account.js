@@ -8,6 +8,9 @@ import shortid from "shortid";
 import BasketContext from "../../context/basket/basketContext";
 import { Link } from "react-router-dom";
 
+// styles
+import "./Account.css";
+
 const Account = () => {
 	const { basket } = useContext(BasketContext);
 
@@ -15,13 +18,24 @@ const Account = () => {
 		if (!_.isEmpty(basket)) {
 			return basket.map((el) => {
 				return (
-					<div key={shortid.generate()}>
-						<p>{el.title}</p>
-						<p>{el.price}</p>
+					<div
+						className="cart__wrapper__column__basket"
+						key={shortid.generate()}
+					>
 						<img
+							className="cart__wrapper__column__basket__image"
 							src={el.thumbnail}
 							alt="product's thumbnail"
 						/>
+						<div className="cart__wrapper__column__basket__text">
+							<p className="cart__wrapper__column__basket__text__title">
+								{el.title}
+							</p>
+							<p className="cart__wrapper__column__basket__text__price">
+								<small>€</small>
+								{el.price}
+							</p>
+						</div>
 					</div>
 				);
 			});
@@ -30,10 +44,12 @@ const Account = () => {
 
 	return (
 		<div className="cart">
-			<h1 className="h3">Cart</h1>
+			<h1 className="cart__h1 h1">Cart</h1>
 			<div className="cart__wrapper">
 				<div className="cart__wrapper__column">
-					<h2 className="h2">Items</h2>
+					<h2 className="cart__wrapper__column__h2 h2">
+						Items
+					</h2>
 					{showItems()}
 				</div>
 				<div className="cart__wrapper__column">

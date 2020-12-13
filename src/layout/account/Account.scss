@@ -1,0 +1,29 @@
+.cart {
+	padding: 12rem;
+
+	&__h1 {
+		padding-bottom: 2rem;
+	}
+
+	&__wrapper {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-column-gap: 10rem;
+
+		&__column {
+			&__h2 {
+				margin-bottom: 2rem;
+			}
+
+			&__basket {
+				margin: 4rem 0;
+
+				&__text {
+					display: flex;
+					flex-direction: row;
+					justify-content: space-between;
+				}
+			}
+		}
+	}
+}
