@@ -22,19 +22,47 @@ const Account = () => {
 						className="cart__wrapper__column__basket"
 						key={shortid.generate()}
 					>
-						<img
-							className="cart__wrapper__column__basket__image"
-							src={el.thumbnail}
-							alt="product's thumbnail"
-						/>
+						<Link
+							className="cart__wrapper__column__basket__link link"
+							to={"/"}
+						>
+							<img
+								className="cart__wrapper__column__basket__container__image"
+								src={el.thumbnail}
+								alt="product's thumbnail"
+							/>
+						</Link>
 						<div className="cart__wrapper__column__basket__text">
-							<p className="cart__wrapper__column__basket__text__title">
-								{el.title}
-							</p>
-							<p className="cart__wrapper__column__basket__text__price">
-								<small>€</small>
-								{el.price}
-							</p>
+							<div className="cart__wrapper__column__basket__text__up">
+								<Link
+									className="cart__wrapper__column__basket__text__up__link link"
+									to={"/"}
+								>
+									<p className="cart__wrapper__column__basket__text__up__link__title">
+										{el.title}
+									</p>
+								</Link>
+								<p className="cart__wrapper__column__basket__text__up__price">
+									<small>€</small>
+									{el.price}
+								</p>
+							</div>
+							<div className="cart__wrapper__column__basket__text__controls">
+								<div className="cart__wrapper__column__basket__text__controls__quantity">
+									<button className="cart__wrapper__column__basket__text__controls__quantity__btn btn">
+										-
+									</button>
+									<span className="cart__wrapper__column__basket__text__controls__quantity__content">
+										4
+									</span>
+									<button className="cart__wrapper__column__basket__text__controls__quantity__btn btn">
+										+
+									</button>
+								</div>
+								<button className="cart__wrapper__column__basket__text__controls__btn btn">
+									Remove
+								</button>
+							</div>
 						</div>
 					</div>
 				);

@@ -1,8 +1,12 @@
+@import "../../styles/variables";
+
 .cart {
+	background-color: $color-white;
 	padding: 12rem;
 
 	&__h1 {
 		padding-bottom: 2rem;
+		font-weight: 200;
 	}
 
 	&__wrapper {
@@ -13,15 +17,38 @@
 		&__column {
 			&__h2 {
 				margin-bottom: 2rem;
+				font-weight: 200;
 			}
 
 			&__basket {
+				display: flex;
+				padding-bottom: 4rem;
 				margin: 4rem 0;
+				border-bottom: 1px solid $color-black;
+
+				&__link {
+					margin-right: 2rem;
+				}
 
 				&__text {
-					display: flex;
-					flex-direction: row;
-					justify-content: space-between;
+					display: grid;
+					grid-template-rows: auto auto;
+					width: 100%;
+
+					&__controls {
+						display: flex;
+						align-items: center;
+						justify-content: space-between;
+					}
+
+					&__up {
+						display: flex;
+
+						&__price {
+							display: flex;
+							justify-self: flex-end;
+						}
+					}
 				}
 			}
 		}
