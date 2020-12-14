@@ -88,8 +88,8 @@
   outline: none;
   text-decoration: none;
   color: #c2d1ff;
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
@@ -190,10 +190,10 @@ img {
 }
 
 *::-moz-selection {
-  background: #033587;
+  background: #c2d1ff;
 }
 
 *::selection {
-  background: #033587;
+  background: #c2d1ff;
 }
 /*# sourceMappingURL=index.css.map */

@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 
 // styles
 import "./Account.css";
+import icon from "../../resources/icons/icomoon/sprites.svg";
 
 const Account = () => {
 	const { basket } = useContext(BasketContext);
@@ -35,28 +36,47 @@ const Account = () => {
 						<div className="cart__wrapper__column__basket__text">
 							<div className="cart__wrapper__column__basket__text__up">
 								<Link
-									className="cart__wrapper__column__basket__text__up__link link"
+									className="cart__wrapper__column__basket__text__up__link"
 									to={"/"}
 								>
-									<p className="cart__wrapper__column__basket__text__up__link__title">
+									<p className="cart__wrapper__column__basket__text__up__link__title p">
 										{el.title}
 									</p>
 								</Link>
-								<p className="cart__wrapper__column__basket__text__up__price">
-									<small>€</small>
+								<p className="cart__wrapper__column__basket__text__up__price p">
+									<small className="cart__wrapper__column__basket__text__up__price__currency">
+										€
+									</small>
 									{el.price}
 								</p>
 							</div>
 							<div className="cart__wrapper__column__basket__text__controls">
 								<div className="cart__wrapper__column__basket__text__controls__quantity">
+									<p className="cart__wrapper__column__basket__text__controls__quantity__p p">
+										qty:
+									</p>
 									<button className="cart__wrapper__column__basket__text__controls__quantity__btn btn">
-										-
+										<svg className="cart__wrapper__column__basket__text__controls__quantity__btn__icon icon">
+											<use
+												href={
+													icon +
+													"#icon-minus-circle"
+												}
+											/>
+										</svg>
 									</button>
 									<span className="cart__wrapper__column__basket__text__controls__quantity__content">
 										4
 									</span>
 									<button className="cart__wrapper__column__basket__text__controls__quantity__btn btn">
-										+
+										<svg className="cart__wrapper__column__basket__text__controls__quantity__btn__icon icon">
+											<use
+												href={
+													icon +
+													"#icon-plus-circle"
+												}
+											/>
+										</svg>
 									</button>
 								</div>
 								<button className="cart__wrapper__column__basket__text__controls__btn btn">
@@ -80,35 +100,57 @@ const Account = () => {
 					</h2>
 					{showItems()}
 				</div>
-				<div className="cart__wrapper__column">
-					<h2 className="h2">Order summary</h2>
-					<div className="cart__wrapper__column__price-summary">
-						<h3 className="h3">Order value</h3>
-						<p className="cart__wrapper__column__price-summary__item">
-							<small>€</small>560
+				<div className="cart__wrapper__order">
+					<h2 className="cart__wrapper__order__h2 h2">
+						Order summary
+					</h2>
+					<div className="cart__wrapper__order__price-summary">
+						<p className="cart__wrapper__order__price-summary__p p">
+							Order value
 						</p>
+						<h3 className="cart__wrapper__order__price-summary__item h3">
+							<small>€</small>&nbsp;560
+						</h3>
 					</div>
-					<div className="cart__wrapper__column__price-summary">
-						<h3 className="h3">Shipping</h3>
-						<p className="cart__wrapper__column__price-summary__item">
-							<small>€</small>10
+					<div className="cart__wrapper__order__price-summary">
+						<p className="cart__wrapper__order__price-summary__p p">
+							Shipping
 						</p>
+						<h3 className="cart__wrapper__order__price-summary__item h3">
+							<small>€</small>&nbsp;10
+						</h3>
 					</div>
-					<div className="cart__wrapper__column__price-summary">
-						<h3 className="h3">Total</h3>
-						<p className="cart__wrapper__column__price-summary__item">
-							<small>€</small>570
+					<div className="cart__wrapper__order__price-summary">
+						<p className="cart__wrapper__order__price-summary__p p">
+							Total
 						</p>
+						<h3 className="cart__wrapper__order__price-summary__item--total h3">
+							<small>€</small>&nbsp;570
+						</h3>
 					</div>
-					<div className="cart__wrapper__column__price-summary">
-						<p className="cart__wrapper__column__price-summary__item">
+					<div className="cart__wrapper__order__price-summary price-summary--last-child">
+						<p className="cart__wrapper__order__price-summary__item--p p">
 							You have 14 days to return items,
 							read more in our&nbsp;
-							<Link to={"/"}>
+							<Link
+								className="cart__wrapper__order__price-summary__item--p__link link"
+								to={"/"}
+							>
 								return and refund policy.
 							</Link>
 						</p>
 					</div>
+					<Link
+						className="cart__wrapper__order__link"
+						to={"/"}
+					>
+						<button
+							className="cart__wrapper__order__link__btn btn"
+							tabIndex="-1"
+						>
+							Checkout
+						</button>
+					</Link>
 				</div>
 			</div>
 
