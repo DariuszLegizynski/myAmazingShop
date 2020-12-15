@@ -19,9 +19,13 @@ const Account = () => {
 		removeItemFromBasket,
 	} = useContext(BasketContext);
 
+	if (!_.isEmpty(basket)) {
+		console.log(_.uniqBy(basket, "articleId"));
+	}
+
 	const showItems = () => {
 		if (!_.isEmpty(basket)) {
-			return basket.map((el) => {
+			return _.uniqBy(basket, "articleId").map((el) => {
 				return (
 					<div
 						className="cart__wrapper__column__basket"
@@ -105,6 +109,13 @@ const Account = () => {
 					</div>
 				);
 			});
+		} else {
+			return (
+				<div>
+					<p>your basket is empty</p>
+					<Link to={"/shop"}>Back to shop</Link>
+				</div>
+			);
 		}
 	};
 

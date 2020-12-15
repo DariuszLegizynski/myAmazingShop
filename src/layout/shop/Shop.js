@@ -24,7 +24,6 @@ const Shop = () => {
 
 	const showProducts = () => {
 		if (!_.isEmpty(products)) {
-			console.log(products);
 			return products.map((el) => {
 				return (
 					<div
