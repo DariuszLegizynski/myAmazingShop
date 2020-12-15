@@ -6,6 +6,7 @@ import "./Shop.css";
 
 // tools
 import _ from "lodash";
+import shortid from "shortid";
 
 // components
 import Header from "../../components/header/Header";
@@ -23,14 +24,14 @@ const Shop = () => {
 
 	const showProducts = () => {
 		if (!_.isEmpty(products)) {
+			console.log(products);
 			return products.map((el) => {
 				return (
 					<div
 						className="shop__wrapper__items__card-container"
-						key={el.id}
+						key={shortid.generate()}
 					>
 						<Product
-							key={el.id}
 							title={el.title}
 							price={el.price}
 							imageOne={el.thumbnailImageOne}
@@ -39,6 +40,7 @@ const Shop = () => {
 						<button
 							onClick={() =>
 								storeBasket(
+									shortid.generate(),
 									el.id,
 									el.thumbnailImageOne,
 									el.title,

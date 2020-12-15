@@ -13,7 +13,11 @@ import "./Account.css";
 import icon from "../../resources/icons/icomoon/sprites.svg";
 
 const Account = () => {
-	const { basket } = useContext(BasketContext);
+	const {
+		basket,
+		removeArticleFromBasket,
+		removeItemFromBasket,
+	} = useContext(BasketContext);
 
 	const showItems = () => {
 		if (!_.isEmpty(basket)) {
@@ -55,7 +59,14 @@ const Account = () => {
 									<p className="cart__wrapper__column__basket__text__controls__quantity__p p">
 										qty:
 									</p>
-									<button className="cart__wrapper__column__basket__text__controls__quantity__btn btn">
+									<button
+										className="cart__wrapper__column__basket__text__controls__quantity__btn btn"
+										onClick={() =>
+											removeItemFromBasket(
+												el.id
+											)
+										}
+									>
 										<svg className="cart__wrapper__column__basket__text__controls__quantity__btn__icon icon">
 											<use
 												href={
@@ -79,7 +90,14 @@ const Account = () => {
 										</svg>
 									</button>
 								</div>
-								<button className="cart__wrapper__column__basket__text__controls__btn btn">
+								<button
+									className="cart__wrapper__column__basket__text__controls__btn btn"
+									onClick={() =>
+										removeArticleFromBasket(
+											el.articleId
+										)
+									}
+								>
 									Remove
 								</button>
 							</div>
