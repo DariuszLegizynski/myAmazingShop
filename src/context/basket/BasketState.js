@@ -17,7 +17,7 @@ const BasketState = (props) => {
 		initialState
 	);
 
-	const storeBasket = (
+	const addItemToBasket = (
 		itemId,
 		articleId,
 		thumbnailImageOne,
@@ -55,7 +55,7 @@ const BasketState = (props) => {
 			value={{
 				basket: state.basket,
 				loading: state.loading,
-				storeBasket,
+				addItemToBasket,
 				removeItemFromBasket,
 				removeArticleFromBasket,
 			}}

@@ -15,23 +15,13 @@ import icon from "../../resources/icons/icomoon/sprites.svg";
 const Account = () => {
 	const {
 		basket,
+		addItemToBasket,
 		removeArticleFromBasket,
 		removeItemFromBasket,
 	} = useContext(BasketContext);
 
-	const showItemCount = () => {
-		if (!_.isEmpty(basket)) {
-			const result = _.values(
-				_.countBy(basket, "articleId")
-			);
-			return result.map((el) => {
-				return (
-					<span className="cart__wrapper__column__basket__text__controls__quantity__content">
-						{el}
-					</span>
-				);
-			});
-		}
+	const totalSum = () => {
+		return basket.reduce((sum, { price }) => sum + price, 0);
 	};
 
 	const showItems = () => {
@@ -90,14 +80,20 @@ const Account = () => {
 										</svg>
 									</button>
 									<span className="cart__wrapper__column__basket__text__controls__quantity__content">
-										{el.id}
-										<div>
-											{showItemCount()}
-										</div>
-
-										{console.log()}
+										42
 									</span>
-									<button className="cart__wrapper__column__basket__text__controls__quantity__btn btn">
+									<button
+										className="cart__wrapper__column__basket__text__controls__quantity__btn btn"
+										onClick={() =>
+											addItemToBasket(
+												shortid.generate(),
+												el.id,
+												el.thumbnailImageOne,
+												el.title,
+												el.price
+											)
+										}
+									>
 										<svg className="cart__wrapper__column__basket__text__controls__quantity__btn__icon icon">
 											<use
 												href={
@@ -152,7 +148,7 @@ const Account = () => {
 							Order value
 						</p>
 						<h3 className="cart__wrapper__order__price-summary__item h3">
-							<small>€</small>&nbsp;560
+							<small>€</small>&nbsp;{totalSum()}
 						</h3>
 					</div>
 					<div className="cart__wrapper__order__price-summary">
@@ -168,7 +164,8 @@ const Account = () => {
 							Total
 						</p>
 						<h3 className="cart__wrapper__order__price-summary__item--total h3">
-							<small>€</small>&nbsp;570
+							<small>€</small>&nbsp;
+							{totalSum() + 10}
 						</h3>
 					</div>
 					<div className="cart__wrapper__order__price-summary price-summary--last-child">

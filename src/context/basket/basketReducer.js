@@ -5,6 +5,7 @@ import {
 } from "../types";
 
 const basketReducer = (state, action) => {
+	console.log(state);
 	switch (action.type) {
 		case ADD_TO_BASKET:
 			return {
