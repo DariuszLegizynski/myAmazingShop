@@ -19,21 +19,30 @@ const Account = () => {
 		removeItemFromBasket,
 	} = useContext(BasketContext);
 
-	if (!_.isEmpty(basket)) {
-		console.log(_.uniqBy(basket, "articleId"));
-	}
+	const showItemCount = () => {
+		if (!_.isEmpty(basket)) {
+			const result = _.values(
+				_.countBy(basket, "articleId")
+			);
+			return result.map((el) => {
+				return (
+					<span className="cart__wrapper__column__basket__text__controls__quantity__content">
+						{el}
+					</span>
+				);
+			});
+		}
+	};
 
 	const showItems = () => {
 		if (!_.isEmpty(basket)) {
 			return _.uniqBy(basket, "articleId").map((el) => {
 				return (
-					<div
-						className="cart__wrapper__column__basket"
-						key={shortid.generate()}
-					>
+					<div className="cart__wrapper__column__basket">
 						<Link
 							className="cart__wrapper__column__basket__link link"
 							to={"/"}
+							key={shortid.generate()}
 						>
 							<img
 								className="cart__wrapper__column__basket__container__image"
@@ -81,7 +90,12 @@ const Account = () => {
 										</svg>
 									</button>
 									<span className="cart__wrapper__column__basket__text__controls__quantity__content">
-										4
+										{el.id}
+										<div>
+											{showItemCount()}
+										</div>
+
+										{console.log()}
 									</span>
 									<button className="cart__wrapper__column__basket__text__controls__quantity__btn btn">
 										<svg className="cart__wrapper__column__basket__text__controls__quantity__btn__icon icon">
