@@ -15,20 +15,28 @@ import icon from "../../resources/icons/icomoon/sprites.svg";
 const Account = () => {
 	const {
 		basket,
-		addItemToBasket,
 		removeArticleFromBasket,
 		removeItemFromBasket,
+		addItemToBasket,
 	} = useContext(BasketContext);
 
 	const totalSum = () => {
-		return basket.reduce((sum, { price }) => sum + price, 0);
+		return basket.reduce(
+			(sum, { price, quantity }) => sum + price * quantity,
+			0
+		);
 	};
+
+	console.log(basket);
 
 	const showItems = () => {
 		if (!_.isEmpty(basket)) {
 			return _.uniqBy(basket, "articleId").map((el) => {
 				return (
-					<div className="cart__wrapper__column__basket">
+					<div
+						className="cart__wrapper__column__basket"
+						key={shortid.generate()}
+					>
 						<Link
 							className="cart__wrapper__column__basket__link link"
 							to={"/"}
@@ -66,7 +74,9 @@ const Account = () => {
 										className="cart__wrapper__column__basket__text__controls__quantity__btn btn"
 										onClick={() =>
 											removeItemFromBasket(
-												el.id
+												(el.quantity =
+													el.quantity -
+													1)
 											)
 										}
 									>
@@ -80,17 +90,16 @@ const Account = () => {
 										</svg>
 									</button>
 									<span className="cart__wrapper__column__basket__text__controls__quantity__content">
-										42
+										{el.quantity}
 									</span>
 									<button
 										className="cart__wrapper__column__basket__text__controls__quantity__btn btn"
 										onClick={() =>
 											addItemToBasket(
-												shortid.generate(),
-												el.id,
-												el.thumbnailImageOne,
-												el.title,
-												el.price
+												el.articleId,
+												(el.quantity =
+													el.quantity +
+													1)
 											)
 										}
 									>

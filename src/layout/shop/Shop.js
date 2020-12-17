@@ -20,7 +20,7 @@ import BasketContext from "../../context/basket/basketContext";
 
 const Shop = () => {
 	const { products } = useContext(ProductsContext);
-	const { addItemToBasket } = useContext(BasketContext);
+	const { addArticleToBasket } = useContext(BasketContext);
 
 	const showProducts = () => {
 		if (!_.isEmpty(products)) {
@@ -38,7 +38,7 @@ const Shop = () => {
 						/>
 						<button
 							onClick={() =>
-								addItemToBasket(
+								addArticleToBasket(
 									shortid.generate(),
 									el.id,
 									el.thumbnailImageOne,
