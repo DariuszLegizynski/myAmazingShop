@@ -38,17 +38,19 @@ const BasketState = (props) => {
 		});
 	};
 
-	const addItemToBasket = (articleId, quantity) => {
+	const addItemToBasket = (articleId) => {
 		dispatch({
 			type: ADD_ITEM_TO_BASKET,
-			payload: { articleId, quantity },
+			payload: {
+				articleId,
+			},
 		});
 	};
 
-	const removeItemFromBasket = (itemId) => {
+	const removeItemFromBasket = (articleId) => {
 		dispatch({
 			type: REMOVE_ITEM_FROM_BASKET,
-			payload: { id: itemId },
+			payload: { articleId },
 		});
 	};
 

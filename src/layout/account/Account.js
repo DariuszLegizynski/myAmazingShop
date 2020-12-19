@@ -31,12 +31,13 @@ const Account = () => {
 
 	const showItems = () => {
 		if (!_.isEmpty(basket)) {
-			return _.uniqBy(basket, "articleId").map((el) => {
+			return basket.map((el) => {
 				return (
 					<div
 						className="cart__wrapper__column__basket"
 						key={shortid.generate()}
 					>
+						{console.log(el)}
 						<Link
 							className="cart__wrapper__column__basket__link link"
 							to={"/"}
@@ -74,9 +75,7 @@ const Account = () => {
 										className="cart__wrapper__column__basket__text__controls__quantity__btn btn"
 										onClick={() =>
 											removeItemFromBasket(
-												(el.quantity =
-													el.quantity -
-													1)
+												el.articleId
 											)
 										}
 									>
@@ -96,10 +95,7 @@ const Account = () => {
 										className="cart__wrapper__column__basket__text__controls__quantity__btn btn"
 										onClick={() =>
 											addItemToBasket(
-												el.articleId,
-												(el.quantity =
-													el.quantity +
-													1)
+												el.articleId
 											)
 										}
 									>
