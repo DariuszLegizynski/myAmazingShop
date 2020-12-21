@@ -2,7 +2,8 @@ import { useReducer } from "react";
 import BasketContext from "./basketContext";
 import basketReducer from "./basketReducer";
 import {
-	ADD_TO_BASKET,
+	ADD_ARTICLE_TO_BASKET,
+	ADD_ITEM_TO_BASKET,
 	REMOVE_ITEM_FROM_BASKET,
 	REMOVE_ARTICLE_FROM_BASKET,
 } from "../types";
@@ -17,29 +18,38 @@ const BasketState = (props) => {
 		initialState
 	);
 
-	const storeBasket = (
-		itemId,
+	const addArticleToBasket = (
 		articleId,
 		thumbnailImageOne,
 		itemTitle,
 		itemPrice
 	) => {
 		dispatch({
-			type: ADD_TO_BASKET,
+			type: ADD_ARTICLE_TO_BASKET,
 			payload: {
-				id: itemId,
 				articleId: articleId,
 				title: itemTitle,
 				price: itemPrice,
 				thumbnail: thumbnailImageOne,
+				quantity: 1,
 			},
 		});
 	};
 
-	const removeItemFromBasket = (itemId) => {
+	const addItemToBasket = (articleId) => {
+		console.log(state.basket);
+		dispatch({
+			type: ADD_ITEM_TO_BASKET,
+			payload: {
+				articleId,
+			},
+		});
+	};
+
+	const removeItemFromBasket = (articleId) => {
 		dispatch({
 			type: REMOVE_ITEM_FROM_BASKET,
-			payload: { id: itemId },
+			payload: { articleId },
 		});
 	};
 
@@ -55,7 +65,8 @@ const BasketState = (props) => {
 			value={{
 				basket: state.basket,
 				loading: state.loading,
-				storeBasket,
+				addArticleToBasket,
+				addItemToBasket,
 				removeItemFromBasket,
 				removeArticleFromBasket,
 			}}

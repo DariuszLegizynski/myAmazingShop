@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import "./Product.css";
+import BasketContext from "../../../context/basket/basketContext";
 
-const Product = ({ title, imageOne, imageTwo, price }) => {
+const Product = ({
+	title,
+	imageOne,
+	imageTwo,
+	price,
+	articleId,
+}) => {
+	const { addArticleToBasket } = useContext(BasketContext);
 	return (
 		<div className="product">
 			<Link to={"/item"} className="product__link link">
@@ -28,6 +36,19 @@ const Product = ({ title, imageOne, imageTwo, price }) => {
 					<small>€</small>
 				</p>
 			</Link>
+			<button
+				onClick={() =>
+					addArticleToBasket(
+						articleId,
+						imageOne,
+						title,
+						price
+					)
+				}
+				className="shop__wrapper__items__card-container__btn btn"
+			>
+				Add to basket
+			</button>
 		</div>
 	);
 };

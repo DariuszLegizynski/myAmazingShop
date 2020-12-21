@@ -16,11 +16,9 @@ import Product from "../../components/products/Product/Product";
 
 // context
 import ProductsContext from "../../context/products/productsContext";
-import BasketContext from "../../context/basket/basketContext";
 
 const Shop = () => {
 	const { products } = useContext(ProductsContext);
-	const { storeBasket } = useContext(BasketContext);
 
 	const showProducts = () => {
 		if (!_.isEmpty(products)) {
@@ -31,25 +29,12 @@ const Shop = () => {
 						key={shortid.generate()}
 					>
 						<Product
+							articleId={el.id}
 							title={el.title}
 							price={el.price}
 							imageOne={el.thumbnailImageOne}
 							imageTwo={el.thumbnailImageTwo}
 						/>
-						<button
-							onClick={() =>
-								storeBasket(
-									shortid.generate(),
-									el.id,
-									el.thumbnailImageOne,
-									el.title,
-									el.price
-								)
-							}
-							className="shop__wrapper__items__card-container__btn btn"
-						>
-							Add to basket
-						</button>
 					</div>
 				);
 			});

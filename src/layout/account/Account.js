@@ -17,23 +17,31 @@ const Account = () => {
 		basket,
 		removeArticleFromBasket,
 		removeItemFromBasket,
+		addItemToBasket,
 	} = useContext(BasketContext);
 
-	if (!_.isEmpty(basket)) {
-		console.log(_.uniqBy(basket, "articleId"));
-	}
+	const totalSum = () => {
+		return basket.reduce(
+			(sum, { price, quantity }) => sum + price * quantity,
+			0
+		);
+	};
+
+	console.log(basket);
 
 	const showItems = () => {
 		if (!_.isEmpty(basket)) {
-			return _.uniqBy(basket, "articleId").map((el) => {
+			return basket.map((el) => {
 				return (
 					<div
 						className="cart__wrapper__column__basket"
 						key={shortid.generate()}
 					>
+						{console.log(el)}
 						<Link
 							className="cart__wrapper__column__basket__link link"
 							to={"/"}
+							key={shortid.generate()}
 						>
 							<img
 								className="cart__wrapper__column__basket__container__image"
@@ -67,7 +75,7 @@ const Account = () => {
 										className="cart__wrapper__column__basket__text__controls__quantity__btn btn"
 										onClick={() =>
 											removeItemFromBasket(
-												el.id
+												el.articleId
 											)
 										}
 									>
@@ -81,9 +89,16 @@ const Account = () => {
 										</svg>
 									</button>
 									<span className="cart__wrapper__column__basket__text__controls__quantity__content">
-										4
+										{el.quantity}
 									</span>
-									<button className="cart__wrapper__column__basket__text__controls__quantity__btn btn">
+									<button
+										className="cart__wrapper__column__basket__text__controls__quantity__btn btn"
+										onClick={() =>
+											addItemToBasket(
+												el.articleId
+											)
+										}
+									>
 										<svg className="cart__wrapper__column__basket__text__controls__quantity__btn__icon icon">
 											<use
 												href={
@@ -138,7 +153,7 @@ const Account = () => {
 							Order value
 						</p>
 						<h3 className="cart__wrapper__order__price-summary__item h3">
-							<small>€</small>&nbsp;560
+							<small>€</small>&nbsp;{totalSum()}
 						</h3>
 					</div>
 					<div className="cart__wrapper__order__price-summary">
@@ -154,7 +169,8 @@ const Account = () => {
 							Total
 						</p>
 						<h3 className="cart__wrapper__order__price-summary__item--total h3">
-							<small>€</small>&nbsp;570
+							<small>€</small>&nbsp;
+							{totalSum() + 10}
 						</h3>
 					</div>
 					<div className="cart__wrapper__order__price-summary price-summary--last-child">

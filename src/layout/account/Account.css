@@ -184,6 +184,13 @@
   margin-right: 0.4rem;
 }
 
+.cart__wrapper__column__products {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+}
+
 .cart__wrapper__order {
   display: -webkit-box;
   display: -ms-flexbox;
