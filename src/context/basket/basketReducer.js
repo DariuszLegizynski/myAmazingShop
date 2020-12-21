@@ -21,9 +21,7 @@ const checkIfArticleIsInBasket = (
 };
 
 const incrementItem = (currentBasket, articleId) => {
-	console.log(currentBasket);
 	const tempBasket = [...currentBasket];
-	console.log(tempBasket);
 	const selectedItem = tempBasket.find(
 		(el) => el.articleId === articleId
 	);
@@ -64,12 +62,6 @@ const basketReducer = (state, action) => {
 			}
 
 		case ADD_ITEM_TO_BASKET:
-			console.log(
-				incrementItem(
-					state.basket,
-					action.payload.articleId
-				)
-			);
 			return {
 				...state,
 				basket: incrementItem(

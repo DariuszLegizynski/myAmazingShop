@@ -19,7 +19,6 @@ const BasketState = (props) => {
 	);
 
 	const addArticleToBasket = (
-		itemId,
 		articleId,
 		thumbnailImageOne,
 		itemTitle,
@@ -28,7 +27,6 @@ const BasketState = (props) => {
 		dispatch({
 			type: ADD_ARTICLE_TO_BASKET,
 			payload: {
-				id: itemId,
 				articleId: articleId,
 				title: itemTitle,
 				price: itemPrice,
@@ -39,6 +37,7 @@ const BasketState = (props) => {
 	};
 
 	const addItemToBasket = (articleId) => {
+		console.log(state.basket);
 		dispatch({
 			type: ADD_ITEM_TO_BASKET,
 			payload: {

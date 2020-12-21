@@ -12,13 +12,13 @@ import BasketState from "./context/basket/BasketState";
 
 ReactDOM.render(
 	<BrowserRouter>
-		<React.StrictMode>
-			<ProductState>
-				<BasketState>
-					<App />
-				</BasketState>
-			</ProductState>
-		</React.StrictMode>
+		{/* <React.StrictMode> */}
+		<ProductState>
+			<BasketState>
+				<App />
+			</BasketState>
+		</ProductState>
+		{/* </React.StrictMode> */}
 	</BrowserRouter>,
 	document.querySelector("#root")
 );
