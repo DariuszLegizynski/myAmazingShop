@@ -13,7 +13,10 @@ const Product = ({
 	const { addArticleToBasket } = useContext(BasketContext);
 	return (
 		<div className="product">
-			<Link to={"/item"} className="product__link link">
+			<Link
+				to={`/${articleId}`}
+				className="product__link link"
+			>
 				<div className="product__link__image-wrapper">
 					<div className="product__link__image-wrapper__image">
 						<img

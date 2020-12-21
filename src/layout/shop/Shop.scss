@@ -18,7 +18,7 @@
 	}
 
 	&__wrapper {
-		padding: 5rem 8rem;
+		padding: 5rem 4rem;
 
 		&__items {
 			display: grid;
@@ -38,7 +38,6 @@
 					border: 1px solid $color-second;
 					border-bottom: 4px solid $color-second;
 
-					// border-radius: 0.5rem;
 					box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
 
 					transition: all 0.2s ease-in-out;
@@ -46,7 +45,6 @@
 					&:hover,
 					&:focus {
 						background-color: $color-second;
-						// border-radius: 0.5rem;
 					}
 				}
 			}
@@ -55,6 +53,10 @@
 		&__p {
 			padding: 1rem 6rem;
 			font-size: $default-font-size-normal;
+
+			&__span {
+				color: $color-first;
+			}
 		}
 	}
 

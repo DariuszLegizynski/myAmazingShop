@@ -1,5 +1,10 @@
 .product {
   padding: 1.5rem 4rem;
+  text-align: center;
+}
+
+.product__link {
+  text-align: start;
 }
 
 .product__link:focus-within .product__link__image-wrapper__hover-image {

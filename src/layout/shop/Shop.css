@@ -14,7 +14,7 @@
 }
 
 .shop__wrapper {
-  padding: 5rem 8rem;
+  padding: 5rem 4rem;
 }
 
 .shop__wrapper__items {
@@ -60,6 +60,10 @@
 .shop__wrapper__p {
   padding: 1rem 6rem;
   font-size: 1.6rem;
+}
+
+.shop__wrapper__p__span {
+  color: #00a4e8;
 }
 
 .shop__center-div__link {

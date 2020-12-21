@@ -41,6 +41,10 @@ const decrementItem = (currentBasket, articleId) => {
 	const item = tempBasket[index];
 
 	item.quantity = item.quantity - 1;
+
+	if (item.quantity <= 0) {
+		item.quantity = 1;
+	}
 	return tempBasket;
 };
 

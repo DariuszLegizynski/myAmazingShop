@@ -1,0 +1,48 @@
+@import "../../styles/typography";
+@import "../../styles/variables";
+
+.item {
+	padding: 1.6rem;
+
+	&__link-wrapper {
+		margin-top: 4rem;
+		text-align: center;
+	}
+
+	&__wrapper {
+		margin: auto;
+		min-width: 90%;
+
+		&__container {
+			&__text {
+				text-align: center;
+
+				&__content {
+					margin: 2rem 0;
+
+					&__price {
+						margin-top: 2rem;
+						font-weight: 600;
+						font-size: $default-font-size-normal;
+					}
+
+					&__titles {
+						max-width: 60rem;
+						margin: 3rem 0;
+
+						&__h1 {
+                            margin-bottom: 1rem;
+                            color: 
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.cart__wrapper__column__basket__text__controls__quantity--item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}

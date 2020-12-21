@@ -22,7 +22,7 @@ function App() {
 					path={"/signIn"}
 					component={SignIn}
 				/>
-				<Route exact path={"/item"} component={Item} />
+				<Route path={"/:item"} component={Item} />
 				<Route
 					exact
 					path={"/personal"}

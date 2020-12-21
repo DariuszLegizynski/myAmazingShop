@@ -2,8 +2,11 @@
 
 .product {
 	padding: 1.5rem 4rem;
+	text-align: center;
 
 	&__link {
+		text-align: start;
+
 		&:focus-within &__image-wrapper__hover-image {
 			visibility: visible;
 			opacity: 1;

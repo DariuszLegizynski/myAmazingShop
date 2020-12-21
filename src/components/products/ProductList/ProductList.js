@@ -81,6 +81,7 @@ const ProductList = () => {
 						price={el.price}
 						imageOne={el.thumbnailImageOne}
 						imageTwo={el.thumbnailImageTwo}
+						articleId={el.id}
 					/>
 				);
 			});

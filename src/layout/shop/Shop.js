@@ -45,7 +45,10 @@ const Shop = () => {
 		if (!_.isEmpty(products)) {
 			return (
 				<p className="shop__wrapper__p p">
-					{_.size(products)} articels found
+					<span className="shop__wrapper__p__span span">
+						{_.size(products)}{" "}
+					</span>
+					articels found
 				</p>
 			);
 		} else {

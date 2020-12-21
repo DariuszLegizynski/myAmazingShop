@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 //styles
 import "./Header.css";
-import logo from "../../resources/logo/logo.png";
+// import logo from "https://i.imgur.com/FArEXrs.png?1";
 
 // context
 import BasketContext from "../../context/basket/basketContext";
@@ -17,7 +17,7 @@ const Header = () => {
 				<Link className="link--logo link" to={"/"}>
 					<img
 						className="header__item__link__logo"
-						src={logo}
+						src="https://i.imgur.com/FArEXrs.png?1"
 						alt="logo"
 					/>
 				</Link>
