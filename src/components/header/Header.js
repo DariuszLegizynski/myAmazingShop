@@ -1,9 +1,11 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+
+//components
+import Burger from "../burger/Burger";
 
 //styles
 import "./Header.css";
-// import logo from "https://i.imgur.com/FArEXrs.png?1";
 
 // context
 import BasketContext from "../../context/basket/basketContext";
@@ -11,24 +13,42 @@ import BasketContext from "../../context/basket/basketContext";
 const Header = () => {
 	const { basket } = useContext(BasketContext);
 
+	const [openBurger, setOpenBurger] = useState(false);
+
+	let burgerClass = "";
+	if (openBurger) {
+		burgerClass = "--open";
+	}
+
 	return (
 		<header className="header">
 			<div className="header__item">
-				<Link className="link--logo link" to={"/"}>
-					<img
-						className="header__item__link__logo"
-						src="https://i.imgur.com/FArEXrs.png?1"
-						alt="logo"
-					/>
-				</Link>
-				<nav className="header__item__nav">
+				<div
+					className="header__item__navigation"
+					onClick={() => setOpenBurger(!openBurger)}
+				>
+					<Burger burgerClass={burgerClass} />
+					<Link className="link--logo link" to={"/"}>
+						<img
+							className="header__item__navigation__link__logo"
+							src="https://i.imgur.com/FArEXrs.png?1"
+							alt="logo"
+						/>
+					</Link>
+				</div>
+
+				<nav className="header__item__nav fadeInFromTop">
 					<ul>
-						<li className="list">
+						<li
+							className={`list${burgerClass} fadeInFromTop`}
+						>
 							<Link className="link" to={"/shop"}>
 								Shop
 							</Link>
 						</li>
-						<li className="list">
+						<li
+							className={`list${burgerClass} fadeInFromTop`}
+						>
 							<Link
 								className="link"
 								to={"/personal"}
@@ -41,7 +61,9 @@ const Header = () => {
 			</div>
 			<div className="header__item">
 				<ul>
-					<li className="list">
+					<li
+						className={`list${burgerClass} fadeInFromTop`}
+					>
 						<Link className="link" to={"/signIn"}>
 							<button
 								className="btn--sign btn"
@@ -51,7 +73,9 @@ const Header = () => {
 							</button>
 						</Link>
 					</li>
-					<li className="list">
+					<li
+						className={`list${burgerClass} fadeInFromTop`}
+					>
 						<Link className="link" to={"/account"}>
 							<button
 								className="btn--account btn"
@@ -61,7 +85,9 @@ const Header = () => {
 							</button>
 						</Link>
 					</li>
-					<li className="list">
+					<li
+						className={`list${burgerClass} fadeInFromTop`}
+					>
 						<Link className="link" to={"/"}>
 							<button
 								className="btn--sign btn"
@@ -71,7 +97,7 @@ const Header = () => {
 							</button>
 						</Link>
 					</li>
-					<li className="list">
+					<li className="list--visible fadeInFromTop">
 						<Link
 							className="link--cart link"
 							to={"/account"}

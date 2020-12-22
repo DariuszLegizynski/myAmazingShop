@@ -22,7 +22,11 @@ function App() {
 					path={"/signIn"}
 					component={SignIn}
 				/>
-				<Route path={"/:item"} component={Item} />
+				<Route
+					exact
+					path={"/products/:item"}
+					component={Item}
+				/>
 				<Route
 					exact
 					path={"/personal"}

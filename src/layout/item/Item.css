@@ -33,6 +33,11 @@
 
 .item__wrapper__container__text__content__titles__h1 {
   margin-bottom: 1rem;
+  color: #00a4e8;
+}
+
+.item__wrapper__container__text__content__titles__h3 {
+  color: #033587;
 }
 
 .cart__wrapper__column__basket__text__controls__quantity--item {
@@ -45,5 +50,13 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.cart__wrapper__column__basket__text__controls__quantity--item > button {
+  margin: 2rem 0;
 }
 /*# sourceMappingURL=Item.css.map */

@@ -1,51 +1,106 @@
 @import "../../styles/variables";
 
 .header {
-    position: fixed;
-    top: 0;
-    z-index: 10;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 0rem 3.2rem;
-    margin: 0 auto;
+	position: fixed;
+	top: 0;
+	z-index: 10;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	padding: 0rem 3.2rem;
+	margin: 0 auto;
 
-    &__item {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+	&__item {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 
-        &__btn {
-            position: relative;
-        }
+		&__btn {
+			position: relative;
+		}
 
-        &__nav {
+		&__nav {
+			& > ul {
+				display: flex;
+				align-items: center;
 
-            & > ul {
-                display: flex;
-                align-items: center;
-                
-                & > li {
-                    margin: 1rem;
-                }
-            }
-        }
+				& > li {
+					margin: 1rem;
+				}
+			}
+		}
 
-        &__span {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform:translate(-50%, -45%);
-            z-index:1;
-        }
+		&__navigation {
+			display: flex;
+			align-items: center;
+			justify-items: center;
 
-        & > ul {
-            display: flex;
-            align-items: center;
-            
-            & > li {
-                margin: 1rem;
-            }
-        }
-    }
+			& > *:not(:last-child) {
+				margin-right: 10%;
+			}
+		}
+
+		&__span {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -45%);
+			z-index: 1;
+		}
+
+		& > ul {
+			display: flex;
+			align-items: center;
+			visibility: visible;
+
+			& > li {
+				margin: 1rem;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	.header {
+		padding: 0rem 1.2rem 0 3.2rem;
+		align-items: flex-start;
+
+		// &:last-child {
+		// 	margin-top: 0.7rem;
+		// }
+		&__item:last-child {
+			margin-top: 0.7rem;
+		}
+
+		&__item {
+			flex-direction: column;
+			justify-content: unset;
+
+			& ul {
+				flex-direction: column-reverse;
+				list-style-type: none;
+				width: 8rem;
+			}
+
+			& .list--visible {
+				display: flex;
+				visibility: visible;
+			}
+
+			& .list {
+				display: none;
+				visibility: hidden;
+			}
+
+			& .list--open {
+				flex-direction: column-reverse;
+				display: flex;
+				visibility: visible;
+			}
+
+			&__nav {
+				left: -7rem;
+			}
+		}
+	}
 }

@@ -22,7 +22,7 @@ export const Item = (props) => {
 		removeArticleFromBasket,
 	} = useContext(BasketContext);
 
-	const articleId = props.location.pathname.substring(1);
+	const articleId = props.match.params.item;
 
 	let selectedItem = [];
 

@@ -1,0 +1,140 @@
+.bounce {
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+  position: relative;
+  animation: bounce 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes bounce {
+
+  0% {
+    top:-5rem;
+    opacity: 0;
+    -webkit-animation-timing-function: ease-in;
+  }
+
+  20% {
+    top: 0rem;
+    opacity: 1;
+    -webkit-animation-timing-function: ease-out;
+  }
+
+  40% {
+    top:-3rem;
+    opacity: 0.3;
+    -webkit-animation-timing-function: ease-in;
+  }
+
+60% {
+  top:0rem;
+    opacity: 1;
+    -webkit-animation-timing-function: ease-out;
+  }
+
+80% {
+  top: -1.8rem;
+  opacity: 0.6;
+  -webkit-animation-timing-function: ease-in;
+  }
+
+  100% {
+    top:0rem;
+    opacity: 1;
+    -webkit-animation-timing-function: ease-in;
+  }
+}
+
+.fadeInFromLeft {
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s;
+    position: relative;
+    animation: fadeInFromLeft 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInFromLeft {
+    from {
+        right: 10rem;
+        opacity: 0;
+    }
+    to {
+        right: 0rem;
+        opacity: 1;
+    }
+}
+
+.fadeInFromRight {
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  position: relative;
+  animation: fadeInFromRight 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInFromRight {
+  from {
+      left: 100%;
+      opacity: 0;
+  }
+  to {
+      left: 0rem;
+      opacity: 1;
+  }
+}
+
+.fadeInFromBottom {
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  position: relative;
+  animation: fadeInFromBottom 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInFromBottom {
+  from {
+      top: 10rem;
+      opacity: 0;
+  }
+  to {
+      top: 0rem;
+      opacity: 1;
+  }
+}
+
+.fadeInFromTop {
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  position: relative;
+  animation: fadeInFromTop 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInFromTop {
+  from {
+      bottom: 10rem;
+      opacity: 0;
+  }
+  to {
+      bottom: 0rem;
+      opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-duration: 6s;
+  animation-duration: 6s;
+  animation: fadeIn 4s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

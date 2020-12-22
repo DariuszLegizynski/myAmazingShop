@@ -27,8 +27,6 @@ const Account = () => {
 		);
 	};
 
-	console.log(basket);
-
 	const showItems = () => {
 		if (!_.isEmpty(basket)) {
 			return basket.map((el) => {
@@ -37,11 +35,9 @@ const Account = () => {
 						className="cart__wrapper__column__basket"
 						key={shortid.generate()}
 					>
-						{console.log(el)}
 						<Link
 							className="cart__wrapper__column__basket__link link"
 							to={"/"}
-							key={shortid.generate()}
 						>
 							<img
 								className="cart__wrapper__column__basket__container__image"

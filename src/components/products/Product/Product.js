@@ -14,7 +14,7 @@ const Product = ({
 	return (
 		<div className="product">
 			<Link
-				to={`/${articleId}`}
+				to={`/products/${articleId}`}
 				className="product__link link"
 			>
 				<div className="product__link__image-wrapper">

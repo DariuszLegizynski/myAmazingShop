@@ -158,6 +158,238 @@
   font-size: 1.3rem;
 }
 
+.bounce {
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+  position: relative;
+  -webkit-animation: bounce 2s;
+          animation: bounce 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    top: -5rem;
+    opacity: 0;
+    -webkit-animation-timing-function: ease-in;
+  }
+  20% {
+    top: 0rem;
+    opacity: 1;
+    -webkit-animation-timing-function: ease-out;
+  }
+  40% {
+    top: -3rem;
+    opacity: 0.3;
+    -webkit-animation-timing-function: ease-in;
+  }
+  60% {
+    top: 0rem;
+    opacity: 1;
+    -webkit-animation-timing-function: ease-out;
+  }
+  80% {
+    top: -1.8rem;
+    opacity: 0.6;
+    -webkit-animation-timing-function: ease-in;
+  }
+  100% {
+    top: 0rem;
+    opacity: 1;
+    -webkit-animation-timing-function: ease-in;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    top: -5rem;
+    opacity: 0;
+    -webkit-animation-timing-function: ease-in;
+  }
+  20% {
+    top: 0rem;
+    opacity: 1;
+    -webkit-animation-timing-function: ease-out;
+  }
+  40% {
+    top: -3rem;
+    opacity: 0.3;
+    -webkit-animation-timing-function: ease-in;
+  }
+  60% {
+    top: 0rem;
+    opacity: 1;
+    -webkit-animation-timing-function: ease-out;
+  }
+  80% {
+    top: -1.8rem;
+    opacity: 0.6;
+    -webkit-animation-timing-function: ease-in;
+  }
+  100% {
+    top: 0rem;
+    opacity: 1;
+    -webkit-animation-timing-function: ease-in;
+  }
+}
+
+.fadeInFromLeft {
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  position: relative;
+  -webkit-animation: fadeInFromLeft 2s;
+          animation: fadeInFromLeft 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fadeInFromLeft {
+  from {
+    right: 10rem;
+    opacity: 0;
+  }
+  to {
+    right: 0rem;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInFromLeft {
+  from {
+    right: 10rem;
+    opacity: 0;
+  }
+  to {
+    right: 0rem;
+    opacity: 1;
+  }
+}
+
+.fadeInFromRight {
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  position: relative;
+  -webkit-animation: fadeInFromRight 2s;
+          animation: fadeInFromRight 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fadeInFromRight {
+  from {
+    left: 100%;
+    opacity: 0;
+  }
+  to {
+    left: 0rem;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInFromRight {
+  from {
+    left: 100%;
+    opacity: 0;
+  }
+  to {
+    left: 0rem;
+    opacity: 1;
+  }
+}
+
+.fadeInFromBottom {
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  position: relative;
+  -webkit-animation: fadeInFromBottom 2s;
+          animation: fadeInFromBottom 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fadeInFromBottom {
+  from {
+    top: 10rem;
+    opacity: 0;
+  }
+  to {
+    top: 0rem;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInFromBottom {
+  from {
+    top: 10rem;
+    opacity: 0;
+  }
+  to {
+    top: 0rem;
+    opacity: 1;
+  }
+}
+
+.fadeInFromTop {
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  position: relative;
+  -webkit-animation: fadeInFromTop 2s;
+          animation: fadeInFromTop 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fadeInFromTop {
+  from {
+    bottom: 10rem;
+    opacity: 0;
+  }
+  to {
+    bottom: 0rem;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInFromTop {
+  from {
+    bottom: 10rem;
+    opacity: 0;
+  }
+  to {
+    bottom: 0rem;
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-duration: 6s;
+  animation-duration: 6s;
+  -webkit-animation: fadeIn 4s;
+          animation: fadeIn 4s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 *,
 *::before,
 *::after {

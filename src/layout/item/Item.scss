@@ -31,8 +31,12 @@
 						margin: 3rem 0;
 
 						&__h1 {
-                            margin-bottom: 1rem;
-                            color: 
+							margin-bottom: 1rem;
+							color: $color-first;
+						}
+
+						&__h3 {
+							color: $color-first-dark;
 						}
 					}
 				}
@@ -41,8 +45,15 @@
 	}
 }
 
-.cart__wrapper__column__basket__text__controls__quantity--item {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+.cart__wrapper {
+	&__column__basket__text__controls__quantity--item {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+
+		& > button {
+			margin: 2rem 0;
+		}
+	}
 }
