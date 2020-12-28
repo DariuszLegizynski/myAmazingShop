@@ -19,7 +19,6 @@ import ProductsContext from "../../context/products/productsContext";
 
 const Shop = () => {
 	const { products } = useContext(ProductsContext);
-	console.log(products);
 
 	const showProducts = () => {
 		if (!_.isEmpty(products)) {

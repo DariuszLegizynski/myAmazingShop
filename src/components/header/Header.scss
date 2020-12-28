@@ -9,6 +9,7 @@
 	width: 100%;
 	padding: 0rem 3.2rem;
 	margin: 0 auto;
+	background-color: rgba(255, 255, 255, 0.2);
 
 	&__item {
 		display: flex;
@@ -65,9 +66,6 @@
 		padding: 0rem 1.2rem 0 3.2rem;
 		align-items: flex-start;
 
-		// &:last-child {
-		// 	margin-top: 0.7rem;
-		// }
 		&__item:last-child {
 			margin-top: 0.7rem;
 		}
@@ -78,7 +76,6 @@
 
 			& ul {
 				flex-direction: column-reverse;
-				list-style-type: none;
 				width: 8rem;
 			}
 

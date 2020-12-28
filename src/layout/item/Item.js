@@ -14,6 +14,7 @@ import BasketContext from "../../context/basket/basketContext";
 
 //styles
 import "./Item.css";
+import ItemGallery from "../../components/itemGallery/ItemGallery";
 
 export const Item = (props) => {
 	const { products } = useContext(ProductsContext);
@@ -40,54 +41,16 @@ export const Item = (props) => {
 						className="item__wrapper__container"
 						key={shortid.generate()}
 					>
-						<div className="item__wrapper__container__images">
-							<div className="item__wrapper__container__images__big-ones">
-								<div className="item__wrapper__container__images__big-ones__big">
-									<img
-										src={el.imageOne}
-										alt="big-one"
-									/>
-								</div>
-								<div className="item__wrapper__container__images__big-ones__big">
-									<img
-										src={el.imageTwo}
-										alt="big-two"
-									/>
-								</div>
-								<div className="item__wrapper__container__images__big-ones__big">
-									<img
-										src={el.imageThree}
-										alt="big-three"
-									/>
-								</div>
-							</div>
-							<div className="item__wrapper__container__images__small-ones">
-								<div className="item__wrapper__container__images__small-ones__small">
-									<img
-										src={
-											el.thumbnailImageOne
-										}
-										alt="thumbnail-one"
-									/>
-								</div>
-								<div className="item__wrapper__container__images__small-ones__small">
-									<img
-										src={
-											el.thumbnailImageTwo
-										}
-										alt="thumbnail-two"
-									/>
-								</div>
-								<div className="item__wrapper__container__images__small-ones__small">
-									<img
-										src={
-											el.thumbnailImageThree
-										}
-										alt="thumbnail-three"
-									/>
-								</div>
-							</div>
-						</div>
+						<ItemGallery
+							imageOneBig={el.imageOne}
+							imageTwoBig={el.imageTwo}
+							imageThreeBig={el.imageThree}
+							imageOneSmall={el.thumbnailImageOne}
+							imageTwoSmall={el.thumbnailImageTwo}
+							imageThreeSmall={
+								el.thumbnailImageThree
+							}
+						/>
 						<div className="item__wrapper__container__text">
 							<div className="item__wrapper__container__text__content">
 								<div className="item__wrapper__container__text__content__titles">

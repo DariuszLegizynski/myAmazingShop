@@ -11,6 +11,7 @@
   width: 100%;
   padding: 0rem 3.2rem;
   margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .header__item {
@@ -103,7 +104,6 @@
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
-    list-style-type: none;
     width: 8rem;
   }
   .header__item .list--visible {

@@ -422,6 +422,10 @@ img {
   width: 100%;
 }
 
+ul {
+  list-style-type: none;
+}
+
 *::-moz-selection {
   background: #c2d1ff;
 }

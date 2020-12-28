@@ -1,0 +1,54 @@
+@import "../../styles/variables";
+
+.item__wrapper__container__gallery {
+	display: grid;
+	grid-template-columns: 17% 80%;
+	grid-gap: 3%;
+
+	&__small {
+		display: grid;
+		grid-template-rows: repeat(3, 7rem);
+		grid-row-gap: 2%;
+
+		& > * {
+			display: flex;
+		}
+
+		& img {
+			object-fit: contain;
+
+			&:focus &,
+			&:hover & {
+				visibility: visible;
+				opacity: 1;
+				transition: visibility 0s, opacity 0.3s linear;
+				-webkit-box-shadow: 0rem 0rem 1rem 0.3rem
+					$color-first;
+				-moz-box-shadow: 0rem 0rem 1rem 0.3rem
+					$color-first;
+				box-shadow: 0rem 0rem 1rem 0.3rem $color-first;
+			}
+		}
+	}
+
+	&__big {
+		position: relative;
+		display: grid;
+		grid-template-rows: 20rem;
+
+		& > div:not(:first-child) {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: auto;
+			visibility: hidden;
+			opacity: 0;
+			transition: visibility 0.3s, opacity 0.3s linear;
+		}
+
+		& img {
+			object-fit: contain;
+			max-height: 31rem;
+		}
+	}
+}

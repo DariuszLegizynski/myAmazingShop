@@ -1,0 +1,62 @@
+.item__wrapper__container__gallery {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 17% 80%;
+      grid-template-columns: 17% 80%;
+  grid-gap: 3%;
+}
+
+.item__wrapper__container__gallery__small {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (7rem)[3];
+      grid-template-rows: repeat(3, 7rem);
+  grid-row-gap: 2%;
+}
+
+.item__wrapper__container__gallery__small > * {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.item__wrapper__container__gallery__small img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.item__wrapper__container__gallery__small img:focus .item__wrapper__container__gallery__small img,
+.item__wrapper__container__gallery__small img:hover .item__wrapper__container__gallery__small img {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: visibility 0s, opacity 0.3s linear;
+  transition: visibility 0s, opacity 0.3s linear;
+  -webkit-box-shadow: 0rem 0rem 1rem 0.3rem #00a4e8;
+  box-shadow: 0rem 0rem 1rem 0.3rem #00a4e8;
+}
+
+.item__wrapper__container__gallery__big {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 20rem;
+      grid-template-rows: 20rem;
+}
+
+.item__wrapper__container__gallery__big > div:not(:first-child) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: auto;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: visibility 0.3s, opacity 0.3s linear;
+  transition: visibility 0.3s, opacity 0.3s linear;
+}
+
+.item__wrapper__container__gallery__big img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  max-height: 31rem;
+}
+/*# sourceMappingURL=ItemGallery.css.map */
