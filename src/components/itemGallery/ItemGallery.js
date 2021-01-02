@@ -29,6 +29,10 @@ const ItemGallery = ({
 		classHoverThree = "selected";
 	}
 
+	const returnFalse = (e) => {
+		e.preventDefault();
+	};
+
 	return (
 		<div className="item__wrapper__container__gallery">
 			<div className="item__wrapper__container__gallery__small">
@@ -39,6 +43,7 @@ const ItemGallery = ({
 					tabIndex="0"
 					onFocus={() => setHoverOne(!hoverOne)}
 					onBlur={() => setHoverOne(!hoverOne)}
+					onClick={(e) => e.preventDefault()}
 				>
 					<img src={imageOneSmall} alt="small-one" />
 				</span>
@@ -49,6 +54,7 @@ const ItemGallery = ({
 					tabIndex="0"
 					onFocus={() => setHoverTwo(!hoverTwo)}
 					onBlur={() => setHoverTwo(!hoverTwo)}
+					onClick={returnFalse}
 				>
 					<img src={imageTwoSmall} alt="small-two" />
 				</span>
@@ -61,6 +67,7 @@ const ItemGallery = ({
 					tabIndex="0"
 					onFocus={() => setHoverThree(!hoverThree)}
 					onBlur={() => setHoverThree(!hoverThree)}
+					onClick={returnFalse}
 				>
 					<img
 						src={imageThreeSmall}
