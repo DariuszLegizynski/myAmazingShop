@@ -8,7 +8,6 @@
 	&__small {
 		display: grid;
 		grid-template-rows: repeat(3, 7rem);
-		grid-row-gap: 2%;
 
 		& > * {
 			display: flex;
@@ -16,27 +15,35 @@
 
 		& img {
 			object-fit: contain;
-
-			&:focus &,
-			&:hover & {
-				visibility: visible;
-				opacity: 1;
-				transition: visibility 0s, opacity 0.3s linear;
-				-webkit-box-shadow: 0rem 0rem 1rem 0.3rem
-					$color-first;
-				-moz-box-shadow: 0rem 0rem 1rem 0.3rem
-					$color-first;
-				box-shadow: 0rem 0rem 1rem 0.3rem $color-first;
-			}
 		}
 	}
 
 	&__big {
 		position: relative;
-		display: grid;
-		grid-template-rows: 20rem;
+		min-height: 31rem;
 
-		& > div:not(:first-child) {
+		& > div:first-child {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: auto;
+		}
+
+		&__one {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: auto;
+
+			&--hidden {
+				visibility: hidden;
+				opacity: 0;
+				transition: visibility 0.3s, opacity 0.3s linear;
+			}
+		}
+
+		&__two,
+		&__three {
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -49,6 +56,13 @@
 		& img {
 			object-fit: contain;
 			max-height: 31rem;
+		}
+
+		&__two--selected,
+		&__three--selected {
+			visibility: visible !important;
+			opacity: 1 !important;
+			transition: visibility 0s, opacity 0.3s linear !important;
 		}
 	}
 }
