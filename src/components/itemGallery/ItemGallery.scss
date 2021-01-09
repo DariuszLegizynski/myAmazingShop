@@ -20,8 +20,14 @@
 
 	&__big {
 		position: relative;
-		display: grid;
-		grid-template-rows: 20rem;
+		min-height: 31rem;
+
+		& > div:first-child {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: auto;
+		}
 
 		& > div:not(:first-child) {
 			position: absolute;

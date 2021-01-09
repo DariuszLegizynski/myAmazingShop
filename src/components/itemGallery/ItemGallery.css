@@ -26,10 +26,14 @@
 
 .item__wrapper__container__gallery__big {
   position: relative;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: 20rem;
-      grid-template-rows: 20rem;
+  min-height: 31rem;
+}
+
+.item__wrapper__container__gallery__big > div:first-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: auto;
 }
 
 .item__wrapper__container__gallery__big > div:not(:first-child) {
