@@ -16,14 +16,14 @@ const ItemGallery = ({
 				".item__wrapper__container__gallery__small__one"
 			)
 			.classList.toggle(
-				"item__wrapper__container__gallery__small__one--selected"
+				"item__wrapper__container__gallery__small__one--hidden"
 			);
 		document
 			.querySelector(
 				".item__wrapper__container__gallery__big__one"
 			)
 			.classList.toggle(
-				"item__wrapper__container__gallery__big__one--selected"
+				"item__wrapper__container__gallery__big__one--hidden"
 			);
 	};
 
@@ -66,34 +66,51 @@ const ItemGallery = ({
 			<div className="item__wrapper__container__gallery__small">
 				<div
 					className="item__wrapper__container__gallery__small__one"
-					onMouseOver={classHoverOne}
-					onMouseOut={classHoverOne}
-					// onClick={classHoverOne}
 					tabIndex="0"
-					onFocus={classHoverOne}
-					onBlur={classHoverOne}
 				>
 					<img src={imageOneSmall} alt="small-one" />
 				</div>
 				<div
 					className="item__wrapper__container__gallery__small__two"
-					onMouseOver={classHoverTwo}
-					onMouseOut={classHoverTwo}
-					// onClick={classHoverTwo}
+					onMouseOver={() => {
+						classHoverTwo();
+						classHoverOne();
+					}}
+					onMouseOut={() => {
+						classHoverTwo();
+						classHoverOne();
+					}}
 					tabIndex="0"
-					onFocus={classHoverTwo}
-					onBlur={classHoverTwo}
+					onFocus={() => {
+						classHoverTwo();
+						classHoverOne();
+					}}
+					onBlur={() => {
+						classHoverTwo();
+						classHoverOne();
+					}}
 				>
 					<img src={imageTwoSmall} alt="small-two" />
 				</div>
 				<div
 					className="item__wrapper__container__gallery__small__three"
-					onMouseOver={classHoverThree}
-					onMouseOut={classHoverThree}
-					// onClick={classHoverThree}
+					onMouseOver={() => {
+						classHoverThree();
+						classHoverOne();
+					}}
+					onMouseOut={() => {
+						classHoverThree();
+						classHoverOne();
+					}}
 					tabIndex="0"
-					onFocus={classHoverThree}
-					onBlur={classHoverThree}
+					onFocus={() => {
+						classHoverThree();
+						classHoverOne();
+					}}
+					onBlur={() => {
+						classHoverThree();
+						classHoverOne();
+					}}
 				>
 					<img
 						src={imageThreeSmall}

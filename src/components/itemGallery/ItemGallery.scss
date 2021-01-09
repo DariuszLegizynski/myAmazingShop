@@ -29,7 +29,21 @@
 			height: auto;
 		}
 
-		& > div:not(:first-child) {
+		&__one {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: auto;
+
+			&--hidden {
+				visibility: hidden;
+				opacity: 0;
+				transition: visibility 0.3s, opacity 0.3s linear;
+			}
+		}
+
+		&__two,
+		&__three {
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -44,7 +58,6 @@
 			max-height: 31rem;
 		}
 
-		&__one--selected,
 		&__two--selected,
 		&__three--selected {
 			visibility: visible !important;
