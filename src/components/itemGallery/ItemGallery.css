@@ -11,7 +11,6 @@
   display: grid;
   -ms-grid-rows: (7rem)[3];
       grid-template-rows: repeat(3, 7rem);
-  grid-row-gap: 2%;
 }
 
 .item__wrapper__container__gallery__small > * {
@@ -23,16 +22,6 @@
 .item__wrapper__container__gallery__small img {
   -o-object-fit: contain;
      object-fit: contain;
-}
-
-.item__wrapper__container__gallery__small img:focus .item__wrapper__container__gallery__small img,
-.item__wrapper__container__gallery__small img:hover .item__wrapper__container__gallery__small img {
-  visibility: visible;
-  opacity: 1;
-  -webkit-transition: visibility 0s, opacity 0.3s linear;
-  transition: visibility 0s, opacity 0.3s linear;
-  -webkit-box-shadow: 0rem 0rem 1rem 0.3rem #00a4e8;
-  box-shadow: 0rem 0rem 1rem 0.3rem #00a4e8;
 }
 
 .item__wrapper__container__gallery__big {
@@ -58,5 +47,12 @@
   -o-object-fit: contain;
      object-fit: contain;
   max-height: 31rem;
+}
+
+.item__wrapper__container__gallery__big__one--selected, .item__wrapper__container__gallery__big__two--selected, .item__wrapper__container__gallery__big__three--selected {
+  visibility: visible !important;
+  opacity: 1 !important;
+  -webkit-transition: visibility 0s, opacity 0.3s linear !important;
+  transition: visibility 0s, opacity 0.3s linear !important;
 }
 /*# sourceMappingURL=ItemGallery.css.map */

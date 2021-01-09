@@ -32,9 +32,9 @@
 
 			&:focus &__hover-image,
 			&:hover &__hover-image {
-				visibility: visible;
-				opacity: 1;
-				transition: visibility 0s, opacity 0.3s linear;
+				visibility: visible !important;
+				opacity: 1 !important;
+				transition: visibility 0s, opacity 0.3s linear !important;
 				-webkit-box-shadow: 0rem 0rem 1rem 0.3rem
 					$color-first;
 				-moz-box-shadow: 0rem 0rem 1rem 0.3rem
