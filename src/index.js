@@ -5,19 +5,21 @@ import App from "./App/App";
 import { BrowserRouter } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
 
-// constext
 // States
 import ProductState from "./context/products/ProductsState";
 import BasketState from "./context/basket/BasketState";
+import AuthState from "./context/auth/AuthState";
 
 ReactDOM.render(
 	<BrowserRouter>
 		{/* <React.StrictMode> */}
-		<ProductState>
-			<BasketState>
-				<App />
-			</BasketState>
-		</ProductState>
+		<AuthState>
+			<ProductState>
+				<BasketState>
+					<App />
+				</BasketState>
+			</ProductState>
+		</AuthState>
 		{/* </React.StrictMode> */}
 	</BrowserRouter>,
 	document.querySelector("#root")
