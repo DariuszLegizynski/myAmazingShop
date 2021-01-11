@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
+import { auth } from "../../firebase/firebase";
 
 //styles
 import "./SignIn.css";
@@ -8,12 +9,28 @@ const SignIn = () => {
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 
+	const history = useHistory();
+
 	const logIn = (e) => {
 		e.preventDefault();
+		auth.signInWithEmailAndPassword(email, password)
+			.then((auth) => {
+				if (auth) {
+					history.push("/");
+				}
+			})
+			.catch((error) => alert(error.message));
 	};
 
-	const newAccount = (e) => {
+	const createNewAccount = (e) => {
 		e.preventDefault();
+		auth.createUserWithEmailAndPassword(email, password)
+			.then((auth) => {
+				if (auth) {
+					history.push("/");
+				}
+			})
+			.catch((error) => alert(error.message));
 	};
 
 	return (
@@ -67,7 +84,7 @@ const SignIn = () => {
 						<div className="login-page__grid__right__form__signup">
 							<button
 								className="login-page__grid__right__form__signup__btn btn btn--item"
-								onClick={newAccount}
+								onClick={createNewAccount}
 							>
 								Create Account
 							</button>
