@@ -166,6 +166,9 @@
 		&__order {
 			display: flex;
 			flex-direction: column;
+			position: fixed;
+			right: 10rem;
+			top: 7rem;
 
 			&__h2 {
 				padding: 1rem 0;

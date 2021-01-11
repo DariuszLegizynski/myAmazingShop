@@ -199,6 +199,9 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: fixed;
+  right: 10rem;
+  top: 7rem;
 }
 
 .cart__wrapper__order__h2 {

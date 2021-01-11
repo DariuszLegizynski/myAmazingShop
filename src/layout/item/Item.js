@@ -76,10 +76,9 @@ export const Item = (props) => {
 									onClick={() =>
 										addArticleToBasket(
 											el.id,
-											el.title,
-											el.price,
 											el.thumbnailImageOne,
-											el.thumbnailImageTwo
+											el.title,
+											el.price
 										)
 									}
 									className="shop__wrapper__items__card-container__btn btn"
@@ -94,7 +93,7 @@ export const Item = (props) => {
 										)
 									}
 								>
-									Remove
+									Remove from basket
 								</button>
 							</div>
 						</div>
