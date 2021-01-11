@@ -28,6 +28,22 @@
   transition: all 0.2s ease-in-out;
 }
 
+.btn--item {
+  height: 2.3rem;
+  max-width: 14em;
+  font-size: 1.3rem;
+  border: 1px solid #efaa54;
+  border-bottom: 4px solid #efaa54;
+  -webkit-box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn--item:hover, .btn--item:focus {
+  background-color: #efaa54;
+}
+
 .btn--shop {
   height: 4rem;
   min-width: 12rem;

@@ -29,6 +29,23 @@
 		transition: all 0.2s ease-in-out;
 	}
 
+	&--item {
+		height: 2.3rem;
+		max-width: 14em;
+		font-size: $default-font-size-small;
+		border: 1px solid $color-second;
+		border-bottom: 4px solid $color-second;
+
+		box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+
+		transition: all 0.2s ease-in-out;
+
+		&:hover,
+		&:focus {
+			background-color: $color-second;
+		}
+	}
+
 	&--shop {
 		height: 4rem;
 		min-width: 12rem;

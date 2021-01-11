@@ -41,22 +41,6 @@
   margin-bottom: 8rem;
 }
 
-.shop__wrapper__items__card-container__btn {
-  height: 2.3rem;
-  max-width: 8em;
-  font-size: 1.3rem;
-  border: 1px solid #efaa54;
-  border-bottom: 4px solid #efaa54;
-  -webkit-box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
-          box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-}
-
-.shop__wrapper__items__card-container__btn:hover, .shop__wrapper__items__card-container__btn:focus {
-  background-color: #efaa54;
-}
-
 .shop__wrapper__p {
   padding: 1rem 6rem;
   font-size: 1.6rem;
