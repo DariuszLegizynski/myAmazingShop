@@ -20,6 +20,13 @@
 			position: relative;
 		}
 
+		&__greeting {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-right: 2rem;
+		}
+
 		&__nav {
 			& > ul {
 				display: flex;

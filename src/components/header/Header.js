@@ -121,6 +121,14 @@ const Header = () => {
 			</div>
 			<div className="header__item">
 				<ul>
+					<div className="header__item__greeting">
+						<p className="header__item__greeting__p p">
+							Hello
+						</p>
+						<p className="header__item__greeting__p p">
+							{user ? user.email : "Guest"}
+						</p>
+					</div>
 					{handleUserBtn()}
 					<li className="list--visible fadeInFromTop">
 						<Link
