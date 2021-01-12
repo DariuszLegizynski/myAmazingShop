@@ -9,9 +9,11 @@ import "./Header.css";
 
 // context
 import BasketContext from "../../context/basket/basketContext";
+import AuthContext from "../../context/auth/authContext";
 
 const Header = () => {
 	const { basket } = useContext(BasketContext);
+	const { user, signOutUser } = useContext(AuthContext);
 
 	const [openBurger, setOpenBurger] = useState(false);
 
@@ -19,6 +21,12 @@ const Header = () => {
 	if (openBurger) {
 		burgerClass = "--open";
 	}
+
+	const handleSignOut = () => {
+		signOutUser();
+	};
+
+	console.log("user is: ", user);
 
 	return (
 		<header className="header">
@@ -88,7 +96,11 @@ const Header = () => {
 					<li
 						className={`list${burgerClass} fadeInFromTop`}
 					>
-						<Link className="link" to={"/"}>
+						<Link
+							className="link"
+							to={"/"}
+							onClick={handleSignOut}
+						>
 							<button
 								className="btn--sign btn"
 								tabIndex="-1"

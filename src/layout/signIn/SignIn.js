@@ -1,11 +1,16 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link, useHistory } from "react-router-dom";
-import { auth } from "../../firebase/firebase";
+
+import AuthContext from "../../context/auth/authContext";
 
 //styles
 import "./SignIn.css";
 
 const SignIn = () => {
+	const { user, createNewAccount, loginUser } = useContext(
+		AuthContext
+	);
+
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 
@@ -13,25 +18,46 @@ const SignIn = () => {
 
 	const logIn = (e) => {
 		e.preventDefault();
-		auth.signInWithEmailAndPassword(email, password)
-			.then((auth) => {
-				if (auth) {
-					history.push("/");
-				}
-			})
-			.catch((error) => alert(error.message));
+		loginUser(email, password);
 	};
 
-	const createNewAccount = (e) => {
+	const createNewUser = (e) => {
 		e.preventDefault();
-		auth.createUserWithEmailAndPassword(email, password)
-			.then((auth) => {
-				if (auth) {
-					history.push("/");
-				}
-			})
-			.catch((error) => alert(error.message));
+		createNewAccount(email, password);
+		if (user) {
+			history.push("/");
+		}
 	};
+
+	const loginSuccess = () => {
+		if (user) {
+			return user ? (
+				<p className="login-page__grid__right__form__p p">
+					You are logged in.
+				</p>
+			) : (
+				<p></p>
+			);
+		}
+	};
+
+	const registerSuccess = () => {
+		if (user) {
+			return user ? (
+				<p className="login-page__grid__right__form__p p">
+					You have created a new account.
+				</p>
+			) : (
+				<p></p>
+			);
+		}
+	};
+
+	if (user) {
+		setTimeout(() => {
+			return history.push("/");
+		}, 1500);
+	}
 
 	return (
 		<div className="login-page">
@@ -81,14 +107,16 @@ const SignIn = () => {
 								<span>Login</span>
 							</button>
 						</div>
+						{loginSuccess()}
 						<div className="login-page__grid__right__form__signup">
 							<button
 								className="login-page__grid__right__form__signup__btn btn btn--item"
-								onClick={createNewAccount}
+								onClick={createNewUser}
 							>
 								Create Account
 							</button>
 						</div>
+						{registerSuccess()}
 					</form>
 				</div>
 			</div>

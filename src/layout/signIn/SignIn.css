@@ -112,6 +112,10 @@
   transition: all 0.2s ease-in-out;
 }
 
+.login-page__grid__right__form__p {
+  margin-top: 2rem;
+}
+
 .login-page__grid__right__form__signup {
   padding-top: 3rem;
 }
