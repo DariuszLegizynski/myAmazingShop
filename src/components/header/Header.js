@@ -28,6 +28,58 @@ const Header = () => {
 
 	console.log("user is: ", user);
 
+	const handleUserBtn = () => {
+		if (!user) {
+			return (
+				<li
+					className={`list${burgerClass} fadeInFromTop`}
+				>
+					<Link className="link" to={"/signIn"}>
+						<button
+							className="btn--sign btn"
+							tabIndex="-1"
+						>
+							Sign In
+						</button>
+					</Link>
+				</li>
+			);
+		} else {
+			return (
+				<>
+					<li
+						className={`list${burgerClass} fadeInFromTop`}
+					>
+						<Link className="link" to={"/account"}>
+							<button
+								className="btn--account btn"
+								tabIndex="-1"
+							>
+								Account
+							</button>
+						</Link>
+					</li>
+					<li
+						className={`list${burgerClass} fadeInFromTop`}
+					>
+						<Link
+							className="link"
+							to={"/"}
+							onClick={handleSignOut}
+						>
+							<button
+								className="btn--sign btn"
+								tabIndex="-1"
+							>
+								Sign Out
+							</button>
+						</Link>
+					</li>
+				</>
+			);
+		}
+	};
+
 	return (
 		<header className="header">
 			<div className="header__item">
@@ -69,46 +121,7 @@ const Header = () => {
 			</div>
 			<div className="header__item">
 				<ul>
-					<li
-						className={`list${burgerClass} fadeInFromTop`}
-					>
-						<Link className="link" to={"/signIn"}>
-							<button
-								className="btn--sign btn"
-								tabIndex="-1"
-							>
-								Sign In
-							</button>
-						</Link>
-					</li>
-					<li
-						className={`list${burgerClass} fadeInFromTop`}
-					>
-						<Link className="link" to={"/account"}>
-							<button
-								className="btn--account btn"
-								tabIndex="-1"
-							>
-								Account
-							</button>
-						</Link>
-					</li>
-					<li
-						className={`list${burgerClass} fadeInFromTop`}
-					>
-						<Link
-							className="link"
-							to={"/"}
-							onClick={handleSignOut}
-						>
-							<button
-								className="btn--sign btn"
-								tabIndex="-1"
-							>
-								Sign Out
-							</button>
-						</Link>
-					</li>
+					{handleUserBtn()}
 					<li className="list--visible fadeInFromTop">
 						<Link
 							className="link--cart link"
