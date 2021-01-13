@@ -31,25 +31,34 @@ const ProductList = () => {
 		infinite: false,
 		initialSlide: 0,
 		lazyLoad: true,
-		slidesToShow: 4,
+		slidesToShow: 5,
 		slidesToScroll: 1,
 		speed: 500,
 		swipeToSlide: true,
-		variableWidth: true,
 		nextArrow: <CarouselArrow icon={carouselArrowRight} />,
 		prevArrow: <CarouselArrow icon={carouselArrowLeft} />,
 		responsive: [
 			{
-				breakpoint: 1024,
+				breakpoint: 1600,
 				settings: {
-					slidesToShow: 3,
-					slidesToScroll: 3,
+					slidesToShow: 4,
+					slidesToScroll: 1,
 					infinite: true,
 					dots: true,
 				},
 			},
 			{
-				breakpoint: 600,
+				breakpoint: 1200,
+				settings: {
+					slidesToShow: 3,
+					slidesToScroll: 1,
+					infinite: true,
+					dots: true,
+				},
+			},
+			{
+				breakpoint: 900,
+
 				settings: {
 					slidesToShow: 2,
 					slidesToScroll: 2,
@@ -59,7 +68,8 @@ const ProductList = () => {
 				},
 			},
 			{
-				breakpoint: 480,
+				breakpoint: 700,
+
 				settings: {
 					slidesToShow: 1,
 					slidesToScroll: 1,
@@ -67,6 +77,14 @@ const ProductList = () => {
 					infinite: true,
 					dots: true,
 				},
+			},
+			{
+				breakpoint: 601,
+				settings: "slick",
+			},
+			{
+				breakpoint: 600,
+				settings: "unslick",
 			},
 		],
 	};

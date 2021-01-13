@@ -1,59 +1,91 @@
 @import "../../styles/variables";
+@import "../../styles/typography";
 
 .intro {
-    position: relative;
+	position: relative;
 
-    &__slider-container {
-        z-index: -5;
+	&__slider-container {
+		z-index: -5;
 
-        &__image {
-            height: 60rem;
-            width: 100%;
-            object-fit: cover;
-        }
-            
-    }
+		&__image {
+			height: 60rem;
+			width: 100%;
+			object-fit: cover;
+		}
+	}
 
-    &__title {
-        position: absolute;
-        top: 70%;
-        left: 30%;
-        -webkit-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-        background-color: rgba(255,255,255,.6);
-        padding: 3rem 5rem;
-        z-index: 1;
+	&__title {
+		position: absolute;
+		top: 22rem;
+		left: 7%;
+		background-color: rgba(255, 255, 255, 0.6);
+		padding: 3rem 5rem;
+		z-index: 1;
 
-        &__white-bg {
-            background-color: rgba(255,255,255,.9);
+		&__white-bg {
+			background-color: rgba(255, 255, 255, 0.9);
 
-            display: grid;
-            grid-template-columns: repeat(12, 5rem);
-            grid-template-rows: repeat(8, 5rem);
+			display: grid;
+			grid-template-columns: repeat(12, 5rem);
+			grid-template-rows: repeat(8, 5.2rem);
 
-            &__main-title {
-                grid-column: 2/10;
-                grid-row: 2/4;
-            }
-    
-            &__subtitle {
-                grid-column: 10/13;
-                grid-row: 2;
-            }
-    
-            &__description {
-                grid-column: 7/13;
-                grid-row: 6;
+			&__main-title {
+				grid-column: 2/10;
+				grid-row: 2/4;
+			}
 
-                &__span {
-                    color: $color-black;
-                }
-            }
-    
-            &__shop {
-                grid-column: 6/8;
-                grid-row: 8;
-            }
-        }
-    } 
+			&__subtitle {
+				grid-column: 10/13;
+				grid-row: 2;
+			}
+
+			&__description {
+				grid-column: 7/12;
+				grid-row: 6;
+
+				&__span {
+					color: $color-black;
+				}
+			}
+
+			&__shop {
+				grid-column: 6/8;
+				grid-row: 8;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 1050px) {
+	.intro {
+		&__title {
+			left: 3%;
+			padding: 1rem 2rem;
+
+			& p {
+				font-size: $default-font-size-smaller;
+			}
+
+			& h1 {
+				font-size: $default-font-size-larger;
+			}
+
+			& span {
+				font-size: $default-font-size-small;
+			}
+
+			&__white-bg {
+				background-color: rgba(255, 255, 255, 0.9);
+
+				display: grid;
+				grid-template-columns: repeat(12, 4.2rem);
+				grid-template-rows: repeat(8, 4.2rem);
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 1050px) {
+	.intro {
+	}
 }

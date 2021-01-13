@@ -26,8 +26,6 @@ const Header = () => {
 		signOutUser();
 	};
 
-	console.log("user is: ", user);
-
 	const handleUserBtn = () => {
 		if (!user) {
 			return (
@@ -96,7 +94,6 @@ const Header = () => {
 						/>
 					</Link>
 				</div>
-
 				<nav className="header__item__nav fadeInFromTop">
 					<ul>
 						<li
@@ -119,16 +116,16 @@ const Header = () => {
 					</ul>
 				</nav>
 			</div>
+			<div className="header__item__greeting fadeInFromTop">
+				<p className="header__item__greeting__p p">
+					Hello
+				</p>
+				<p className="header__item__greeting__p p">
+					{user ? user.email : "Guest"}
+				</p>
+			</div>
 			<div className="header__item">
 				<ul>
-					<div className="header__item__greeting">
-						<p className="header__item__greeting__p p">
-							Hello
-						</p>
-						<p className="header__item__greeting__p p">
-							{user ? user.email : "Guest"}
-						</p>
-					</div>
 					{handleUserBtn()}
 					<li className="list--visible fadeInFromTop">
 						<Link

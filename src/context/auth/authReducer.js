@@ -3,9 +3,11 @@ import {
 	ADD_NEW_USER,
 	LOGIN_USER,
 	LOGOUT_USER,
+	LOGIN_ANON,
 } from "../types";
 
 const authReducer = (state, action) => {
+	console.log(action.type);
 	switch (action.type) {
 		case SET_USER:
 			return {
@@ -23,6 +25,11 @@ const authReducer = (state, action) => {
 				user: action.user,
 			};
 		case LOGOUT_USER:
+			return {
+				...state,
+				user: action.user,
+			};
+		case LOGIN_ANON:
 			return {
 				...state,
 				user: action.user,

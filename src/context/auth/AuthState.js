@@ -8,6 +8,7 @@ import {
 	ADD_NEW_USER,
 	LOGIN_USER,
 	LOGOUT_USER,
+	LOGIN_ANON,
 } from "../types";
 
 const AuthState = (props) => {
@@ -29,6 +30,16 @@ const AuthState = (props) => {
 						email,
 						password,
 					},
+				});
+			})
+			.catch((error) => alert(error.message));
+	};
+
+	const loginGuest = () => {
+		auth.signInAnonymously()
+			.then(() => {
+				dispatch({
+					type: LOGIN_ANON,
 				});
 			})
 			.catch((error) => alert(error.message));
@@ -82,6 +93,7 @@ const AuthState = (props) => {
 				createNewAccount,
 				loginUser,
 				signOutUser,
+				loginGuest,
 			}}
 		>
 			{props.children}

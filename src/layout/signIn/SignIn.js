@@ -7,9 +7,12 @@ import AuthContext from "../../context/auth/authContext";
 import "./SignIn.css";
 
 const SignIn = () => {
-	const { user, createNewAccount, loginUser } = useContext(
-		AuthContext
-	);
+	const {
+		user,
+		createNewAccount,
+		loginUser,
+		loginGuest,
+	} = useContext(AuthContext);
 
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
@@ -27,6 +30,10 @@ const SignIn = () => {
 		if (user) {
 			history.push("/");
 		}
+	};
+
+	const loginAsGuest = () => {
+		loginGuest();
 	};
 
 	const loginSuccess = () => {
@@ -118,6 +125,14 @@ const SignIn = () => {
 						</div>
 						{registerSuccess()}
 					</form>
+					<div className="login-page__grid__right__form__signup">
+						<button
+							className="login-page__grid__right__form__signup__btn btn btn--item"
+							onClick={loginAsGuest}
+						>
+							Demo
+						</button>
+					</div>
 				</div>
 			</div>
 			<Link to={"/"}>
