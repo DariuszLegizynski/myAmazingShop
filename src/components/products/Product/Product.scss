@@ -30,6 +30,11 @@
 				transition: visibility 0.3s, opacity 0.3s linear;
 			}
 
+			// & img {
+			// 	height: 100%;
+			// 	width: auto;
+			// }
+
 			&:focus &__hover-image,
 			&:hover &__hover-image {
 				visibility: visible !important;
