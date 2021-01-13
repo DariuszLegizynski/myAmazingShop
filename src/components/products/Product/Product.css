@@ -31,6 +31,11 @@
   transition: visibility 0.3s, opacity 0.3s linear;
 }
 
+.product__link__image-wrapper img {
+  max-width: 20rem;
+  width: unset;
+}
+
 .product__link__image-wrapper:focus .product__link__image-wrapper__hover-image,
 .product__link__image-wrapper:hover .product__link__image-wrapper__hover-image {
   visibility: visible !important;

@@ -30,10 +30,10 @@
 				transition: visibility 0.3s, opacity 0.3s linear;
 			}
 
-			// & img {
-			// 	height: 100%;
-			// 	width: auto;
-			// }
+			& img {
+				max-width: 20rem;
+				width: unset;
+			}
 
 			&:focus &__hover-image,
 			&:hover &__hover-image {

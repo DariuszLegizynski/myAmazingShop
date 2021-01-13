@@ -57,7 +57,7 @@ const ProductList = () => {
 				},
 			},
 			{
-				breakpoint: 900,
+				breakpoint: 1000,
 
 				settings: {
 					slidesToShow: 2,
