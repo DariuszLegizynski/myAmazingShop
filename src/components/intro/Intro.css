@@ -89,8 +89,91 @@
     display: grid;
     -ms-grid-columns: (4.2rem)[12];
         grid-template-columns: repeat(12, 4.2rem);
-    -ms-grid-rows: (4.2rem)[8];
-        grid-template-rows: repeat(8, 4.2rem);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .intro__title__white-bg {
+    -ms-grid-columns: (4.2rem)[9];
+        grid-template-columns: repeat(9, 4.2rem);
+    -ms-grid-rows: (4.6rem)[8];
+        grid-template-rows: repeat(8, 4.6rem);
+  }
+  .intro__title__white-bg__main-title {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 7;
+    grid-column: 2/9;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 2;
+    grid-row: 2/4;
+  }
+  .intro__title__white-bg__subtitle {
+    -ms-grid-column: 5;
+    -ms-grid-column-span: 3;
+    grid-column: 5/8;
+    -ms-grid-row: 5;
+    grid-row: 5;
+  }
+  .intro__title__white-bg__description {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 5;
+    grid-column: 2/7;
+    -ms-grid-row: 6;
+    grid-row: 6;
+  }
+  .intro__title__white-bg__shop {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 2;
+    grid-column: 3/5;
+    -ms-grid-row: 8;
+    grid-row: 8;
+  }
+  .intro__title p {
+    font-size: 1.1rem;
+  }
+  .intro__title h1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .intro__title__white-bg {
+    -ms-grid-columns: (1.9rem)[17];
+        grid-template-columns: repeat(17, 1.9rem);
+    -ms-grid-rows: (2.1rem)[14];
+        grid-template-rows: repeat(14, 2.1rem);
+  }
+  .intro__title__white-bg__main-title {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 15;
+    grid-column: 2/17;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 6;
+    grid-row: 1/7;
+  }
+  .intro__title__white-bg__subtitle {
+    -ms-grid-column: 10;
+    -ms-grid-column-span: 6;
+    grid-column: 10/16;
+    -ms-grid-row: 7;
+    grid-row: 7;
+  }
+  .intro__title__white-bg__description {
+    -ms-grid-column: 5;
+    -ms-grid-column-span: 11;
+    grid-column: 5/16;
+    -ms-grid-row: 9;
+    grid-row: 9;
+  }
+  .intro__title__white-bg__shop {
+    -ms-grid-column: 7;
+    -ms-grid-column-span: 7;
+    grid-column: 7/14;
+    -ms-grid-row: 12;
+    grid-row: 12;
+  }
+  .intro__title h1 {
+    line-height: 4rem;
   }
 }
 /*# sourceMappingURL=Intro.css.map */
