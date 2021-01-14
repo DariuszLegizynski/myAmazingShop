@@ -9,11 +9,11 @@ const Shipment = () => {
 				</h3>
 				<span className="shipment__part__span span">
 					We are currently shipping each parcel
-					directly from Japan to your door in France.
-					Regular shipping would take around 2 weeks,
-					however due to the unexpected situation with
-					COVID-19, delivery time can delay without
-					notice.
+					directly from Avalon to your wardrobe in
+					Narnia. Regular shipping would take around 2
+					weeks, however due to the unexpected
+					situation with COVID-19, delivery time can
+					delay without notice.
 				</span>
 			</div>
 			<div className="shipment__part">

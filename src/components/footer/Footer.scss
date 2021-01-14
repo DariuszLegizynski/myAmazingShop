@@ -14,14 +14,22 @@
 		align-items: center;
 
 		&__link {
-			&:focus,
-			&:hover {
-			}
-
 			&__span {
 				color: $color-black;
 				font-size: $default-font-size-small;
 			}
+		}
+	}
+}
+
+@media only screen and (max-width: 900px) {
+	.footer {
+		padding: 3rem 2rem;
+		display: flex;
+		flex-direction: column;
+
+		&__column {
+			padding-bottom: 2rem;
 		}
 	}
 }
