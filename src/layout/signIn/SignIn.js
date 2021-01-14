@@ -127,7 +127,7 @@ const SignIn = () => {
 					</form>
 					<div className="login-page__grid__right__form__signup">
 						<button
-							className="login-page__grid__right__form__signup__btn btn btn--item"
+							className="login-page__grid__right__form__signup__btn btn btn--item btn--demo"
 							onClick={loginAsGuest}
 						>
 							Demo

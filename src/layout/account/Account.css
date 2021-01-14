@@ -3,6 +3,24 @@
   padding: 12rem 16rem;
 }
 
+.cart__back-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #00a4e8;
+}
+
+.cart__empty-basket {
+  margin-bottom: 2rem;
+}
+
 .cart__h1 {
   padding-bottom: 2rem;
   font-weight: 200;
@@ -28,6 +46,10 @@
   padding-bottom: 4rem;
   margin: 4rem 0;
   border-bottom: 1px solid #1f1f1f;
+}
+
+.cart__wrapper__column__basket img {
+  min-width: 10rem;
 }
 
 .cart__wrapper__column__basket__link {
@@ -274,5 +296,76 @@
 
 .price-summary--last-child {
   border-bottom: none;
+}
+
+@media only screen and (max-width: 1550px) {
+  .cart {
+    padding: 6rem 6rem;
+  }
+  .cart__wrapper__order {
+    right: 4rem;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .cart {
+    padding: 6rem 4rem;
+  }
+  .cart__wrapper {
+    grid-column-gap: 4rem;
+  }
+  .cart__wrapper__order {
+    max-width: 28rem;
+    right: 4rem;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .cart {
+    padding: 2rem 6rem;
+  }
+  .cart__wrapper {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr auto;
+        grid-template-rows: 1fr auto;
+    grid-row-gap: 4rem;
+  }
+  .cart__wrapper__column {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .cart__wrapper__order {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    justify-items: center;
+    position: relative;
+    margin: auto;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    top: 0;
+    right: 0;
+  }
+  .cart__wrapper__order__link {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .cart__wrapper__column__basket__text__up p {
+    font-size: 1.6rem;
+  }
+  .cart__wrapper__column__basket__text__controls p {
+    font-size: 1.3rem;
+  }
 }
 /*# sourceMappingURL=Account.css.map */

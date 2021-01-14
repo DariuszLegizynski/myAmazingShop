@@ -5,6 +5,17 @@
 	background-color: $color-white;
 	padding: 12rem 16rem;
 
+	&__back-link {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		color: $color-first;
+	}
+
+	&__empty-basket {
+		margin-bottom: 2rem;
+	}
+
 	&__h1 {
 		padding-bottom: 2rem;
 		font-weight: 200;
@@ -26,6 +37,10 @@
 				padding-bottom: 4rem;
 				margin: 4rem 0;
 				border-bottom: 1px solid $color-black;
+
+				& img {
+					min-width: 10rem;
+				}
 
 				&__link {
 					margin-right: 2rem;
@@ -236,4 +251,86 @@
 
 .price-summary--last-child {
 	border-bottom: none;
+}
+
+@media only screen and (max-width: 1550px) {
+	.cart {
+		padding: 6rem 6rem;
+
+		&__wrapper {
+			&__order {
+				right: 4rem;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 1300px) {
+	.cart {
+		padding: 6rem 4rem;
+
+		&__wrapper {
+			grid-column-gap: 4rem;
+
+			&__order {
+				max-width: 28rem;
+				right: 4rem;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+	.cart {
+		padding: 2rem 6rem;
+
+		&__wrapper {
+			grid-template-columns: 1fr;
+			grid-template-rows: 1fr auto;
+			grid-row-gap: 4rem;
+
+			&__column {
+				order: 2;
+			}
+
+			&__order {
+				display: flex;
+				flex-direction: column;
+				justify-items: center;
+				position: relative;
+				margin: auto;
+				order: 1;
+				top: 0;
+				right: 0;
+
+				&__link {
+					align-self: center;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.cart {
+		&__wrapper {
+			&__column {
+				&__basket {
+					&__text {
+						&__up {
+							& p {
+								font-size: $default-font-size-normal;
+							}
+						}
+
+						&__controls {
+							& p {
+								font-size: $default-font-size-small;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }

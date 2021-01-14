@@ -122,9 +122,8 @@ const Account = () => {
 			});
 		} else {
 			return (
-				<div>
+				<div className="cart__empty-basket">
 					<p>your basket is empty</p>
-					<Link to={"/shop"}>Back to shop</Link>
 				</div>
 			);
 		}
@@ -195,7 +194,9 @@ const Account = () => {
 				</div>
 			</div>
 
-			<Link to={"/shop"}>Back to shop</Link>
+			<Link className="cart__back-link link" to={"/shop"}>
+				Back to shop
+			</Link>
 		</div>
 	);
 };
