@@ -97,12 +97,12 @@
 	}
 
 	.btn--demo {
-		border: 1px solid red;
-		border-bottom: 4px solid red;
+		border: 1px solid $color-demo;
+		border-bottom: 4px solid $color-demo;
 
 		&:hover,
 		&:focus {
-			background-color: red;
+			background-color: $color-demo;
 			color: $color-white;
 		}
 	}
