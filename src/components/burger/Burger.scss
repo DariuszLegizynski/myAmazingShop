@@ -1,24 +1,60 @@
 @import "../../styles/variables";
 
 .burger {
-	width: 2rem;
+	width: 3rem;
 	height: 2rem;
-	display: none;
-	visibility: hidden;
-	justify-content: space-around;
-	flex-flow: column nowrap;
+	display: flex;
+	position: relative;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
 
-	& > div {
-		width: 2rem;
+	&__stick {
+		width: 3rem;
 		height: 0.25rem;
-		background-color: $color-black;
+		background-color: $color-first;
 		border-radius: 10px;
+		transition: all 0.5s ease-in-out;
+
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			width: 3rem;
+			height: 0.25rem;
+			background-color: $color-first;
+			border-radius: 10px;
+			transition: all 0.5s ease-in-out;
+		}
+
+		&::before {
+			transform: translateY(-16px);
+		}
+
+		&::after {
+			transform: translateY(16px);
+		}
 	}
 }
 
-@media only screen and (max-width: 800px) {
+.burger--open .burger__stick {
+	transform: translateX(-50px);
+	background: transparent;
+}
+
+.burger--open .burger__stick {
+	&::before {
+		transform: rotate(45deg) translate(35px, -35px);
+	}
+
+	&::after {
+		transform: rotate(-45deg) translate(35px, 35px);
+	}
+}
+
+@media only screen and (min-width: 800px) {
 	.burger {
-		display: flex;
-		visibility: visible;
+		display: none;
+		visibility: hidden;
 	}
 }
