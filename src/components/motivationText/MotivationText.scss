@@ -14,7 +14,31 @@
 	}
 
 	&__span {
-		padding: 2rem 40rem;
+		padding: 2rem 35%;
 		color: $color-black;
+	}
+}
+
+@media only screen and (max-width: 1200px) {
+	.motto {
+		&__span {
+			padding: 2rem 30%;
+		}
+	}
+}
+
+@media only screen and (max-width: 900px) {
+	.motto {
+		&__span {
+			padding: 2rem 20%;
+		}
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.motto {
+		&__span {
+			padding: 2rem 10%;
+		}
 	}
 }

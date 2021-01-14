@@ -22,7 +22,25 @@
 }
 
 .motto__span {
-  padding: 2rem 40rem;
+  padding: 2rem 35%;
   color: #1f1f1f;
+}
+
+@media only screen and (max-width: 1200px) {
+  .motto__span {
+    padding: 2rem 30%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .motto__span {
+    padding: 2rem 20%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .motto__span {
+    padding: 2rem 10%;
+  }
 }
 /*# sourceMappingURL=MotivationText.css.map */
