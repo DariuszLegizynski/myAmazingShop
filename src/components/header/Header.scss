@@ -27,6 +27,7 @@
 			align-items: center;
 			justify-items: center;
 			margin-top: 1.2rem;
+			margin-right: 10%;
 		}
 
 		&__nav {
@@ -82,6 +83,10 @@
 		&__item {
 			flex-direction: column;
 			justify-content: unset;
+
+			&__greeting {
+				margin-right: 5%;
+			}
 
 			& ul {
 				flex-direction: column-reverse;

@@ -7,7 +7,6 @@ import {
 } from "../types";
 
 const authReducer = (state, action) => {
-	console.log(action.type);
 	switch (action.type) {
 		case SET_USER:
 			return {

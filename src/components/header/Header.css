@@ -46,6 +46,7 @@
           align-items: center;
   justify-items: center;
   margin-top: 1.2rem;
+  margin-right: 10%;
 }
 
 .header__item__nav > ul {
@@ -116,6 +117,9 @@
     -webkit-box-pack: unset;
         -ms-flex-pack: unset;
             justify-content: unset;
+  }
+  .header__item__greeting {
+    margin-right: 5%;
   }
   .header__item ul {
     -webkit-box-orient: vertical;
