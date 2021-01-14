@@ -1,12 +1,11 @@
-// import { useEffect } from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
-// import { auth } from "../firebase/firebase";
 
 //layout
 import Home from "../layout/home/Home";
 import Shop from "../layout/shop/Shop";
 import SignIn from "../layout/signIn/SignIn";
 import Item from "../layout/item/Item";
+import Payment from "../layout/payment/Payment";
 
 //styles
 import "./App.css";
@@ -14,16 +13,6 @@ import Personal from "../layout/personal/Personal";
 import Account from "../layout/account/Account";
 
 function App() {
-	// useEffect(() => {
-	// 	auth.onAuthStateChanged((authUser) => {
-	// 		console.log("The user is: ", authUser);
-
-	// 		if (authUser) {
-	// 		} else {
-	// 		}
-	// 	});
-	// }, []);
-
 	return (
 		<div className="App">
 			<Switch>
@@ -48,6 +37,11 @@ function App() {
 					exact
 					path={"/account"}
 					component={Account}
+				/>
+				<Route
+					exact
+					path={"/payment"}
+					component={Payment}
 				/>
 				<Redirect to={"/"} />
 			</Switch>

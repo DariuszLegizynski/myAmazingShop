@@ -38,5 +38,8 @@
         -ms-flex-align: center;
             align-items: center;
   }
+  .products__h2 {
+    padding: 4rem 0 2rem 0;
+  }
 }
 /*# sourceMappingURL=ProductList.css.map */

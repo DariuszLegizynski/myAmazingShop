@@ -6,7 +6,7 @@ import shortid from "shortid";
 
 //context
 import BasketContext from "../../context/basket/basketContext";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 // styles
 import "./Account.css";
@@ -19,6 +19,8 @@ const Account = () => {
 		removeItemFromBasket,
 		addItemToBasket,
 	} = useContext(BasketContext);
+
+	const history = useHistory();
 
 	const totalSum = () => {
 		return basket.reduce(
@@ -185,6 +187,9 @@ const Account = () => {
 						to={"/"}
 					>
 						<button
+							onClick={(e) =>
+								history.push("/payment")
+							}
 							className="cart__wrapper__order__link__btn btn"
 							tabIndex="-1"
 						>

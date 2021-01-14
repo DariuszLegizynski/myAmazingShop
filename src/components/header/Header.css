@@ -152,4 +152,29 @@
     left: -7rem;
   }
 }
+
+@media only screen and (max-width: 460px) {
+  .header {
+    padding: 0 0.6rem;
+  }
+  .header__item__greeting {
+    margin-right: 1%;
+  }
+  .header__item ul {
+    width: 4rem;
+  }
+  .header__item__navigation > *:not(:last-child) {
+    margin-right: 10%;
+  }
+  .header__item__navigation img {
+    width: auto;
+    height: 6rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .header__item__greeting p {
+    display: none;
+  }
+}
 /*# sourceMappingURL=Header.css.map */

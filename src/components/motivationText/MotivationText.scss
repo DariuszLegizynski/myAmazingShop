@@ -37,6 +37,9 @@
 
 @media only screen and (max-width: 600px) {
 	.motto {
+		padding-top: 0;
+		padding-bottom: 2rem;
+
 		&__span {
 			padding: 2rem 10%;
 		}

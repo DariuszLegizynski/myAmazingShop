@@ -115,3 +115,42 @@
 		}
 	}
 }
+
+@media only screen and (max-width: 460px) {
+	.header {
+		padding: 0 0.6rem;
+
+		&__item {
+			&__greeting {
+				margin-right: 1%;
+			}
+
+			& ul {
+				width: 4rem;
+			}
+
+			&__navigation {
+				& > *:not(:last-child) {
+					margin-right: 10%;
+				}
+
+				& img {
+					width: auto;
+					height: 6rem;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 400px) {
+	.header {
+		&__item {
+			&__greeting {
+				& p {
+					display: none;
+				}
+			}
+		}
+	}
+}

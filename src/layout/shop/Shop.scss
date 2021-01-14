@@ -94,6 +94,10 @@
 		&__wrapper {
 			&__items {
 				grid-template-columns: repeat(2, auto);
+
+				&__card-container {
+					margin-bottom: 4rem;
+				}
 			}
 		}
 	}
@@ -109,9 +113,41 @@
 
 @media only screen and (max-width: 600px) {
 	.shop {
+		&__bg-image {
+			&__h1 {
+				font-size: $default-font-size-larger;
+			}
+		}
+
 		&__wrapper {
+			padding: 3rem 0 0 0;
 			&__items {
 				grid-template-columns: auto;
+
+				&__card-container {
+					margin-bottom: 2rem;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 400px) {
+	.shop {
+		&__bg-image {
+			&__h1 {
+				font-size: $default-font-size-large;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 330px) {
+	.shop {
+		&__bg-image {
+			&__h1 {
+				left: 52.5%;
+				font-size: $default-font-size-normal;
 			}
 		}
 	}

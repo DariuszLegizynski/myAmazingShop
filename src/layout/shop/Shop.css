@@ -89,6 +89,9 @@
     -ms-grid-columns: (auto)[2];
         grid-template-columns: repeat(2, auto);
   }
+  .shop__wrapper__items__card-container {
+    margin-bottom: 4rem;
+  }
 }
 
 @media only screen and (max-width: 700px) {
@@ -98,9 +101,31 @@
 }
 
 @media only screen and (max-width: 600px) {
+  .shop__bg-image__h1 {
+    font-size: 2.8rem;
+  }
+  .shop__wrapper {
+    padding: 3rem 0 0 0;
+  }
   .shop__wrapper__items {
     -ms-grid-columns: auto;
         grid-template-columns: auto;
+  }
+  .shop__wrapper__items__card-container {
+    margin-bottom: 2rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .shop__bg-image__h1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media only screen and (max-width: 330px) {
+  .shop__bg-image__h1 {
+    left: 52.5%;
+    font-size: 1.6rem;
   }
 }
 /*# sourceMappingURL=Shop.css.map */
