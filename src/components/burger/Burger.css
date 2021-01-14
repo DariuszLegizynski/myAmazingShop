@@ -35,13 +35,13 @@
 }
 
 .burger__stick::before {
-  -webkit-transform: translateY(-16px);
-          transform: translateY(-16px);
+  -webkit-transform: translateY(-12px);
+          transform: translateY(-12px);
 }
 
 .burger__stick::after {
-  -webkit-transform: translateY(16px);
-          transform: translateY(16px);
+  -webkit-transform: translateY(12px);
+          transform: translateY(12px);
 }
 
 .burger--open .burger__stick {

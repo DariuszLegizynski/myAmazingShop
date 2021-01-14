@@ -28,11 +28,11 @@
 		}
 
 		&::before {
-			transform: translateY(-16px);
+			transform: translateY(-12px);
 		}
 
 		&::after {
-			transform: translateY(16px);
+			transform: translateY(12px);
 		}
 	}
 }
