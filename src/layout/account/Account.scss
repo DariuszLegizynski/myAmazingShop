@@ -283,6 +283,9 @@
 @media only screen and (max-width: 1024px) {
 	.cart {
 		padding: 2rem 6rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 
 		&__wrapper {
 			grid-template-columns: 1fr;
@@ -296,7 +299,6 @@
 			&__order {
 				display: flex;
 				flex-direction: column;
-				justify-items: center;
 				position: relative;
 				margin: auto;
 				order: 1;
@@ -313,22 +315,50 @@
 
 @media only screen and (max-width: 768px) {
 	.cart {
+		padding: 2rem 1rem;
+		align-items: unset;
+
 		&__wrapper {
+			grid-template-columns: auto;
+
 			&__column {
 				&__basket {
+					margin: 2rem 0;
+					flex-direction: column;
+
+					&__link {
+						margin-right: 0.6rem;
+					}
+
 					&__text {
 						&__up {
+							flex-direction: column;
+							align-items: center;
+							margin: 1rem;
+
 							& p {
 								font-size: $default-font-size-normal;
 							}
 						}
 
 						&__controls {
+							flex-direction: column;
+							align-items: center;
+
 							& p {
 								font-size: $default-font-size-small;
 							}
 						}
 					}
+				}
+			}
+
+			&__order {
+				max-width: 16rem;
+				margin: 0;
+
+				&__h2 {
+					font-size: $default-font-size-larger;
 				}
 			}
 		}

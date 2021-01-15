@@ -323,6 +323,16 @@
 @media only screen and (max-width: 1024px) {
   .cart {
     padding: 2rem 6rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .cart__wrapper {
     -ms-grid-columns: 1fr;
@@ -344,7 +354,6 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    justify-items: center;
     position: relative;
     margin: auto;
     -webkit-box-ordinal-group: 2;
@@ -361,11 +370,57 @@
 }
 
 @media only screen and (max-width: 768px) {
+  .cart {
+    padding: 2rem 1rem;
+    -webkit-box-align: unset;
+        -ms-flex-align: unset;
+            align-items: unset;
+  }
+  .cart__wrapper {
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+  }
+  .cart__wrapper__column__basket {
+    margin: 2rem 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .cart__wrapper__column__basket__link {
+    margin-right: 0.6rem;
+  }
+  .cart__wrapper__column__basket__text__up {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 1rem;
+  }
   .cart__wrapper__column__basket__text__up p {
     font-size: 1.6rem;
   }
+  .cart__wrapper__column__basket__text__controls {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
   .cart__wrapper__column__basket__text__controls p {
     font-size: 1.3rem;
+  }
+  .cart__wrapper__order {
+    max-width: 16rem;
+    margin: 0;
+  }
+  .cart__wrapper__order__h2 {
+    font-size: 2.8rem;
   }
 }
 /*# sourceMappingURL=Account.css.map */
