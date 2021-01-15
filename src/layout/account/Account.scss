@@ -316,15 +316,20 @@
 @media only screen and (max-width: 768px) {
 	.cart {
 		padding: 2rem 1rem;
-		align-items: unset;
+		align-items: center;
 
 		&__wrapper {
 			grid-template-columns: auto;
+			justify-items: center;
 
 			&__column {
 				&__basket {
 					margin: 2rem 0;
 					flex-direction: column;
+
+					&__img {
+						max-width: 8rem;
+					}
 
 					&__link {
 						margin-right: 0.6rem;
@@ -336,6 +341,10 @@
 							align-items: center;
 							margin: 1rem;
 
+							&__link {
+								margin-bottom: 1rem;
+							}
+
 							& p {
 								font-size: $default-font-size-normal;
 							}
@@ -344,6 +353,10 @@
 						&__controls {
 							flex-direction: column;
 							align-items: center;
+
+							&__btn {
+								margin-top: 1rem;
+							}
 
 							& p {
 								font-size: $default-font-size-small;
