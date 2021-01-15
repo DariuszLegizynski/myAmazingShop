@@ -73,4 +73,26 @@
   -webkit-transition: visibility 0s, opacity 0.3s linear !important;
   transition: visibility 0s, opacity 0.3s linear !important;
 }
+
+@media only screen and (max-width: 360px) {
+  .item__wrapper__container__gallery {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .item__wrapper__container__gallery__small {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 0.5rem;
+  }
+  .item__wrapper__container__gallery__big {
+    position: relative;
+    min-height: 21rem;
+  }
+}
 /*# sourceMappingURL=ItemGallery.css.map */

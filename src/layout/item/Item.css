@@ -28,7 +28,16 @@
 
 .item__wrapper__container__text__content__titles {
   max-width: 60rem;
-  margin: 3rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .item__wrapper__container__text__content__titles__h1 {
@@ -58,5 +67,20 @@
 
 .cart__wrapper__column__basket__text__controls__quantity--item > button {
   margin: 2rem 0;
+}
+
+@media only screen and (max-width: 360px) {
+  .item__wrapper__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 /*# sourceMappingURL=Item.css.map */

@@ -81,7 +81,7 @@ export const Item = (props) => {
 											el.price
 										)
 									}
-									className="shop__wrapper__items__card-container__btn btn"
+									className="shop__wrapper__items__card-container__btn btn--item btn"
 								>
 									Add to basket
 								</button>

@@ -137,6 +137,9 @@
 }
 
 @media only screen and (max-width: 600px) {
+  .intro__slider-container__image {
+    height: 46rem;
+  }
   .intro__title {
     top: 12rem;
   }

@@ -125,6 +125,12 @@
 
 @media only screen and (max-width: 600px) {
 	.intro {
+		&__slider-container {
+			&__image {
+				height: 46rem;
+			}
+		}
+
 		&__title {
 			top: 12rem;
 
