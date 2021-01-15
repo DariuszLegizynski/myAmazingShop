@@ -6,11 +6,11 @@ import Shop from "../layout/shop/Shop";
 import SignIn from "../layout/signIn/SignIn";
 import Item from "../layout/item/Item";
 import Payment from "../layout/payment/Payment";
+import Personal from "../layout/personal/Personal";
+import Account from "../layout/account/Account";
 
 //styles
 import "./App.css";
-import Personal from "../layout/personal/Personal";
-import Account from "../layout/account/Account";
 
 function App() {
 	return (
