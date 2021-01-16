@@ -1,0 +1,25 @@
+@import "../../styles/variables";
+
+.payment {
+	background-color: $color-white;
+
+	& > h2 {
+		text-align: center;
+		padding: 1rem;
+	}
+
+	&__container {
+		display: flex;
+		padding: 1.6rem;
+		margin: 0 1.2rem;
+		border-bottom: 1px solid $color-black;
+	}
+
+	&__title {
+		flex: 20%;
+	}
+
+	&__address {
+		flex: 80%;
+	}
+}

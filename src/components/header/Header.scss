@@ -129,6 +129,10 @@
 				width: 4rem;
 			}
 
+			&__nav {
+				left: -5rem;
+			}
+
 			&__navigation {
 				& > *:not(:last-child) {
 					margin-right: 10%;

@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,QAAQ,CAAC;EACR,gBAAgB,ECKH,OAAO;CDgBpB;;AAtBD,AAGC,QAHO,GAGH,EAAE,CAAC;EACN,UAAU,EAAE,MAAM;EAClB,OAAO,EAAE,IAAI;CACb;;AAEA,AAAD,mBAAY,CAAC;EACZ,OAAO,EAAE,IAAI;EACb,OAAO,EAAE,MAAM;EACf,MAAM,EAAE,QAAQ;EAChB,aAAa,EAAE,GAAG,CAAC,KAAK,CCLZ,OAAO;CDMnB;;AAEA,AAAD,eAAQ,CAAC;EACR,IAAI,EAAE,GAAG;CACT;;AAEA,AAAD,iBAAU,CAAC;EACV,IAAI,EAAE,GAAG;CACT",
+    "sources": [
+        "Payment.scss",
+        "../../styles/_variables.scss"
+    ],
+    "names": [],
+    "file": "Payment.css"
+}

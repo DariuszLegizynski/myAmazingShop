@@ -6,6 +6,9 @@ import AuthContext from "../../context/auth/authContext";
 import Product from "../../components/products/Product/Product";
 
 import _ from "lodash";
+import { Link } from "react-router-dom";
+
+import "./Payment.css";
 
 const Payment = () => {
 	const { basket } = useContext(BasketContext);
@@ -30,6 +33,16 @@ const Payment = () => {
 
 	return (
 		<section className="payment">
+			<h2 className="h2">
+				Checkout (
+				<Link
+					className="link--cart link"
+					to={"/account"}
+				>
+					{basket?.length} items
+				</Link>
+				)
+			</h2>
 			<div className="payment__container">
 				<div className="payment__title">
 					<h3>Delivery Address</h3>
@@ -44,8 +57,10 @@ const Payment = () => {
 				<div className="payment__title">
 					<h3>Review items and delivery</h3>
 				</div>
+			</div>
+			<div className="payment__container">
 				<div className="payment__items">
-					<h3>Delivery Address</h3>
+					<h3>Payment Method</h3>
 				</div>
 			</div>
 			<div className="payment__conatiner">

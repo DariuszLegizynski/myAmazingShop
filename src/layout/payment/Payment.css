@@ -1,0 +1,30 @@
+.payment {
+  background-color: #fafafa;
+}
+
+.payment > h2 {
+  text-align: center;
+  padding: 1rem;
+}
+
+.payment__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1.6rem;
+  margin: 0 1.2rem;
+  border-bottom: 1px solid #1f1f1f;
+}
+
+.payment__title {
+  -webkit-box-flex: 20%;
+      -ms-flex: 20%;
+          flex: 20%;
+}
+
+.payment__address {
+  -webkit-box-flex: 80%;
+      -ms-flex: 80%;
+          flex: 80%;
+}
+/*# sourceMappingURL=Payment.css.map */

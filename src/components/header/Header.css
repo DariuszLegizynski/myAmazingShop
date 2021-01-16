@@ -163,6 +163,9 @@
   .header__item ul {
     width: 4rem;
   }
+  .header__item__nav {
+    left: -5rem;
+  }
   .header__item__navigation > *:not(:last-child) {
     margin-right: 10%;
   }
