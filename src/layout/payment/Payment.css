@@ -16,13 +16,13 @@
   border-bottom: 1px solid #1f1f1f;
 }
 
-.payment__title {
+.payment__top {
   -webkit-box-flex: 20%;
       -ms-flex: 20%;
           flex: 20%;
 }
 
-.payment__address {
+.payment__bottom {
   -webkit-box-flex: 80%;
       -ms-flex: 80%;
           flex: 80%;

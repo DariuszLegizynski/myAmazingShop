@@ -2,23 +2,17 @@ import React, { useContext } from "react";
 
 // tools
 import _ from "lodash";
-import shortid from "shortid";
+import { Link } from "react-router-dom";
 
 //context
 import BasketContext from "../../context/basket/basketContext";
-import { Link } from "react-router-dom";
 
 // styles
 import "./Account.css";
-import icon from "../../resources/icons/icomoon/sprites.svg";
+import ItemInBasket from "../../components/itemInBasket/ItemInBasket";
 
 const Account = () => {
-	const {
-		basket,
-		removeArticleFromBasket,
-		removeItemFromBasket,
-		addItemToBasket,
-	} = useContext(BasketContext);
+	const { basket } = useContext(BasketContext);
 
 	const totalSum = () => {
 		return basket.reduce(
@@ -31,93 +25,13 @@ const Account = () => {
 		if (!_.isEmpty(basket)) {
 			return basket.map((el) => {
 				return (
-					<div
-						className="cart__wrapper__column__basket"
-						key={shortid.generate()}
-					>
-						<Link
-							className="cart__wrapper__column__basket__link link"
-							to={"/"}
-						>
-							<img
-								className="cart__wrapper__column__basket__container__image"
-								src={el.thumbnail}
-								alt="product's thumbnail"
-							/>
-						</Link>
-						<div className="cart__wrapper__column__basket__text">
-							<div className="cart__wrapper__column__basket__text__up">
-								<Link
-									className="cart__wrapper__column__basket__text__up__link"
-									to={"/"}
-								>
-									<p className="cart__wrapper__column__basket__text__up__link__title p">
-										{el.title}
-									</p>
-								</Link>
-								<p className="cart__wrapper__column__basket__text__up__price p">
-									<small className="cart__wrapper__column__basket__text__up__price__currency">
-										€
-									</small>
-									{el.price}
-								</p>
-							</div>
-							<div className="cart__wrapper__column__basket__text__controls">
-								<div className="cart__wrapper__column__basket__text__controls__quantity">
-									<p className="cart__wrapper__column__basket__text__controls__quantity__p p">
-										qty:
-									</p>
-									<button
-										className="cart__wrapper__column__basket__text__controls__quantity__btn btn"
-										onClick={() =>
-											removeItemFromBasket(
-												el.articleId
-											)
-										}
-									>
-										<svg className="cart__wrapper__column__basket__text__controls__quantity__btn__icon icon">
-											<use
-												href={
-													icon +
-													"#icon-minus-circle"
-												}
-											/>
-										</svg>
-									</button>
-									<span className="cart__wrapper__column__basket__text__controls__quantity__content">
-										{el.quantity}
-									</span>
-									<button
-										className="cart__wrapper__column__basket__text__controls__quantity__btn btn"
-										onClick={() =>
-											addItemToBasket(
-												el.articleId
-											)
-										}
-									>
-										<svg className="cart__wrapper__column__basket__text__controls__quantity__btn__icon icon">
-											<use
-												href={
-													icon +
-													"#icon-plus-circle"
-												}
-											/>
-										</svg>
-									</button>
-								</div>
-								<button
-									className="cart__wrapper__column__basket__text__controls__btn btn"
-									onClick={() =>
-										removeArticleFromBasket(
-											el.articleId
-										)
-									}
-								>
-									Remove
-								</button>
-							</div>
-						</div>
-					</div>
+					<ItemInBasket
+						thumbnail={el.thumbnail}
+						title={el.title}
+						price={el.price}
+						articleId={el.articleId}
+						quantity={el.quantity}
+					/>
 				);
 			});
 		} else {

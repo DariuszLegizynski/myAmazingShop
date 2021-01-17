@@ -9,8 +9,16 @@ import Payment from "../layout/payment/Payment";
 import Personal from "../layout/personal/Personal";
 import Account from "../layout/account/Account";
 
+//Stripes
+import { loadStripe } from "@stripe/stripe-js";
+import { Elements } from "@stripe/react-stripe-js";
+
 //styles
 import "./App.css";
+
+const promise = loadStripe(
+	"pk_test_51IAiWLJPul52MnZX1sJy8E6ronrwHCOtaeH035A53r2eVzZSJ7ZQoaHZKf8NKLF8nXDIsX8KPPy4D2fIbESe9UAX00YZqmzvXr"
+);
 
 function App() {
 	return (
@@ -38,11 +46,13 @@ function App() {
 					path={"/account"}
 					component={Account}
 				/>
-				<Route
-					exact
-					path={"/payment"}
-					component={Payment}
-				/>
+				<Elements stripe={promise}>
+					<Route
+						exact
+						path={"/payment"}
+						component={Payment}
+					/>
+				</Elements>
 				<Redirect to={"/"} />
 			</Switch>
 		</div>

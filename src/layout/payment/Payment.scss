@@ -15,11 +15,11 @@
 		border-bottom: 1px solid $color-black;
 	}
 
-	&__title {
+	&__top {
 		flex: 20%;
 	}
 
-	&__address {
+	&__bottom {
 		flex: 80%;
 	}
 }
