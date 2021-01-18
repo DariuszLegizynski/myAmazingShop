@@ -3,6 +3,7 @@ import React, { useContext } from "react";
 // tools
 import _ from "lodash";
 import { Link } from "react-router-dom";
+import shortid from "shortid";
 
 //context
 import BasketContext from "../../context/basket/basketContext";
@@ -26,6 +27,7 @@ const Account = () => {
 			return basket.map((el) => {
 				return (
 					<ItemInBasket
+						key={shortid.generate()}
 						thumbnail={el.thumbnail}
 						title={el.title}
 						price={el.price}

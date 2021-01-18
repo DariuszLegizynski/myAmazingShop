@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 //Context
 import BasketContext from "../../context/basket/basketContext";
@@ -9,12 +9,14 @@ import ItemInBasket from "../../components/itemInBasket/ItemInBasket";
 
 //Tools
 import _ from "lodash";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import {
 	CardElement,
 	useStripe,
 	useElements,
 } from "@stripe/react-stripe-js";
+import axios from "../../axios/axios";
+import shortid from "shortid";
 
 //styles
 import "./Payment.css";
@@ -23,19 +25,48 @@ const Payment = () => {
 	const { basket } = useContext(BasketContext);
 	const { user } = useContext(AuthContext);
 
-	const [error, setError] = useState(null);
-	const [disabled, setDisabled] = useState(true);
+	const [nameOnCard, setNameOnCard] = useState("");
+	const [clientSecret, setClientSecret] = useState(true);
 	const [processing, setProcessing] = useState("");
+	const [error, setError] = useState(null);
 	const [succeeded, setSucceeded] = useState(false);
+	const [disabled, setDisabled] = useState(true);
 
 	const stripe = useStripe();
 	const elements = useElements();
 
-	const handleSubmit = (e) => {};
+	const history = useHistory();
+
+	const handleNameOnCard = (e) => {
+		setNameOnCard(e.target.value);
+	};
 
 	const handleChange = (e) => {
 		setDisabled(e.empty);
 		setError(e.error ? e.error.message : "");
+	};
+
+	const handleSubmit = async (e) => {
+		e.preventDefault();
+		setProcessing(true); //to prevent the "Buy Now" btn beeing clicked multiple times
+
+		const payload = await stripe
+			.confirmCardPayment(clientSecret, {
+				payment_method: {
+					card: elements.getElement(CardElement),
+				},
+			})
+			.then(({ paymentIntent }) => {
+				//paymentIntent === payment confirmation (stripe standard)
+
+				setSucceeded(true);
+				setError(null);
+				setProcessing(false);
+
+				history.replace("/orders");
+			});
+
+		console.log(payload);
 	};
 
 	const totalSum = () => {
@@ -45,11 +76,27 @@ const Payment = () => {
 		);
 	};
 
+	const totalPrice = totalSum();
+
+	useEffect(() => {
+		const getClientSecret = async () => {
+			const res = await axios({
+				method: "post",
+				url: `/payment/create?totalAmount=${
+					totalPrice * 100
+				}`,
+			});
+			setClientSecret(res.data.clientSecret);
+		};
+		getClientSecret();
+	}, [totalPrice]);
+
 	const showItemsInBasket = () => {
 		if (!_.isEmpty(basket)) {
 			return basket.map((el) => {
 				return (
 					<ItemInBasket
+						key={shortid.generate()}
 						thumbnail={el.thumbnail}
 						title={el.title}
 						price={el.price}
@@ -99,12 +146,25 @@ const Payment = () => {
 				</div>
 				<div className="payment__bottom">
 					<form onSubmit={handleSubmit}>
+						<div className="payment__name">
+							<input
+								name="nameOnCard"
+								className="payment__input__field"
+								type="text"
+								value={nameOnCard}
+								onChange={(e) =>
+									handleNameOnCard(e)
+								}
+								placeholder="Card's owner name"
+								required={true}
+							/>
+						</div>
 						<CardElement onChange={handleChange} />
 
 						<div className="payment__price-container">
 							<p className="p">
 								Total:&nbsp;
-								{totalSum()}
+								{totalPrice}
 								<small>&nbsp;€</small>
 							</p>
 							<button
@@ -123,9 +183,16 @@ const Payment = () => {
 								</span>
 							</button>
 						</div>
+						{error && <div>{error}</div>}
 					</form>
 				</div>
 			</div>
+			<Link
+				className="cart__back-link link"
+				to={"/account"}
+			>
+				Back to Basket
+			</Link>
 		</section>
 	);
 };

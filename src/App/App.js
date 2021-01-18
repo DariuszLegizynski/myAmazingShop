@@ -16,7 +16,7 @@ import { Elements } from "@stripe/react-stripe-js";
 //styles
 import "./App.css";
 
-const promise = loadStripe(
+const stripePromise = loadStripe(
 	"pk_test_51IAiWLJPul52MnZX1sJy8E6ronrwHCOtaeH035A53r2eVzZSJ7ZQoaHZKf8NKLF8nXDIsX8KPPy4D2fIbESe9UAX00YZqmzvXr"
 );
 
@@ -46,7 +46,7 @@ function App() {
 					path={"/account"}
 					component={Account}
 				/>
-				<Elements stripe={promise}>
+				<Elements stripe={stripePromise}>
 					<Route
 						exact
 						path={"/payment"}
