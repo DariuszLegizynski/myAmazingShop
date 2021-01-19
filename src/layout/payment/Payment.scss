@@ -2,10 +2,19 @@
 
 .payment {
 	background-color: $color-white;
+	padding: 5rem;
 
 	& > h2 {
 		text-align: center;
 		padding: 1rem;
+	}
+
+	&__back-link {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		color: #00a4e8;
+		margin-top: 5rem;
 	}
 
 	&__container {
@@ -13,13 +22,22 @@
 		padding: 1.6rem;
 		margin: 0 1.2rem;
 		border-bottom: 1px solid $color-black;
-	}
 
-	&__top {
-		flex: 20%;
-	}
+		&__top {
+			flex: 20%;
+		}
 
-	&__bottom {
-		flex: 80%;
+		&__bottom {
+			flex: 80%;
+			padding-left: 5rem;
+
+			&__name {
+				margin-bottom: 1rem;
+			}
+
+			&__price-container > p {
+				margin: 1rem 0;
+			}
+		}
 	}
 }

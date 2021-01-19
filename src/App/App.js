@@ -1,6 +1,6 @@
 import { Route, Switch, Redirect } from "react-router-dom";
 
-//layout
+// layout
 import Home from "../layout/home/Home";
 import Shop from "../layout/shop/Shop";
 import SignIn from "../layout/signIn/SignIn";
@@ -10,11 +10,14 @@ import Personal from "../layout/personal/Personal";
 import Account from "../layout/account/Account";
 import Orders from "../layout/orders/Orders";
 
-//Stripes
+// components
+import PrivateRoute from "../private/PrivateRoute";
+
+// stripes
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
 
-//styles
+// styles
 import "./App.css";
 
 const stripePromise = loadStripe(
@@ -42,7 +45,7 @@ function App() {
 					path={"/personal"}
 					component={Personal}
 				/>
-				<Route
+				<PrivateRoute
 					exact
 					path={"/orders"}
 					component={Orders}
@@ -53,7 +56,7 @@ function App() {
 					component={Account}
 				/>
 				<Elements stripe={stripePromise}>
-					<Route
+					<PrivateRoute
 						exact
 						path={"/payment"}
 						component={Payment}

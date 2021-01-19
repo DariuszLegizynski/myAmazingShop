@@ -101,8 +101,6 @@ const Payment = () => {
 		getClientSecret();
 	}, [totalPrice]);
 
-	console.log("the secret is: ", clientSecret);
-
 	const showItemsInBasket = () => {
 		if (!_.isEmpty(basket)) {
 			return basket.map((el) => {
@@ -134,47 +132,47 @@ const Payment = () => {
 				)
 			</h2>
 			<div className="payment__container">
-				<div className="payment__top">
+				<div className="payment__container__top">
 					<h3 className="h3">Delivery Address</h3>
 				</div>
-				<div className="payment__bottom">
+				<div className="payment__container__bottom">
 					<p className="p">{user?.email}</p>
 					<p className="p">Lightstreet 42</p>
 					<p className="p">2700 Narnia, AT</p>
 				</div>
 			</div>
 			<div className="payment__container">
-				<div className="payment__top">
+				<div className="payment__container__top">
 					<h3 className="h3">
 						Review items and delivery
 					</h3>
 				</div>
-				<div className="payment__bottom">
+				<div className="payment__container__bottom">
 					{showItemsInBasket()}
 				</div>
 			</div>
 			<div className="payment__container">
-				<div className="payment__top">
+				<div className="payment__container__top">
 					<h3 className="h3">Payment Method</h3>
 				</div>
-				<div className="payment__bottom">
+				<div className="payment__container__bottom">
 					<form onSubmit={handleSubmit}>
-						<div className="payment__name">
+						<div className="payment__container__bottom__name">
 							<input
 								name="nameOnCard"
-								className="payment__input__field"
+								className="payment__container__bottom__name__input"
 								type="text"
 								value={nameOnCard}
 								onChange={(e) =>
 									handleNameOnCard(e)
 								}
-								placeholder="Card's owner name"
+								placeholder="card owner's name"
 								required={true}
 							/>
 						</div>
 						<CardElement onChange={handleChange} />
 
-						<div className="payment__price-container">
+						<div className="payment__container__bottom__price-container">
 							<p className="p">
 								Total:&nbsp;
 								{totalPrice}
@@ -201,7 +199,7 @@ const Payment = () => {
 				</div>
 			</div>
 			<Link
-				className="cart__back-link link"
+				className="payment__back-link link"
 				to={"/account"}
 			>
 				Back to Basket

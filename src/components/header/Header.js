@@ -48,12 +48,12 @@ const Header = () => {
 					<li
 						className={`list${burgerClass} fadeInFromTop`}
 					>
-						<Link className="link" to={"/account"}>
+						<Link className="link" to={"/orders"}>
 							<button
 								className="btn--account btn"
 								tabIndex="-1"
 							>
-								Account
+								Orders
 							</button>
 						</Link>
 					</li>

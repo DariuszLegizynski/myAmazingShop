@@ -5,6 +5,8 @@ import AuthContext from "../../context/auth/authContext";
 
 import Order from "../../components/order/Order";
 
+import { Link } from "react-router-dom";
+
 import "./Orders.css";
 
 const Orders = () => {
@@ -41,6 +43,14 @@ const Orders = () => {
 					return <Order order={order} />;
 				})}
 			</div>
+			<Link
+				className="intro__title__white-bg__shop__link link"
+				to={"/shop"}
+			>
+				<button className="btn--shop btn" tabIndex="-1">
+					<span className="span">Shop</span>
+				</button>
+			</Link>
 		</div>
 	);
 };

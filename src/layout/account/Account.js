@@ -7,6 +7,7 @@ import shortid from "shortid";
 
 //context
 import BasketContext from "../../context/basket/basketContext";
+import AuthContext from "../../context/auth/authContext";
 
 // styles
 import "./Account.css";
@@ -14,6 +15,7 @@ import ItemInBasket from "../../components/itemInBasket/ItemInBasket";
 
 const Account = () => {
 	const { basket } = useContext(BasketContext);
+	const { user } = useContext(AuthContext);
 
 	const totalSum = () => {
 		return basket.reduce(
@@ -96,17 +98,33 @@ const Account = () => {
 							</Link>
 						</p>
 					</div>
-					<Link
-						className="cart__wrapper__order__link"
-						to={"/payment"}
-					>
-						<button
-							className="cart__wrapper__order__link__btn btn"
-							tabIndex="-1"
+					{!user && (
+						<Link
+							className="cart__wrapper__order__link"
+							to={"/signIn"}
 						>
-							Checkout
-						</button>
-					</Link>
+							<button
+								className="cart__wrapper__order__link__btn btn"
+								tabIndex="-1"
+							>
+								Login
+							</button>
+						</Link>
+					)}
+					{user && (
+						<Link
+							className="cart__wrapper__order__link"
+							to={"/payment"}
+						>
+							<button
+								className="cart__wrapper__order__link__btn btn"
+								tabIndex="-1"
+								disabled={!user}
+							>
+								Checkout
+							</button>
+						</Link>
+					)}
 				</div>
 			</div>
 

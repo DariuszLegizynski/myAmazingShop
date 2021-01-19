@@ -10,7 +10,6 @@ import shortid from "shortid";
 import "./Order.css";
 
 const Order = ({ order }) => {
-	console.log(order);
 	return (
 		<section className="order">
 			<h2 className="orders__h2 h2">Order</h2>
