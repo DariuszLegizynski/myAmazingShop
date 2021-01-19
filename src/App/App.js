@@ -8,6 +8,7 @@ import Item from "../layout/item/Item";
 import Payment from "../layout/payment/Payment";
 import Personal from "../layout/personal/Personal";
 import Account from "../layout/account/Account";
+import Orders from "../layout/orders/Orders";
 
 //Stripes
 import { loadStripe } from "@stripe/stripe-js";
@@ -40,6 +41,11 @@ function App() {
 					exact
 					path={"/personal"}
 					component={Personal}
+				/>
+				<Route
+					exact
+					path={"/orders"}
+					component={Orders}
 				/>
 				<Route
 					exact

@@ -13,6 +13,7 @@ const ItemInbasket = ({
 	price,
 	articleId,
 	quantity,
+	hidebtn,
 }) => {
 	const {
 		removeArticleFromBasket,
@@ -51,48 +52,59 @@ const ItemInbasket = ({
 						<p className="basket-item__text__controls__quantity__p p">
 							qty:
 						</p>
-						<button
-							className="basket-item__text__controls__quantity__btn btn"
-							onClick={() =>
-								removeItemFromBasket(articleId)
-							}
-						>
-							<svg className="basket-item__text__controls__quantity__btn__icon icon">
-								<use
-									href={
-										icon +
-										"#icon-minus-circle"
-									}
-								/>
-							</svg>
-						</button>
+						{!hidebtn && (
+							<button
+								className="basket-item__text__controls__quantity__btn btn"
+								onClick={() =>
+									removeItemFromBasket(
+										articleId
+									)
+								}
+							>
+								<svg className="basket-item__text__controls__quantity__btn__icon icon">
+									<use
+										href={
+											icon +
+											"#icon-minus-circle"
+										}
+									/>
+								</svg>
+							</button>
+						)}
+
 						<span className="basket-item__text__controls__quantity__content">
 							{quantity}
 						</span>
+						{!hidebtn && (
+							<button
+								className="basket-item__text__controls__quantity__btn btn"
+								onClick={() =>
+									addItemToBasket(articleId)
+								}
+							>
+								<svg className="basket-item__text__controls__quantity__btn__icon icon">
+									<use
+										href={
+											icon +
+											"#icon-plus-circle"
+										}
+									/>
+								</svg>
+							</button>
+						)}
+					</div>
+					{!hidebtn && (
 						<button
-							className="basket-item__text__controls__quantity__btn btn"
+							className="basket-item__text__controls__btn btn"
 							onClick={() =>
-								addItemToBasket(articleId)
+								removeArticleFromBasket(
+									articleId
+								)
 							}
 						>
-							<svg className="basket-item__text__controls__quantity__btn__icon icon">
-								<use
-									href={
-										icon +
-										"#icon-plus-circle"
-									}
-								/>
-							</svg>
+							Remove
 						</button>
-					</div>
-					<button
-						className="basket-item__text__controls__btn btn"
-						onClick={() =>
-							removeArticleFromBasket(articleId)
-						}
-					>
-						Remove
-					</button>
+					)}
 				</div>
 			</div>
 		</div>

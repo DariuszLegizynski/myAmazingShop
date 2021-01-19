@@ -5,24 +5,20 @@ const stripe = require("stripe")(
 	"sk_test_51IAiWLJPul52MnZXX2Xs9VKzzrfJadfdJqFi714kL4dfdNqBrEyWXwe1KGltxSWUkCSjDUlqL2Bs109CR1u6LPdk00wavy4jIZ"
 );
 
-//API
-
-//App config
+// App config
 const app = express();
 
-//Middlewares
+// Middlewares
 app.use(cors({ origin: true }));
 app.use(express.json());
 
-//API routes
+// API routes
 app.get("/", (request, response) =>
 	response.status(200).send("Hello World")
 );
 
 app.post("/payment/create", async (request, response) => {
 	const totalAmount = request.query.totalAmount;
-
-	console.log("Payment request received", totalAmount);
 
 	const paymentIntent = await stripe.paymentIntents.create({
 		amount: totalAmount,

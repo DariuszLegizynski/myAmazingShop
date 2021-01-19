@@ -17,6 +17,7 @@ import {
 } from "@stripe/react-stripe-js";
 import axios from "../../axios/axios";
 import shortid from "shortid";
+import { db } from "../../firebase/firebase";
 
 //styles
 import "./Payment.css";
@@ -59,13 +60,22 @@ const Payment = () => {
 			.then(({ paymentIntent }) => {
 				//paymentIntent === payment confirmation (stripe standard)
 
+				db.collection("users")
+					.doc(user?.uid)
+					.collection("orders")
+					.doc(paymentIntent.id)
+					.set({
+						basket: basket,
+						amount: paymentIntent.amount,
+						created: paymentIntent.created,
+					});
+
 				setSucceeded(true);
 				setError(null);
 				setProcessing(false);
 
 				history.replace("/orders");
 			});
-
 		console.log(payload);
 	};
 
@@ -76,20 +86,22 @@ const Payment = () => {
 		);
 	};
 
-	const totalPrice = totalSum();
+	const totalPrice = totalSum() + 10;
 
 	useEffect(() => {
 		const getClientSecret = async () => {
-			const res = await axios({
+			const response = await axios({
 				method: "post",
 				url: `/payment/create?totalAmount=${
 					totalPrice * 100
 				}`,
 			});
-			setClientSecret(res.data.clientSecret);
+			setClientSecret(response.data.clientSecret);
 		};
 		getClientSecret();
 	}, [totalPrice]);
+
+	console.log("the secret is: ", clientSecret);
 
 	const showItemsInBasket = () => {
 		if (!_.isEmpty(basket)) {
@@ -102,6 +114,7 @@ const Payment = () => {
 						price={el.price}
 						articleId={el.articleId}
 						quantity={el.quantity}
+						hidebtn
 					/>
 				);
 			});
