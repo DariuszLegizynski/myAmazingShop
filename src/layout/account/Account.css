@@ -120,6 +120,7 @@
 
 .cart__wrapper__order__price-summary__item--p__link {
   color: #00a4e8;
+  cursor: pointer;
 }
 
 .cart__wrapper__order__price-summary__p {

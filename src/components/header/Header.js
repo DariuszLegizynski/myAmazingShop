@@ -1,10 +1,14 @@
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 
-//components
+// components
 import Burger from "../burger/Burger";
 
-//styles
+// tools
+import { Tooltip } from "react-tippy";
+import "react-tippy/dist/tippy.css";
+
+// styles
 import "./Header.css";
 
 // context
@@ -106,12 +110,16 @@ const Header = () => {
 						<li
 							className={`list${burgerClass} fadeInFromTop`}
 						>
-							<Link
+							<Tooltip
+								// options
+								tabIndex="0"
+								title="Not included in demo version"
+								position="bottom"
+								trigger="click"
 								className="link"
-								to={"/personal"}
 							>
-								About
-							</Link>
+								<span>About</span>
+							</Tooltip>
 						</li>
 					</ul>
 				</nav>

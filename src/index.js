@@ -10,17 +10,20 @@ import ProductState from "./context/products/ProductsState";
 import BasketState from "./context/basket/BasketState";
 import AuthState from "./context/auth/AuthState";
 
+import ScrollToTop from "./ScrollToTop";
+
 ReactDOM.render(
 	<BrowserRouter>
-		{/* <React.StrictMode> */}
-		<AuthState>
-			<ProductState>
-				<BasketState>
-					<App />
-				</BasketState>
-			</ProductState>
-		</AuthState>
-		{/* </React.StrictMode> */}
+		<React.StrictMode>
+			<AuthState>
+				<ProductState>
+					<BasketState>
+						<ScrollToTop />
+						<App />
+					</BasketState>
+				</ProductState>
+			</AuthState>
+		</React.StrictMode>
 	</BrowserRouter>,
 	document.querySelector("#root")
 );

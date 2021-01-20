@@ -6,7 +6,6 @@ import Shop from "../layout/shop/Shop";
 import SignIn from "../layout/signIn/SignIn";
 import Item from "../layout/item/Item";
 import Payment from "../layout/payment/Payment";
-import Personal from "../layout/personal/Personal";
 import Account from "../layout/account/Account";
 import Orders from "../layout/orders/Orders";
 
@@ -36,11 +35,6 @@ function App() {
 					exact
 					path={"/products/:item"}
 					component={Item}
-				/>
-				<Route
-					exact
-					path={"/personal"}
-					component={Personal}
 				/>
 				<PrivateRoute
 					exact

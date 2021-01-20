@@ -4,6 +4,8 @@ import React, { useContext } from "react";
 import _ from "lodash";
 import { Link } from "react-router-dom";
 import shortid from "shortid";
+import { Tooltip } from "react-tippy";
+import "react-tippy/dist/tippy.css";
 
 //context
 import BasketContext from "../../context/basket/basketContext";
@@ -90,12 +92,18 @@ const Account = () => {
 						<p className="cart__wrapper__order__price-summary__item--p p">
 							You have 14 days to return items,
 							read more in our&nbsp;
-							<Link
-								className="cart__wrapper__order__price-summary__item--p__link link"
-								to={"/"}
+							<Tooltip
+								// options
+								tabIndex="0"
+								title="Not included in demo version"
+								position="bottom"
+								trigger="click"
+								className="cart__wrapper__order__price-summary__item--p__link"
 							>
-								return and refund policy.
-							</Link>
+								<span>
+									return and refund policy.
+								</span>
+							</Tooltip>
 						</p>
 					</div>
 					{!user && (

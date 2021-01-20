@@ -1,4 +1,8 @@
 import React from "react";
+
+// tools
+import { Tooltip } from "react-tippy";
+import "react-tippy/dist/tippy.css";
 import { Link } from "react-router-dom";
 
 import "./Footer.css";
@@ -15,12 +19,16 @@ const Footer = () => {
 				</Link>
 			</div>
 			<div className="footer__column">
-				<Link
-					to={"/personal"}
+				<Tooltip
+					// options
+					tabIndex="0"
+					title="Not included in demo version"
+					position="bottom"
+					trigger="click"
 					className="footer__column__link link"
 				>
-					About
-				</Link>
+					<span>About</span>
+				</Tooltip>
 			</div>
 			<div className="footer__column">
 				<Link

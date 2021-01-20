@@ -7,7 +7,9 @@ import AuthContext from "../../context/auth/authContext";
 //Component
 import ItemInBasket from "../../components/itemInBasket/ItemInBasket";
 
-//Tools
+// tools
+import { Tooltip } from "react-tippy";
+import "react-tippy/dist/tippy.css";
 import _ from "lodash";
 import { Link, useHistory } from "react-router-dom";
 import {
@@ -156,6 +158,17 @@ const Payment = () => {
 					<h3 className="h3">Payment Method</h3>
 				</div>
 				<div className="payment__container__bottom">
+					<Tooltip
+						// options
+						tabIndex="0"
+						position="top"
+						trigger="click"
+						title="For demo purposes use: <br/> card owner: whoever<br/> card number: 4242 4242 4242 4242<br/> exp date: 04/24<br/> CVC: 242<br/> zip: 42424"
+						className="link"
+					>
+						For Demo users (click me) <br />
+						!NO payment will be issued!
+					</Tooltip>
 					<form onSubmit={handleSubmit}>
 						<div className="payment__container__bottom__name">
 							<input
@@ -170,6 +183,7 @@ const Payment = () => {
 								required={true}
 							/>
 						</div>
+
 						<CardElement onChange={handleChange} />
 
 						<div className="payment__container__bottom__price-container">
