@@ -57,7 +57,7 @@ const Shop = () => {
 	};
 
 	return (
-		<section className="shop">
+		<section className="shop fadeIn">
 			<Header />
 			<div className="shop__bg-image">
 				<h1 className="shop__bg-image__h1 h1">

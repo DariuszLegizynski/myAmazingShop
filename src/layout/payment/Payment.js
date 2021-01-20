@@ -122,7 +122,7 @@ const Payment = () => {
 	};
 
 	return (
-		<section className="payment">
+		<section className="payment fadeIn">
 			<h2 className="h2">
 				Checkout (
 				<Link

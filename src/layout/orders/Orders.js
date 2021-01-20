@@ -38,7 +38,7 @@ const Orders = () => {
 	}, [user]);
 
 	return (
-		<section>
+		<section className="fadeIn">
 			<Header />
 			<div className="orders">
 				<h1 className="orders__h1 h1">Your Orders</h1>

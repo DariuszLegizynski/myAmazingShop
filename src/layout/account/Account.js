@@ -50,7 +50,7 @@ const Account = () => {
 	};
 
 	return (
-		<div className="cart">
+		<div className="cart fadeIn">
 			<h1 className="cart__h1 h1">Cart</h1>
 			<div className="cart__wrapper">
 				<div className="cart__wrapper__column">

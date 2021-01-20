@@ -1,4 +1,6 @@
-import { Link } from "react-router-dom";
+// tools
+import { Tooltip } from "react-tippy";
+import "react-tippy/dist/tippy.css";
 
 import "./About.css";
 
@@ -16,16 +18,16 @@ const About = () => {
 					Discover beautiful attributes of ordinary,
 					everyday electronics
 				</p>
-				<Link
-					className="about__info__link link"
-					to={"/personal"}
+				<Tooltip
+					// options
+					tabIndex="0"
+					title="Not included in demo version"
+					position="bottom"
+					trigger="click"
+					className="link"
 				>
-					<button className="about__info__link__btn btn">
-						<span className="about__info__link__btn__span span">
-							About
-						</span>
-					</button>
-				</Link>
+					<span>About</span>
+				</Tooltip>
 			</div>
 		</section>
 	);

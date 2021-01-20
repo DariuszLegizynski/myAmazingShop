@@ -67,7 +67,7 @@ const SignIn = () => {
 	}
 
 	return (
-		<div className="login-page">
+		<div className="login-page fadeIn">
 			<div className="login-page__grid">
 				<div className="login-page__grid__greeting">
 					<h1 className="login-page__grid__greeting__title h1">
