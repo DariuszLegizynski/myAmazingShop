@@ -175,6 +175,11 @@
   font-size: 1.3rem;
 }
 
+.input:link, .input:visited, .input:active, .input:focus, .input:hover {
+  outline: none;
+  text-decoration: none;
+}
+
 .bounce {
   -webkit-animation-duration: 5s;
   animation-duration: 5s;

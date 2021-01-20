@@ -160,7 +160,7 @@ const Payment = () => {
 						<div className="payment__container__bottom__name">
 							<input
 								name="nameOnCard"
-								className="payment__container__bottom__name__input"
+								className="payment__container__bottom__name__input input"
 								type="text"
 								value={nameOnCard}
 								onChange={(e) =>
@@ -179,6 +179,7 @@ const Payment = () => {
 								<small>&nbsp;€</small>
 							</p>
 							<button
+								className="btn"
 								disabled={
 									processing ||
 									disabled ||

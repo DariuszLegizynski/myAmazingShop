@@ -17,9 +17,6 @@ import PrivateRoute from "../private/PrivateRoute";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
 
-// styles
-import "./App.css";
-
 const stripePromise = loadStripe(
 	"pk_test_51IAiWLJPul52MnZX1sJy8E6ronrwHCOtaeH035A53r2eVzZSJ7ZQoaHZKf8NKLF8nXDIsX8KPPy4D2fIbESe9UAX00YZqmzvXr"
 );

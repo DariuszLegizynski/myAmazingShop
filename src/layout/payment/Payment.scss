@@ -1,4 +1,5 @@
 @import "../../styles/variables";
+@import "../../styles/typography";
 
 .payment {
 	background-color: $color-white;
@@ -13,7 +14,7 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		color: #00a4e8;
+		color: $color-first;
 		margin-top: 5rem;
 	}
 
@@ -33,10 +34,50 @@
 
 			&__name {
 				margin-bottom: 1rem;
+
+				&__input {
+					// background-color: $color-first-light;
+					border: 2px solid $color-first-light;
+					border-radius: 4px;
+					padding-left: 0.5rem;
+					font-size: $default-font-size-small;
+
+					&:hover,
+					&:focus {
+						border: 2px solid $color-first-dark;
+					}
+				}
 			}
 
 			&__price-container > p {
 				margin: 1rem 0;
+				font-weight: 600;
+			}
+
+			&__price-container > button {
+				background: $color-first;
+				border-radius: 4px;
+				width: 100%;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.payment {
+		&__container {
+			flex-direction: column;
+			align-items: center;
+
+			&__top {
+				flex: 1;
+				margin: 1rem 0;
+			}
+
+			&__bottom {
+				margin: 2rem;
+				flex: 1;
+				padding-left: 0rem;
 			}
 		}
 	}

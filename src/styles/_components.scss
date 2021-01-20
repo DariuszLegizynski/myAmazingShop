@@ -1,4 +1,5 @@
 @import "./variables";
+@import "./typography";
 
 .btn {
 	border: none;
@@ -159,4 +160,15 @@
 
 .p {
 	font-size: $default-font-size-small;
+}
+
+.input {
+	&:link,
+	&:visited,
+	&:active,
+	&:focus,
+	&:hover {
+		outline: none;
+		text-decoration: none;
+	}
 }
