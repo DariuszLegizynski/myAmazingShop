@@ -1,9 +1,11 @@
 import React, { useEffect, useContext, useState } from "react";
-import { db } from "../../firebase/firebase";
 
 import AuthContext from "../../context/auth/authContext";
 
+// Components
+import { db } from "../../firebase/firebase";
 import Order from "../../components/order/Order";
+import Header from "../../components/header/Header";
 
 import { Link } from "react-router-dom";
 
@@ -36,22 +38,23 @@ const Orders = () => {
 	}, [user]);
 
 	return (
-		<div className="orders">
-			<h1 className="orders__h1 h1">Your Orders</h1>
-			<div className="orders__container">
-				{orders?.map((order) => {
-					return <Order order={order} />;
-				})}
+		<section>
+			<Header />
+			<div className="orders">
+				<h1 className="orders__h1 h1">Your Orders</h1>
+				<div className="orders__container">
+					{orders?.map((order) => {
+						return <Order order={order} />;
+					})}
+				</div>
+				<Link
+					className="cart__back-link link"
+					to={"/shop"}
+				>
+					Back to shop
+				</Link>
 			</div>
-			<Link
-				className="intro__title__white-bg__shop__link link"
-				to={"/shop"}
-			>
-				<button className="btn--shop btn" tabIndex="-1">
-					<span className="span">Shop</span>
-				</button>
-			</Link>
-		</div>
+		</section>
 	);
 };
 

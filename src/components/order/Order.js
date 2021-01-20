@@ -12,14 +12,14 @@ import "./Order.css";
 const Order = ({ order }) => {
 	return (
 		<section className="order">
-			<h2 className="orders__h2 h2">Order</h2>
+			<h2 className="order__h2 h2">Order</h2>
 			<p>
 				{moment
 					.unix(order.data.created)
 					.format("MMMM Do YYYY, h:mma")}
 			</p>
 			<p className="order__id">
-				<small>{order.id}</small>
+				order id: <small>{order.id}</small>
 			</p>
 			{order.data.basket?.map((item) => {
 				return (

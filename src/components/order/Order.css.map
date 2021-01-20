@@ -1,8 +1,9 @@
 {
     "version": 3,
-    "mappings": "AAAA,AAAA,MAAM,CAAC;EACN,gBAAgB,EAAE,QAAQ;CAC1B",
+    "mappings": "AAEA,AAAA,MAAM,CAAC;EACN,MAAM,EAAE,MAAM;CAKd;;AAHC,AAAD,UAAK,CAAC;EACL,aAAa,EAAE,IAAI;CACnB",
     "sources": [
-        "Order.scss"
+        "Order.scss",
+        "../../styles/_variables.scss"
     ],
     "names": [],
     "file": "Order.css"

@@ -1,4 +1,8 @@
 .order {
-  background-color: seagreen;
+  margin: 1rem 0;
+}
+
+.order__h2 {
+  margin-bottom: 2rem;
 }
 /*# sourceMappingURL=Order.css.map */
