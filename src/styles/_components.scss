@@ -60,6 +60,7 @@
 
 	&--sign {
 		border-bottom: 1px solid $color-first;
+		white-space: nowrap;
 
 		transition: all 0.2s ease-in-out;
 	}

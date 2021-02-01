@@ -58,6 +58,7 @@
 
 .btn--sign {
   border-bottom: 1px solid #00a4e8;
+  white-space: nowrap;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
