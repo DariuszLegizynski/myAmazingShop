@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+# myAmazingShop
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+React e-commerce web site to get the newest technologies to your home.
 
-## Available Scripts
+[myAmazingShop]
 
-In the project directory, you can run:
+### Disclaimer
 
-### `npm start`
+Website is for demonstractive purposes only. No real transactions are to be made.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# Built with
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+* React
 
-### `npm test`
+* useContext and useReducer
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* SCSS
 
-### `npm run build`
+* Firebase
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* Firestore
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* Node.js/Express
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* stripe.com
 
-### `npm run eject`
+## Getting Started
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Prerequisites
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+What is needed for the software to run.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+* npm
 
-## Learn More
+`npm i npm@latest -g`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Installing
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Clone the repository
 
-### Code Splitting
+`git clone https://github.com/DariuszLegizynski/myAmazingShop.git`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+2. Run npm install inside project root directory
 
-### Analyzing the Bundle Size
+`npm install`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+3. Start the server
 
-### Making a Progressive Web App
+`npm run start`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+4. Enjoy! :-)
 
-### Advanced Configuration
+## Brief summary
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+1. The application uses cloud Firestore to store user and product information.
+2. Product images are hosted on imgur.
+3. Authentication via Firebase, guest login possible.
+3. Hosted on Firebase.
+4. For transactions stripe.com is used.
+5. Desktop first.
+6. Point #3 appears two times.
 
-### Deployment
+## Contributors
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Dariusz Legizynski - Initial work.
 
-### `npm run build` fails to minify
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the MIT License - see the [LICENSE.md] file for details.
+
+[myAmazingShop]: https://myamazingshop-ae51c.web.app/
+[LICENSE.md]: https://github.com/DariuszLegizynski/myAmazingShop/blob/main/LICENSE
